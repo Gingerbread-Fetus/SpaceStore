@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ItemsAtlas
+  m_Name: ItemsAtlasPlaceholder
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -794,5 +794,5 @@ SpriteAtlas:
   - Items_52
   - Items_51
   - Items_50
-  m_Tag: ItemsAtlas
+  m_Tag: ItemsAtlasPlaceholder
   m_IsVariant: 0
