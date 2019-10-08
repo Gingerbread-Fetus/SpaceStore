@@ -15,7 +15,3 @@ MonoBehaviour:
   itemName: Meta-Shield
   itemIcon: {fileID: -9075936618163766259, guid: b987a06d6af50c640bfad963c69561e2,
     type: 3}
-  boomItem: 0
-  baseSellPrice: 1000
-  stock: 0
-  quality: 0

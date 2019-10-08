@@ -11,8 +11,11 @@ using UnityEngine;
 public class StoreInventory : ScriptableObject
 {
     
-    Dictionary<string, Item> inventory;
+    //Config Params
+    Dictionary<ItemInstance, Item> inventory;
     [SerializeField] List<ItemInstance> itemList;
+    [SerializeField] int Currency = 0;
+
     ///A list of items that are currently in the inventory. Left visible to set starting values and for debugging
 
     private static StoreInventory _instance;
@@ -62,25 +65,29 @@ public class StoreInventory : ScriptableObject
 
     /* Start of Inventory Methods */
 
-    public void Start()
+    public void Awake()
     {
         //Take every object in the ItemList and add it to the dictionary
         foreach (ItemInstance itemInstance in itemList)
         {
-            inventory.Add(itemInstance.item.name, itemInstance.item);
+            inventory.Add(itemInstance, itemInstance.item);
         }
     }
 
-    //Add an item to the inventory
-    public void AddItem(Item newItem)
+    /// <summary>
+    /// Add an item to the inventory.
+    /// </summary>
+    /// <param name="newItem">The instance of the item to add to the dictionary</param>
+    /// <param name="count">The number of this item to add</param>
+    public void AddItem(ItemInstance newItem, int count)
     {
-        if (inventory[newItem.ItemName])//if it's already in the inventory add number asked for.
+        if (inventory[newItem])//if it's already in the inventory add number asked for.
         {
-           
+            //inventory[newItem].stock += count;
         }
         else
         {
-            inventory.Add(newItem.name, newItem);
+            inventory.Add(newItem, newItem.item);
         }
     }
 

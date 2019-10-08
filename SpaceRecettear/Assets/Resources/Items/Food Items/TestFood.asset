@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7995472ad0aaff4a8fc6d5b60e6e0a1, type: 3}
-  m_Name: Cake
+  m_Name: TestFood
   m_EditorClassIdentifier: 
-  itemName: Cake
-  itemIcon: {fileID: 1623647345179350462, guid: b987a06d6af50c640bfad963c69561e2,
+  itemName: Test
+  itemIcon: {fileID: -4261047623482395726, guid: b987a06d6af50c640bfad963c69561e2,
     type: 3}
-  foodType: 2
+  foodType: 0

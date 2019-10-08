@@ -12,10 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7995472ad0aaff4a8fc6d5b60e6e0a1, type: 3}
   m_Name: Apple
   m_EditorClassIdentifier: 
-  itemType: 1
   itemName: Apple
   itemIcon: {fileID: 2029542551908640097, guid: b987a06d6af50c640bfad963c69561e2,
     type: 3}
-  boomItem: 0
-  baseSellPrice: 100
-  stock: 5
+  foodType: 1
