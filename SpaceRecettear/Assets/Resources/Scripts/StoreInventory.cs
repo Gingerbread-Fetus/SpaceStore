@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
+using RotaryHeart.Lib;
 using System.Collections.Generic;
 using UnityEngine;
+using RotaryHeart.Lib.SerializableDictionary;
 
 /// <summary>
 /// This is the player's store inventory across all screens in the game. Should not ever be destroyed
@@ -10,11 +12,11 @@ using UnityEngine;
 [System.Serializable]
 public class StoreInventory : ScriptableObject
 {
-    
+
     //Config Params
-    //Dictionary<ItemInstance, Item> inventory;
-    [SerializeField] List<ItemInstance> itemList;
-    [SerializeField] int Currency = 0;
+    [SerializeField] MyDictionary inventory;
+    //[SerializeField] List<ItemInstance> itemList;
+    [SerializeField] int currency = 0;
 
     ///A list of items that are currently in the inventory. Left visible to set starting values and for debugging
 
@@ -70,7 +72,10 @@ public class StoreInventory : ScriptableObject
         //Take every object in the ItemList and add it to the dictionary
         //foreach (ItemInstance itemInstance in itemList)
         //{
-        //    inventory.Add(itemInstance, itemInstance.item);
+        //    if (itemInstance != null)
+        //    {
+        //        inventory.Add(itemInstance.GetHashCode(), itemInstance); 
+        //    }
         //}
     }
 
@@ -82,18 +87,16 @@ public class StoreInventory : ScriptableObject
     public void AddItem(Item addItem)
     {
         ItemInstance newItem = new ItemInstance(addItem);
-        Debug.Log("Is the item in the list? : " + itemList.Contains(newItem).ToString());
-        if (itemList.Contains(newItem))//if it's already in the inventory add number asked for.
+        Debug.Log(newItem);
+        if (inventory.ContainsKey(newItem.GetHashCode()))//if it's already in the inventory add number asked for.
         {
-            //inventory[newItem].stock += 1;
-            itemList[itemList.IndexOf(newItem)].stock += 1;
-            Debug.Log("Added");
+            inventory[newItem.GetHashCode()].stock += 1;
+            Debug.Log("Added one apple to existing stock.");
         }
         else
         {
-            //inventory.Add(newItem, newItem.item);
-            Debug.Log("Something went wrong. No apples for you.");
-            itemList.Add(newItem);
+            Debug.Log("New item added.");
+            inventory.Add(newItem.GetHashCode(), newItem);
         }
     }
 
@@ -107,3 +110,9 @@ public class StoreInventory : ScriptableObject
         SaveManager.SaveInventory();
     }
 }
+/// <summary>
+/// Declaration of the dictionary used for the inventory. Uses an int as a key for some wonkiness in the editor view if you
+/// just use another iteminstance.
+/// </summary>
+[Serializable]
+public class MyDictionary : SerializableDictionaryBase<int, ItemInstance> { }

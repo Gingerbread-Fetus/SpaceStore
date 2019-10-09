@@ -48,6 +48,16 @@ public class ItemInstance
     public ItemInstance(Item item)
     {
         this.item = item;
+        quality = 0;
+    }
+
+    public ItemInstance(ItemInstance itemInstance)
+    {
+        this.item = itemInstance.item;
+        this.boomItem = itemInstance.boomItem;
+        this.baseSellPrice = itemInstance.baseSellPrice;
+        this.stock = itemInstance.stock;//TODO: This doesn't seem quite right, make sure that stock is changed and set correctly
+        this.quality = itemInstance.quality;
     }
 
     public override bool Equals(object obj)

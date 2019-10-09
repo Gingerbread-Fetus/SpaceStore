@@ -156,7 +156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -113.7, y: 40}
+  m_AnchoredPosition: {x: -98.925, y: 30}
   m_SizeDelta: {x: 175.3, y: 42.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &42827412
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -474,9 +474,9 @@ RectTransform:
   m_Father: {fileID: 220438351}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 308.72, y: -132}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -165.64, y: 94}
   m_SizeDelta: {x: 160, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &757174450
@@ -894,7 +894,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1388495232}
   - component: {fileID: 1388495231}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Shopkeeper Placeholder Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -936,9 +936,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 2106706721
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: -8251314956710100740, guid: 167ca058260cc6540aa6fc9bc2c2dfa1,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -959,8 +959,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388495230}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -276, y: -57.349754, z: -5706}
-  m_LocalScale: {x: 63.4, y: 63.4, z: 63.4}
+  m_LocalPosition: {x: -356, y: -224, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 220438351}
   m_RootOrder: 4
@@ -1070,7 +1070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.00032131426}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1516351266
@@ -1448,6 +1448,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623206617}
   m_CullTransparentMesh: 0
+--- !u!1 &1666353682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1666353683}
+  - component: {fileID: 1666353684}
+  m_Layer: 0
+  m_Name: NPC Storekeeper Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1666353683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666353682}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1666353684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666353682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e6cde6a1100ab48997505a91a354da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeInventory: {fileID: 11400000, guid: 1ed804c52c8df2a4dbc163b24dae29e4, type: 2}
 --- !u!1 &1688131364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1640,10 +1684,10 @@ RectTransform:
   m_Father: {fileID: 220438351}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 308.72, y: 92.7}
-  m_SizeDelta: {x: 457.45, y: 394.1}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -165.64, y: 55.4}
+  m_SizeDelta: {x: 308.72998, y: 319.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1914530296
 MonoBehaviour:

@@ -7,10 +7,10 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fc09beb45537dc48a862216ac0d3c56, type: 3}
-  m_Name: InventoryTemplate
+  m_Name: NPCShopInventory
   m_EditorClassIdentifier: 
   inventory:
     reorderableList:
@@ -35,7 +35,12 @@ MonoBehaviour:
       elementIcon: {fileID: 0}
     reqReferences: {fileID: 0}
     isExpanded: 1
-    _keyValues: 
-    _keys: 
-    _values: []
+    _keyValues: 00000000
+    _keys: 00000000
+    _values:
+    - item: {fileID: 11400000, guid: 01cc6a52cdea1284bbdb8c474c58dedd, type: 2}
+      boomItem: 0
+      baseSellPrice: 100
+      stock: 1
+      quality: 1
   currency: 0
