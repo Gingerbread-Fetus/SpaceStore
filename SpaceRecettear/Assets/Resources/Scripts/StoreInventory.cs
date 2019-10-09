@@ -12,7 +12,7 @@ public class StoreInventory : ScriptableObject
 {
     
     //Config Params
-    Dictionary<ItemInstance, Item> inventory;
+    //Dictionary<ItemInstance, Item> inventory;
     [SerializeField] List<ItemInstance> itemList;
     [SerializeField] int Currency = 0;
 
@@ -68,10 +68,10 @@ public class StoreInventory : ScriptableObject
     public void Awake()
     {
         //Take every object in the ItemList and add it to the dictionary
-        foreach (ItemInstance itemInstance in itemList)
-        {
-            inventory.Add(itemInstance, itemInstance.item);
-        }
+        //foreach (ItemInstance itemInstance in itemList)
+        //{
+        //    inventory.Add(itemInstance, itemInstance.item);
+        //}
     }
 
     /// <summary>
@@ -79,15 +79,21 @@ public class StoreInventory : ScriptableObject
     /// </summary>
     /// <param name="newItem">The instance of the item to add to the dictionary</param>
     /// <param name="count">The number of this item to add</param>
-    public void AddItem(ItemInstance newItem, int count)
+    public void AddItem(Item addItem)
     {
-        if (inventory[newItem])//if it's already in the inventory add number asked for.
+        ItemInstance newItem = new ItemInstance(addItem);
+        Debug.Log("Is the item in the list? : " + itemList.Contains(newItem).ToString());
+        if (itemList.Contains(newItem))//if it's already in the inventory add number asked for.
         {
-            //inventory[newItem].stock += count;
+            //inventory[newItem].stock += 1;
+            itemList[itemList.IndexOf(newItem)].stock += 1;
+            Debug.Log("Added");
         }
         else
         {
-            inventory.Add(newItem, newItem.item);
+            //inventory.Add(newItem, newItem.item);
+            Debug.Log("Something went wrong. No apples for you.");
+            itemList.Add(newItem);
         }
     }
 

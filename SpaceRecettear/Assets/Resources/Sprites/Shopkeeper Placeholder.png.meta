@@ -1,0 +1,907 @@
+fileFormatVersion: 2
+guid: 167ca058260cc6540aa6fc9bc2c2dfa1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8251314956710100740
+    second: Shopkeeper Placeholder_0
+  - first:
+      213: -476273022303866460
+    second: Shopkeeper Placeholder_1
+  - first:
+      213: 5761374940755687407
+    second: Shopkeeper Placeholder_2
+  - first:
+      213: -1066449169775576481
+    second: Shopkeeper Placeholder_3
+  - first:
+      213: -3970911935740865302
+    second: Shopkeeper Placeholder_4
+  - first:
+      213: 1654438578754120312
+    second: Shopkeeper Placeholder_5
+  - first:
+      213: -8177824129757491574
+    second: Shopkeeper Placeholder_6
+  - first:
+      213: 811987434046746117
+    second: Shopkeeper Placeholder_7
+  - first:
+      213: -1495131715577355212
+    second: Shopkeeper Placeholder_8
+  - first:
+      213: 1311202402327735178
+    second: Shopkeeper Placeholder_9
+  - first:
+      213: -5665543301347203418
+    second: Shopkeeper Placeholder_10
+  - first:
+      213: 4551277756961685814
+    second: Shopkeeper Placeholder_11
+  - first:
+      213: 1437473058340134256
+    second: Shopkeeper Placeholder_12
+  - first:
+      213: -2788644327310894310
+    second: Shopkeeper Placeholder_13
+  - first:
+      213: 3241809222061848011
+    second: Shopkeeper Placeholder_14
+  - first:
+      213: 6840949761432388766
+    second: Shopkeeper Placeholder_15
+  - first:
+      213: -3499015220704904464
+    second: Shopkeeper Placeholder_16
+  - first:
+      213: 2747055700118067124
+    second: Shopkeeper Placeholder_17
+  - first:
+      213: 8491554598067656605
+    second: Shopkeeper Placeholder_18
+  - first:
+      213: 1965225239071021302
+    second: Shopkeeper Placeholder_19
+  - first:
+      213: 402923374926690788
+    second: Shopkeeper Placeholder_20
+  - first:
+      213: 7919142590701372567
+    second: Shopkeeper Placeholder_21
+  - first:
+      213: 5690047666017323385
+    second: Shopkeeper Placeholder_22
+  - first:
+      213: -2461569170763838673
+    second: Shopkeeper Placeholder_23
+  - first:
+      213: 3474304434252046825
+    second: Shopkeeper Placeholder_24
+  - first:
+      213: 8827894986862707778
+    second: Shopkeeper Placeholder_25
+  - first:
+      213: 8406407442905827954
+    second: Shopkeeper Placeholder_26
+  - first:
+      213: 5372574232841594253
+    second: Shopkeeper Placeholder_27
+  - first:
+      213: -8816788908275422096
+    second: Shopkeeper Placeholder_28
+  - first:
+      213: 6579195601828200262
+    second: Shopkeeper Placeholder_29
+  - first:
+      213: 7469065463908430964
+    second: Shopkeeper Placeholder_30
+  - first:
+      213: -4014750256107975358
+    second: Shopkeeper Placeholder_31
+  - first:
+      213: -2583886114578402583
+    second: Shopkeeper Placeholder_32
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1310
+        width: 165
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8446a34d726376f468cbc4dba30dd838
+      internalID: -8251314956710100740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_1
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1310
+        width: 167
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 910e64e31caab0e4ab4f8e6548380db3
+      internalID: -476273022303866460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_2
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 1310
+        width: 166
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37958f7a777f2c4795a6638d62309ba
+      internalID: 5761374940755687407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_3
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1310
+        width: 166
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c3dba1b6d18854c99bd1003373baa5
+      internalID: -1066449169775576481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_4
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 1459
+        width: 82
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8180625f872226044829824879dd6fda
+      internalID: -3970911935740865302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1090
+        width: 211
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2564193af33df4ca1f8e2dfc32ed05
+      internalID: 1654438578754120312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_6
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1232
+        width: 82
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc5ec484729e24e478c863713fc19182
+      internalID: -8177824129757491574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_7
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 1090
+        width: 198
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968647dc8a71c4a40adfbbdb9d9fe46d
+      internalID: 811987434046746117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_8
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 1232
+        width: 82
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7921169c8aa1c24786bb2afbfe14444
+      internalID: -1495131715577355212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_9
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 1090
+        width: 200
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f21f925579b8c74a99cdc863fcd80ea
+      internalID: 1311202402327735178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_10
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 1250
+        width: 82
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0406d56b3d04a42a36de51bbebd476
+      internalID: -5665543301347203418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 870
+        width: 192
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0e83d1a668be647b0d1d0601b56447
+      internalID: 4551277756961685814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_12
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 870
+        width: 186
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224a0643d2d6ce14c8e96446a2459d31
+      internalID: 1437473058340134256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_13
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 870
+        width: 188
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e9323edbc43d3a4884d8b9e0a45d41f
+      internalID: -2788644327310894310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_14
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 870
+        width: 190
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2599244c1b807a44b85036cdc6cc1ef5
+      internalID: 3241809222061848011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 657
+        width: 192
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd3e04881046734f90f321670180bd2
+      internalID: 6840949761432388766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_16
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 657
+        width: 192
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a66795d85d24c045854d9e1ec542771
+      internalID: -3499015220704904464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_17
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 657
+        width: 192
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c24131cc29251d40b46327a8bdb56a3
+      internalID: 2747055700118067124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_18
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 803
+        width: 82
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3417653b3e03eaf4aaf9abe4e99b7596
+      internalID: 8491554598067656605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 440
+        width: 184
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf213eae413f2943a4c868973818f4f
+      internalID: 1965225239071021302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_20
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 440
+        width: 184
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d4c1c380568b84b9d3abe1b63d8e61
+      internalID: 402923374926690788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_21
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 440
+        width: 184
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51add5215b092a4cbc429116cee1147
+      internalID: 7919142590701372567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_22
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 440
+        width: 184
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d9ff900bbacc94b8e7df1ff809a828
+      internalID: 5690047666017323385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 228
+        width: 185
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1435b04474691a943b8614b9500435fe
+      internalID: -2461569170763838673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_24
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 228
+        width: 185
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4152aa5bc42ecd546bd8b04235be8e29
+      internalID: 3474304434252046825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_25
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 228
+        width: 184
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060cb39efaff9f24a96109621c0123bf
+      internalID: 8827894986862707778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_26
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 370
+        width: 82
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bbb12f96bb87674ab18ee1f121d1dba
+      internalID: 8406407442905827954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_27
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 228
+        width: 185
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108e6f0c6c3b9204f801b66d886c46e0
+      internalID: 5372574232841594253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_28
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 375
+        width: 82
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b9a2ca006ec894d8f58c4550aaf2ac
+      internalID: -8816788908275422096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 201
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07afdaac28b5be499d027dcd48485bf
+      internalID: 6579195601828200262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_30
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 0
+        width: 199
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e1155cff570d14d96de8633c6383e7
+      internalID: 7469065463908430964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_31
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 0
+        width: 201
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc7c01b4c3cc8340bc85897a6094209
+      internalID: -4014750256107975358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper Placeholder_32
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 153
+        width: 82
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00a60ab0f63eeb469456e9f956ed81b
+      internalID: -2583886114578402583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

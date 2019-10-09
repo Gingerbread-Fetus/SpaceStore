@@ -12,7 +12,7 @@ public abstract class Item : ScriptableObject
 
     public override bool Equals(System.Object obj)
     {
-        if(obj == null || obj.GetType() != this.GetType()) {return false;}
+        if (obj == null || obj.GetType() != this.GetType()) {return false;}
         else
         {
             Item c = obj as Item;
@@ -29,10 +29,13 @@ public abstract class Item : ScriptableObject
     }
 }
 
-// A class that holds a real instance of a ScriptableObject item.
-// Allows us to have copies with mutable data.
+/// <summary>
+/// A class that holds a real instance of a ScriptableObject item.
+/// Allows us to have copies with mutable data.
+/// The fields on this class are shared attributes that all items should have.
+/// </summary>
 [System.Serializable]
-public class ItemInstance 
+public class ItemInstance
 {
     // Reference to scriptable object "template".
     public Item item;
@@ -40,19 +43,18 @@ public class ItemInstance
     [SerializeField] bool boomItem;
     [SerializeField] int baseSellPrice;
     [SerializeField] public int stock = 1;
-    [Range(0, 10)]
-    public int quality;
+    [SerializeField, Range(0, 10)] public int quality;
 
-    public ItemInstance(Item item, int quality)
+    public ItemInstance(Item item)
     {
         this.item = item;
-        this.quality = quality;
     }
 
     public override bool Equals(object obj)
     {
         if(obj == null || this.GetType() != obj.GetType()) { return false; }
-        return item.Equals(obj);
+        ItemInstance c = obj as ItemInstance;
+        return this.item.name.Equals(c.item.name) && c.quality == this.quality;
     }
 
     public override int GetHashCode()
