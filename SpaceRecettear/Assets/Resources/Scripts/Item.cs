@@ -51,6 +51,12 @@ public class ItemInstance
         quality = 0;
     }
 
+    public ItemInstance(Item item, int itemQuality)
+    {
+        this.item = item;
+        this.quality = itemQuality;
+    }
+
     public ItemInstance(ItemInstance itemInstance)
     {
         this.item = itemInstance.item;

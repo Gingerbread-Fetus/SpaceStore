@@ -17,4 +17,20 @@ public class StoreManager : MonoBehaviour
     {
         
     }
+
+    /// <summary>
+    /// Call this when an item is given to the store
+    /// </summary>
+    public void GiveItem()
+    {
+
+    }
+
+    /// <summary>
+    /// Call on sale, or whenever an item is taken from inventory.
+    /// </summary>
+    public void TakeItem()
+    {
+
+    }
 }

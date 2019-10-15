@@ -13,30 +13,14 @@ MonoBehaviour:
   m_Name: PlayerShopInventory
   m_EditorClassIdentifier: 
   inventory:
-    reorderableList:
-      canAdd: 1
-      canRemove: 1
-      draggable: 1
-      expandable: 1
-      multipleSelection: 1
-      isExpanded: 1
-      label:
-        m_Text: Keys
-        m_Image: {fileID: 0}
-        m_Tooltip: 
-      headerHeight: 18
-      footerHeight: 13
-      slideEasing: 0.15
-      verticalSpacing: 2
-      showDefaultBackground: 1
-      elementDisplayType: 0
-      elementNameProperty: 
-      elementNameOverride: 
-      elementIcon: {fileID: 0}
-    reqReferences: {fileID: 0}
-    isExpanded: 1
-    _keyValues: 
-    _keys: 
-    _values: []
-  itemList: []
-  currency: 0
+  - item: {fileID: 11400000, guid: 01cc6a52cdea1284bbdb8c474c58dedd, type: 2}
+    boomItem: 0
+    baseSellPrice: 0
+    stock: 1
+    quality: 0
+  - item: {fileID: 11400000, guid: 10b591890c2f8a34bbe4b4074f4db942, type: 2}
+    boomItem: 0
+    baseSellPrice: 0
+    stock: 1
+    quality: 0
+  currency: 100

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
-using RotaryHeart.Lib;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using RotaryHeart.Lib.SerializableDictionary;
 
 /// <summary>
 /// This is the player's store inventory across all screens in the game. Should not ever be destroyed
@@ -14,7 +10,8 @@ public class StoreInventory : ScriptableObject
 {
 
     //Config Params
-    [SerializeField] MyDictionary inventory;
+    //[SerializeField] MyDictionary inventory;
+    [SerializeField] List<ItemInstance> inventory;
     //[SerializeField] List<ItemInstance> itemList;
     [SerializeField] int currency = 0;
 
@@ -86,17 +83,18 @@ public class StoreInventory : ScriptableObject
     /// <param name="count">The number of this item to add</param>
     public void AddItem(Item addItem)
     {
-        ItemInstance newItem = new ItemInstance(addItem);
+        ItemInstance newItem = new ItemInstance(addItem, Random.Range(0,11));
         Debug.Log(newItem);
-        if (inventory.ContainsKey(newItem.GetHashCode()))//if it's already in the inventory add number asked for.
+        if (inventory.Contains(newItem))//if it's already in the inventory add number asked for.
         {
-            inventory[newItem.GetHashCode()].stock += 1;
-            Debug.Log("Added one apple to existing stock.");
+            int i = inventory.IndexOf(newItem);
+            inventory[i].stock += 1;
+            Debug.Log(newItem.item.name + " of quality: " + inventory[i].quality + " has new stock: " + inventory[i].stock);
         }
         else
         {
             Debug.Log("New item added.");
-            inventory.Add(newItem.GetHashCode(), newItem);
+            inventory.Add(newItem);
         }
     }
 
@@ -110,9 +108,3 @@ public class StoreInventory : ScriptableObject
         SaveManager.SaveInventory();
     }
 }
-/// <summary>
-/// Declaration of the dictionary used for the inventory. Uses an int as a key for some wonkiness in the editor view if you
-/// just use another iteminstance.
-/// </summary>
-[Serializable]
-public class MyDictionary : SerializableDictionaryBase<int, ItemInstance> { }

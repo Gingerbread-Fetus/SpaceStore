@@ -522,11 +522,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: dddc49361cd27c049a77eae83b7e0cde, type: 2}
+      - m_Target: {fileID: 11400000, guid: 1c4ab54a659735b4685f72c82d4c99c3, type: 2}
         m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 01cc6a52cdea1284bbdb8c474c58dedd,
+          m_ObjectArgument: {fileID: 11400000, guid: 10b591890c2f8a34bbe4b4074f4db942,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
           m_IntArgument: 0
@@ -1070,7 +1070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00032131426}
+  m_AnchoredPosition: {x: 0, y: 0.00000878367}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1516351266
@@ -1873,7 +1873,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1445466679}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.97046757
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
