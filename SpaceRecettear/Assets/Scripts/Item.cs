@@ -80,4 +80,14 @@ public class ItemInstance
         hashCode = hashCode * -1521134295 + quality.GetHashCode();
         return hashCode;
     }
+
+    /// <summary>
+    /// Item price is based off of the base price and the quality of the item.
+    /// TODO: determine pricing function
+    /// </summary>
+    /// <returns></returns>
+    public int CalculateItemPrice()
+    {
+        return baseSellPrice;
+    }
 }

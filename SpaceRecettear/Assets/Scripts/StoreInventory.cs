@@ -63,27 +63,16 @@ public class StoreInventory : ScriptableObject
     }
 
     /* Start of Inventory Methods */
-
-    public void Awake()
-    {
-        //Take every object in the ItemList and add it to the dictionary
-        //foreach (ItemInstance itemInstance in itemList)
-        //{
-        //    if (itemInstance != null)
-        //    {
-        //        inventory.Add(itemInstance.GetHashCode(), itemInstance); 
-        //    }
-        //}
-    }
-
+        
     /// <summary>
-    /// Add an item to the inventory.
+    /// Adds an item to the inventory. Functional command for purchasing something with this inventory. Decrements currency.
+    /// TODO: NPCs should have infinite money, but for now I've just given them 2 billion instead.
     /// </summary>
     /// <param name="newItem">The instance of the item to add to the dictionary</param>
     /// <param name="count">The number of this item to add</param>
-    public void AddItem(Item addItem)
+    public void GiveItem(Item addItem)
     {
-        ItemInstance newItem = new ItemInstance(addItem, Random.Range(0,11));
+        ItemInstance newItem = new ItemInstance(addItem);
         Debug.Log(newItem);
         if (inventory.Contains(newItem))//if it's already in the inventory add number asked for.
         {
@@ -98,9 +87,47 @@ public class StoreInventory : ScriptableObject
         }
     }
 
-    public void SellItem(Item itemToSell)
+    public void GiveItem(Item addItem, int Quality)
     {
-        //TODO: Implement this method
+        ItemInstance newItem = new ItemInstance(addItem);
+        if (inventory.Contains(newItem))//if it's already in the inventory add number asked for.
+        {
+            int i = inventory.IndexOf(newItem);
+            inventory[i].stock += 1;
+            Debug.Log(newItem.item.name + " of quality: " + inventory[i].quality + " has new stock: " + inventory[i].stock);
+        }
+        else
+        {
+            Debug.Log("New item added.");
+            inventory.Add(newItem);
+        }
+    }
+
+    /// <summary>
+    /// Used for when an item is taken from the inventory. Does nothing and returns false if the item isn't in the inventory.
+    /// </summary>
+    /// <param name="itemToSell"></param>
+    public bool TakeItem(Item itemToSell)
+    {
+        ItemInstance soldItem = new ItemInstance(itemToSell);
+        if (inventory.Contains(soldItem))
+        {
+            int i = inventory.IndexOf(soldItem);
+
+            if (inventory[i].stock > 1)
+            {
+                inventory[i].stock -= 1;
+                Debug.Log("Stock of " + soldItem.item.name + " was reduced");
+            }
+            else
+            {
+                inventory.Remove(soldItem);
+                Debug.Log("Stock of " + soldItem.item.name + " reached zero");
+            }
+            return true;
+        }
+        Debug.Log("This item was not found in the inventory");
+        return false;
     }
 
     private void Save()

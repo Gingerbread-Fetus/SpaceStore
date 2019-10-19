@@ -6,18 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Resources/Scenes/Main Menu.unity
+    path: Assets/Scenes/Main Menu.unity
     guid: a62cdd4aa67b7544595766c706099cc3
   - enabled: 1
-    path: Assets/Resources/Scenes/Station Scene.unity
+    path: Assets/Scenes/Station Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Resources/Scenes/StoreFront Scene.unity
+    path: Assets/Scenes/StoreFront Scene.unity
     guid: 07879a836bad1f545a873a80e0884c55
   - enabled: 1
-    path: Assets/Resources/Scenes/Questgiving Scene.unity
+    path: Assets/Scenes/Questgiving Scene.unity
     guid: cb73b1ad335919e45b39aed5a751a1b2
   - enabled: 1
-    path: Assets/Resources/Scenes/Shopping Scene.unity
+    path: Assets/Scenes/Shopping Scene.unity
     guid: 0e8ca8f356fe3864eb8ef7456407ad54
   m_configObjects: {}
