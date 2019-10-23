@@ -7,7 +7,7 @@ using UnityEngine;
 public abstract class Item : ScriptableObject
 {   
     [SerializeField] string itemName;
-    [SerializeField] Sprite itemIcon;
+    [SerializeField] public Sprite itemIcon;
     public string ItemName { get => itemName;}
 
     public override bool Equals(System.Object obj)

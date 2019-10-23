@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// HagglingManager handles turns in the haggling screen.
@@ -13,10 +15,17 @@ public class HagglingManager : MonoBehaviour
     [SerializeField] bool playerTurn;
     [SerializeField] StoreInventory playerInventory;
     [SerializeField] StoreInventory customerInventory;
+    [SerializeField] Image imageHolder;
+    [SerializeField] TextMeshProUGUI offerText;
+
+    int currentOffer;
     // Start is called before the first frame update
     void Start()
     {
-         //GetCustomer()//Don't know if I should do this, or just set the customer when the encounter manager finds one.
+        //GetCustomer()//Don't know if I should do this, or just set the customer when the encounter manager finds one.
+        currentOffer = 10;
+        imageHolder.sprite = playerInventory.RandomItem().item.itemIcon;
+        offerText.text = currentOffer.ToString();
     }
 
     void OnEnable()
@@ -36,6 +45,8 @@ public class HagglingManager : MonoBehaviour
     private void HandleCustomerTurn()
     {
         Debug.Log("Customer turn");
+        currentOffer += 10;
+        offerText.text = currentOffer.ToString();
         playerTurn = true;
         Debug.Log("Ending customer turn, now player turn.");
     }

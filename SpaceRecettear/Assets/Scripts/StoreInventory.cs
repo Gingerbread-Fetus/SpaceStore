@@ -104,6 +104,16 @@ public class StoreInventory : ScriptableObject
     }
 
     /// <summary>
+    /// Returns a random item that exists in the inventory.
+    /// </summary>
+    /// <returns></returns>
+    public ItemInstance RandomItem()
+    {
+        int index = (int)Random.Range(0, inventory.Count);
+        return inventory[index];
+    }
+
+    /// <summary>
     /// Used for when an item is taken from the inventory. Does nothing and returns false if the item isn't in the inventory.
     /// </summary>
     /// <param name="itemToSell"></param>
