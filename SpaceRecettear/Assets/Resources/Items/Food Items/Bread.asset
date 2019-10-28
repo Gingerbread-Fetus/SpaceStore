@@ -15,4 +15,5 @@ MonoBehaviour:
   itemName: Bread
   itemIcon: {fileID: 5059554465816530446, guid: b987a06d6af50c640bfad963c69561e2,
     type: 3}
+  baseSellPrice: 100
   foodType: 0

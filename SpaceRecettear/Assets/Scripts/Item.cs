@@ -8,6 +8,7 @@ public abstract class Item : ScriptableObject
 {   
     [SerializeField] string itemName;
     [SerializeField] public Sprite itemIcon;
+    [SerializeField] public int baseSellPrice;
     public string ItemName { get => itemName;}
 
     public override bool Equals(System.Object obj)
@@ -39,9 +40,9 @@ public class ItemInstance
 {
     // Reference to scriptable object "template".
     public Item item;
+    int sellPrice;
     // Object-specific data.
     [SerializeField] bool boomItem;
-    [SerializeField] int baseSellPrice;
     [SerializeField] public int stock = 1;
     [SerializeField, Range(0, 10)] public int quality;
 
@@ -61,9 +62,9 @@ public class ItemInstance
     {
         this.item = itemInstance.item;
         this.boomItem = itemInstance.boomItem;
-        this.baseSellPrice = itemInstance.baseSellPrice;
         this.stock = itemInstance.stock;//TODO: This doesn't seem quite right, make sure that stock is changed and set correctly
         this.quality = itemInstance.quality;
+        this.sellPrice = CalculateItemPrice();
     }
 
     public override bool Equals(object obj)
@@ -88,6 +89,6 @@ public class ItemInstance
     /// <returns></returns>
     public int CalculateItemPrice()
     {
-        return baseSellPrice;
+        return item.baseSellPrice + (10 * quality);
     }
 }

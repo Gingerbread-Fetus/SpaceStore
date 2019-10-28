@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -39,6 +40,11 @@ public class StoreInventory : ScriptableObject
 
             return _instance;
         }
+    }
+
+    public int GetCurrency()
+    {
+        return currency;
     }
 
     public static void LoadFromJSON(string path)
@@ -109,17 +115,17 @@ public class StoreInventory : ScriptableObject
     /// <returns></returns>
     public ItemInstance RandomItem()
     {
-        int index = (int)Random.Range(0, inventory.Count);
+        int index = (int)UnityEngine.Random.Range(0, inventory.Count);
         return inventory[index];
     }
 
     /// <summary>
     /// Used for when an item is taken from the inventory. Does nothing and returns false if the item isn't in the inventory.
     /// </summary>
-    /// <param name="itemToSell"></param>
-    public bool TakeItem(Item itemToSell)
+    /// <param name="itemToTake"></param>
+    public bool TakeItem(Item itemToTake)
     {
-        ItemInstance soldItem = new ItemInstance(itemToSell);
+        ItemInstance soldItem = new ItemInstance(itemToTake);
         if (inventory.Contains(soldItem))
         {
             int i = inventory.IndexOf(soldItem);
@@ -138,6 +144,37 @@ public class StoreInventory : ScriptableObject
         }
         Debug.Log("This item was not found in the inventory");
         return false;
+    }
+
+    public bool TakeItem(ItemInstance itemToTake)
+    {
+        if (inventory.Contains(itemToTake))
+        {
+            int i = inventory.IndexOf(itemToTake);
+
+            if (inventory[i].stock > 1)
+            {
+                inventory[i].stock -= 1;
+                Debug.Log("Stock of " + itemToTake.item.name + " was reduced");
+            }
+            else
+            {
+                inventory.Remove(itemToTake);
+                Debug.Log("Stock of " + itemToTake.item.name + " reached zero");
+            }
+            return true;
+        }
+        Debug.Log("This item was not found in the inventory");
+        return false;
+    }
+
+    public void SellItem(ItemInstance itemToSell, int itemPrice)
+    {
+        if (TakeItem(itemToSell))
+        {
+            Debug.Log("Item being sold for: " + itemToSell.CalculateItemPrice());
+            currency += itemPrice;
+        }
     }
 
     private void Save()

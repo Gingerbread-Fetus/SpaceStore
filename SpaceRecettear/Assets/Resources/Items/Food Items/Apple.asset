@@ -15,4 +15,5 @@ MonoBehaviour:
   itemName: Apple
   itemIcon: {fileID: 2029542551908640097, guid: b987a06d6af50c640bfad963c69561e2,
     type: 3}
+  baseSellPrice: 10
   foodType: 1

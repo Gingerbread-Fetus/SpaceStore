@@ -15,4 +15,5 @@ MonoBehaviour:
   itemName: Cake
   itemIcon: {fileID: 1623647345179350462, guid: b987a06d6af50c640bfad963c69561e2,
     type: 3}
+  baseSellPrice: 1000
   foodType: 2

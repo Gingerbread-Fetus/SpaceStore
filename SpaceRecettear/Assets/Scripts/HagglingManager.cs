@@ -11,20 +11,23 @@ using UnityEngine.UI;
 public class HagglingManager : MonoBehaviour
 {
     private bool introShown;
+    private ItemInstance itemForSale;
     [SerializeField] float gameSpeed;
     [SerializeField] bool playerTurn;
     [SerializeField] StoreInventory playerInventory;
     [SerializeField] StoreInventory customerInventory;
     [SerializeField] Image imageHolder;
     [SerializeField] TextMeshProUGUI offerText;
+    [SerializeField] TextMeshProUGUI goldText;
 
     int currentOffer;
     // Start is called before the first frame update
     void Start()
     {
         //GetCustomer()//Don't know if I should do this, or just set the customer when the encounter manager finds one.
-        currentOffer = 10;
-        imageHolder.sprite = playerInventory.RandomItem().item.itemIcon;
+        itemForSale = playerInventory.RandomItem();
+        currentOffer = itemForSale.CalculateItemPrice();
+        imageHolder.sprite = itemForSale.item.itemIcon;
         offerText.text = currentOffer.ToString();
     }
 
@@ -36,19 +39,19 @@ public class HagglingManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        goldText.text = playerInventory.GetCurrency().ToString();
         if (!playerTurn)
         {
             HandleCustomerTurn();
+            
         }
     }
 
     private void HandleCustomerTurn()
     {
-        Debug.Log("Customer turn");
         currentOffer += 10;
         offerText.text = currentOffer.ToString();
         playerTurn = true;
-        Debug.Log("Ending customer turn, now player turn.");
     }
 
     private void HandlePlayerTurn()
@@ -64,9 +67,13 @@ public class HagglingManager : MonoBehaviour
         if (playerTurn)
         {
             //The important part is that these methods end the turn
-            Debug.Log("Player has made a move ending turn");
             playerTurn = false; 
         }
+    }
+
+    public void Sell()
+    {
+        playerInventory.SellItem(itemForSale, currentOffer);
     }
 
     private void PrintIntro()
