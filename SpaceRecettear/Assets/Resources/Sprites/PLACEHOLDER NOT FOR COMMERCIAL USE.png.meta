@@ -1,0 +1,5515 @@
+fileFormatVersion: 2
+guid: 771a1711c73475743805662b13d7b6cc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6688400171952922533
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_0
+  - first:
+      213: -3524494051817878264
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_1
+  - first:
+      213: 2634351683140939821
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_2
+  - first:
+      213: 7738905869924117247
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_3
+  - first:
+      213: 880217872040309082
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_4
+  - first:
+      213: 431761374362289701
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_5
+  - first:
+      213: -1633267391922896901
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_6
+  - first:
+      213: -8020162287442039062
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_7
+  - first:
+      213: 8011198526967922529
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_8
+  - first:
+      213: 2742950856248227960
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_9
+  - first:
+      213: -5678053743163775147
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_10
+  - first:
+      213: 3946506911574525245
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_11
+  - first:
+      213: 7350819755048300623
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_12
+  - first:
+      213: 3095777678418744131
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_13
+  - first:
+      213: -1439467191033498870
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_14
+  - first:
+      213: 4574804539623512243
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_15
+  - first:
+      213: 8531980176546880456
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_16
+  - first:
+      213: 7328739195248567147
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_17
+  - first:
+      213: 5095055544076010698
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_18
+  - first:
+      213: 1351604174924426443
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_19
+  - first:
+      213: -1056285843732389077
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_20
+  - first:
+      213: -3537659515317045339
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_21
+  - first:
+      213: -3063401154725293524
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_22
+  - first:
+      213: 5389763983998199898
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_23
+  - first:
+      213: -1593244060127030573
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_24
+  - first:
+      213: 8975817187496601357
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_25
+  - first:
+      213: 8508350293350402959
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_26
+  - first:
+      213: -4907642814607051113
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_27
+  - first:
+      213: 6849124136048098778
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_28
+  - first:
+      213: -1986587417471591732
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_29
+  - first:
+      213: -7439154467915051000
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_30
+  - first:
+      213: -6682974086352686375
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_31
+  - first:
+      213: -6013497763162136918
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_32
+  - first:
+      213: 6615769828088042200
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_33
+  - first:
+      213: -8791431379899549351
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_34
+  - first:
+      213: 1156218388702332432
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_35
+  - first:
+      213: -8612297093212424921
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_36
+  - first:
+      213: 9138637074218651022
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_37
+  - first:
+      213: 4612346326901712951
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_38
+  - first:
+      213: -3055129974505363011
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_39
+  - first:
+      213: 3254200025844023764
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_40
+  - first:
+      213: 1908445774125149420
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_41
+  - first:
+      213: 7818714610765191667
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_42
+  - first:
+      213: 9105611979794291122
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_43
+  - first:
+      213: 2861581507252043948
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_44
+  - first:
+      213: 2021132851746169910
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_45
+  - first:
+      213: 7025837271752802807
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_46
+  - first:
+      213: -1261118677372390002
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_47
+  - first:
+      213: 2317170463019786402
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_48
+  - first:
+      213: -5114597556562909453
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_49
+  - first:
+      213: -3506196723508415022
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_50
+  - first:
+      213: 1057858010000166822
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_51
+  - first:
+      213: -2587919389979596734
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_52
+  - first:
+      213: 4655284478584052895
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_53
+  - first:
+      213: 6605334055752636259
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_54
+  - first:
+      213: 6586392698485434789
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_55
+  - first:
+      213: -4234896320072703954
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_56
+  - first:
+      213: -4666185220263391201
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_57
+  - first:
+      213: 5860895651149690890
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_58
+  - first:
+      213: -2940428278766952205
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_59
+  - first:
+      213: -3128077248459780262
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_60
+  - first:
+      213: 3301037908584569988
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_61
+  - first:
+      213: 1059680306796553331
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_62
+  - first:
+      213: 3542614686145780291
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_63
+  - first:
+      213: -7756030116229131967
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_64
+  - first:
+      213: -7087772892062829597
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_65
+  - first:
+      213: -4046060119323197182
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_66
+  - first:
+      213: 7754473887656953972
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_67
+  - first:
+      213: 837886675078279005
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_68
+  - first:
+      213: -833330133532220814
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_69
+  - first:
+      213: -5272326077434841443
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_70
+  - first:
+      213: 7171104606702723666
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_71
+  - first:
+      213: 7708584241400827423
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_72
+  - first:
+      213: 2066097069071550759
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_73
+  - first:
+      213: 9184747407461554869
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_74
+  - first:
+      213: 6208352227539511635
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_75
+  - first:
+      213: -1385412888398948406
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_76
+  - first:
+      213: -7700107990823377541
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_77
+  - first:
+      213: -7335564938950159427
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_78
+  - first:
+      213: -5605017503657749870
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_79
+  - first:
+      213: 6819081493850843201
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_80
+  - first:
+      213: 5106575435558358825
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_81
+  - first:
+      213: 6207569635865663569
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_82
+  - first:
+      213: 1280782256535954324
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_83
+  - first:
+      213: -6377726081035932995
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_84
+  - first:
+      213: 5045043964824007494
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_85
+  - first:
+      213: 309923018104996884
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_86
+  - first:
+      213: -7525264136717584100
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_87
+  - first:
+      213: 4401196925646799413
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_88
+  - first:
+      213: -7177218742432360078
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_89
+  - first:
+      213: -2264284834799352972
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_90
+  - first:
+      213: 5663396248671513642
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_91
+  - first:
+      213: -1067501381223889274
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_92
+  - first:
+      213: 6696424567067309532
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_93
+  - first:
+      213: 4509510201149889897
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_94
+  - first:
+      213: 6310726876923883694
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_95
+  - first:
+      213: 3672323121467397469
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_96
+  - first:
+      213: 3862171635100125074
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_97
+  - first:
+      213: 5624628409864671029
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_98
+  - first:
+      213: -859489412324441112
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_99
+  - first:
+      213: 124618403734286117
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_100
+  - first:
+      213: -8987560299541750969
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_101
+  - first:
+      213: 107915639969461242
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_102
+  - first:
+      213: -8053125721542043399
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_103
+  - first:
+      213: 8409227099871337555
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_104
+  - first:
+      213: 9222312789046604958
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_105
+  - first:
+      213: -2767371936954005772
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_106
+  - first:
+      213: -1340800094390782163
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_107
+  - first:
+      213: -2032236198556600673
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_108
+  - first:
+      213: -3798441115976590748
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_109
+  - first:
+      213: 8332063400141255299
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_110
+  - first:
+      213: -9213837633579347695
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_111
+  - first:
+      213: 3761478037494340380
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_112
+  - first:
+      213: -8879830124333928335
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_113
+  - first:
+      213: 8468838113083793552
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_114
+  - first:
+      213: -9133201758112562886
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_115
+  - first:
+      213: -1365940389797215086
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_116
+  - first:
+      213: -2538142823395295435
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_117
+  - first:
+      213: -2198788518264062524
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_118
+  - first:
+      213: -2028913325721098443
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_119
+  - first:
+      213: -4937525964314941960
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_120
+  - first:
+      213: 871707863524939921
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_121
+  - first:
+      213: -3122798288555671494
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_122
+  - first:
+      213: -7163024110120462586
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_123
+  - first:
+      213: -605553147562648673
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_124
+  - first:
+      213: -2552015516743218805
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_125
+  - first:
+      213: 4962786590574355971
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_126
+  - first:
+      213: -3516244480553053611
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_127
+  - first:
+      213: -3324150349432698389
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_128
+  - first:
+      213: 7733718018942473303
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_129
+  - first:
+      213: -6667405462699691320
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_130
+  - first:
+      213: 173983432469878757
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_131
+  - first:
+      213: 7075046072524217291
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_132
+  - first:
+      213: -8462937008364866701
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_133
+  - first:
+      213: -6062929148994059365
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_134
+  - first:
+      213: -4441915553686020271
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_135
+  - first:
+      213: -1087305213920582403
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_136
+  - first:
+      213: 160526872031695392
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_137
+  - first:
+      213: -5398069767627277961
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_138
+  - first:
+      213: -3697188443853748855
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_139
+  - first:
+      213: 4535217313472651749
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_140
+  - first:
+      213: -7920744845459880506
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_141
+  - first:
+      213: -7562911295620539862
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_142
+  - first:
+      213: -6351038389916941433
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_143
+  - first:
+      213: 7888272291008157447
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_144
+  - first:
+      213: -6783674491352412657
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_145
+  - first:
+      213: 8106763806585147890
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_146
+  - first:
+      213: -5998093363065493713
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_147
+  - first:
+      213: 6459267863362850845
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_148
+  - first:
+      213: 1310929561002725303
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_149
+  - first:
+      213: 1161724128708320872
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_150
+  - first:
+      213: 1060087556520276794
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_151
+  - first:
+      213: 4799849966735167735
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_152
+  - first:
+      213: 6443388702019005433
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_153
+  - first:
+      213: 943829489058290853
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_154
+  - first:
+      213: 1571088777697215936
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_155
+  - first:
+      213: 2088935734845475450
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_156
+  - first:
+      213: 3223828301138769010
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_157
+  - first:
+      213: -7123224785724163529
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_158
+  - first:
+      213: -3048935491356359388
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_159
+  - first:
+      213: 4529331253716081008
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_160
+  - first:
+      213: 2013027710769382977
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_161
+  - first:
+      213: -905346662130386868
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_162
+  - first:
+      213: -3898115935972698119
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_163
+  - first:
+      213: 2534047181916772263
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_164
+  - first:
+      213: 8763472038129675493
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_165
+  - first:
+      213: -3081344731376352557
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_166
+  - first:
+      213: -6161158736137662654
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_167
+  - first:
+      213: 6795830138445325824
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_168
+  - first:
+      213: 6335490336733045592
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_169
+  - first:
+      213: 1641059052885377429
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_170
+  - first:
+      213: 180598226260567604
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_171
+  - first:
+      213: -8878360761736070632
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_172
+  - first:
+      213: -3458410028079913321
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_173
+  - first:
+      213: 3558187623672155576
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_174
+  - first:
+      213: -2291826963390455089
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_175
+  - first:
+      213: 1733418944751690297
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_176
+  - first:
+      213: -4272827663974685968
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_177
+  - first:
+      213: -7765309989605173830
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_178
+  - first:
+      213: 3534716400166864125
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_179
+  - first:
+      213: -7985598116707879196
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_180
+  - first:
+      213: -7066288783117107074
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_181
+  - first:
+      213: 9103067437045787540
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_182
+  - first:
+      213: -4627895553941582649
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_183
+  - first:
+      213: 7788074382886203772
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_184
+  - first:
+      213: 4407333368409473186
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_185
+  - first:
+      213: -1350654774092539794
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_186
+  - first:
+      213: -1672986159190726190
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_187
+  - first:
+      213: 7378991834933300559
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_188
+  - first:
+      213: -6490806575369714732
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_189
+  - first:
+      213: -2717365439023499899
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_190
+  - first:
+      213: 5620000502543732983
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_191
+  - first:
+      213: -3928504394166937793
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_192
+  - first:
+      213: 5596264107060762639
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_193
+  - first:
+      213: -1705512074653125307
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_194
+  - first:
+      213: -944618751322616901
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_195
+  - first:
+      213: 8702165741029870866
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_196
+  - first:
+      213: -2034391750711189808
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_197
+  - first:
+      213: 37760814570338339
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_198
+  - first:
+      213: -8200034445212559848
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_199
+  - first:
+      213: 2540878598739619324
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_200
+  - first:
+      213: 3078815209481189085
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_201
+  - first:
+      213: 1969455079579153628
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_202
+  - first:
+      213: -5179135237612218471
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_203
+  - first:
+      213: 7315309447068811971
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_204
+  - first:
+      213: 1069376235611410904
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_205
+  - first:
+      213: -6464115612738730808
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_206
+  - first:
+      213: -2114777127476665520
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_207
+  - first:
+      213: 8064488803537458191
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_208
+  - first:
+      213: 586804602909667918
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_209
+  - first:
+      213: -7698552263086217545
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_210
+  - first:
+      213: 8892661134026349665
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_211
+  - first:
+      213: 6520931754884163018
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_212
+  - first:
+      213: -4104183039673175066
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_213
+  - first:
+      213: 5462601627727930500
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_214
+  - first:
+      213: 3209537876463818283
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_215
+  - first:
+      213: -649803555864120386
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_216
+  - first:
+      213: 5552887463482426643
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_217
+  - first:
+      213: -1203753501076718595
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_218
+  - first:
+      213: -5072356344865754047
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_219
+  - first:
+      213: 4433515797882443057
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_220
+  - first:
+      213: -6618278164022431414
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_221
+  - first:
+      213: -8361696998426198107
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_222
+  - first:
+      213: 8343040634249398147
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_223
+  - first:
+      213: -4207947539380058407
+    second: PLACEHOLDER NOT FOR COMMERCIAL USE_224
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1153
+        width: 57
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5ca50b6fdd9284091adf422c94c6a3
+      internalID: 6688400171952922533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_1
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1158
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23bc0d83bdf3e694786e2b7ac1360c26
+      internalID: -3524494051817878264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1158
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2497a3f64cd9745b65830359c3e537
+      internalID: 2634351683140939821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_3
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 1158
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6079485a6d40283448cbd752d4a33b66
+      internalID: 7738905869924117247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_4
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1158
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be297acb3c4e8b040a92a87cc2b1ba6f
+      internalID: 880217872040309082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1150
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e025720e2ef427d47bd59a6b3c0853ee
+      internalID: 431761374362289701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_6
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1150
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb7d10add16eca49a5c116cdcd4764c
+      internalID: -1633267391922896901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_7
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1177
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfecc0a8f34073a49bf57eec2e9f3fce
+      internalID: -8020162287442039062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_8
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 1177
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2645e931a00144c85d7d22df26ae5f
+      internalID: 8011198526967922529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_9
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1177
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24abdf22836ff4499c788b0b1696e0a
+      internalID: 2742950856248227960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_10
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1177
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398a59b3ca3f3a04187278367bd6e5c7
+      internalID: -5678053743163775147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_11
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 1135
+        width: 74
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397702d1c0cf343478f17cf64f5ebd4e
+      internalID: 3946506911574525245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_12
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 1173
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35db5c6c27b37104797050bf7b7bfe97
+      internalID: 7350819755048300623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_13
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1173
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9788be816b3e0834cb24e702ad062f4f
+      internalID: 3095777678418744131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_14
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1173
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8cee3356756e67479276ee6fa353abf
+      internalID: -1439467191033498870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_15
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 1173
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4756e587d836940a811d1f95fddaed
+      internalID: 4574804539623512243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_16
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1085
+        width: 73
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499084aa31b68464790ccc88999afbdf
+      internalID: 8531980176546880456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_17
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1080
+        width: 37
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf5be72eb03a5a498908db29c3ba032
+      internalID: 7328739195248567147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_18
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1107
+        width: 69
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1e805f691e51747b648281e7e57a77
+      internalID: 5095055544076010698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_19
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 1080
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071550df7d1efd847b75866a1763cef1
+      internalID: 1351604174924426443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_20
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1138
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786352c0ba348d149a7e0969eda64ea3
+      internalID: -1056285843732389077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_21
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 1138
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30528c265ff7a06438c5f4af4d0f4ccf
+      internalID: -3537659515317045339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_22
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1138
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e3898ad7385ae449fbca14d64356dc
+      internalID: -3063401154725293524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_23
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1138
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3163bdb48f4a247479eade087c92f4da
+      internalID: 5389763983998199898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_24
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 1129
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1754a21bd89ead429dff402890fa1ca
+      internalID: -1593244060127030573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_25
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1129
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341b937e45d28654cac7668d46dc511b
+      internalID: 8975817187496601357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_26
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1129
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf6b5958bd71444f95a290ef7449c66
+      internalID: 8508350293350402959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_27
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 1129
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00ec15726216fd48a02fa431c491657
+      internalID: -4907642814607051113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_28
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1096
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da2fdde294a7547458577638cf22ccc8
+      internalID: 6849124136048098778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_29
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1096
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0128729c8920a8b4f909e346eceb6963
+      internalID: -1986587417471591732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_30
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 1096
+        width: 62
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e408096e524dc544e8242de05a5ec0c6
+      internalID: -7439154467915051000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_31
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 1050
+        width: 42
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38ae8ce29c3a7ee4b92e2e9e0ab0f7b6
+      internalID: -6682974086352686375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_32
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 1086
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7cfc3fa66230ed46b2d5e193bb29a42
+      internalID: -6013497763162136918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_33
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1086
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9e6127ae800264583a48ce6bca09c3
+      internalID: 6615769828088042200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_34
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1086
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fdaf0c97bdaee84795820ef387dfeb8
+      internalID: -8791431379899549351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_35
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 1086
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e722e04717f06f54cb37a2f89a1b50a5
+      internalID: 1156218388702332432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_36
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1025
+        width: 59
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef16cb922af768409510f71be6ac878
+      internalID: -8612297093212424921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_37
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1025
+        width: 59
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b351694124aaa2944af73379e1227871
+      internalID: 9138637074218651022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_38
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1025
+        width: 59
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95276e27428f52741bb5d2e635cf80ae
+      internalID: 4612346326901712951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_39
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 954
+        width: 36
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8bafc7e8cdcf88488aa38982cf1c02b
+      internalID: -3055129974505363011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_40
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 1043
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3f7753dc60cd245be2e539ae94197e
+      internalID: 3254200025844023764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_41
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1043
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a05bdfbe32caa4cbe5a5eddaf8c6c6
+      internalID: 1908445774125149420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_42
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1043
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc9040b05e3d1449a497cf49a63bb66
+      internalID: 7818714610765191667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_43
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 1043
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a84060f39a6374b8d3621afc31ea53
+      internalID: 9105611979794291122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_44
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 978
+        width: 55
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c87c6dfcc2b445f40b73c61f15a89991
+      internalID: 2861581507252043948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_45
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 979
+        width: 57
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaf45f0b12e860a4d900a03831f926ed
+      internalID: 2021132851746169910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_46
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 980
+        width: 57
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88193b45312a6824381807e083cf1262
+      internalID: 7025837271752802807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_47
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1007
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 401a897d5e3f73e469ca1d172f9a35d6
+      internalID: -1261118677372390002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_48
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 1007
+        width: 70
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99607a76a24a314c92506b04341b4d8
+      internalID: 2317170463019786402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_49
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1007
+        width: 70
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c59d96202bb384d82419d5ba0dc515
+      internalID: -5114597556562909453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_50
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 954
+        width: 36
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12e09f7fd22633b489019ca1973f7eb4
+      internalID: -3506196723508415022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_51
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 961
+        width: 34
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609afe73e88cff243a7fac41bac3f1a8
+      internalID: 1057858010000166822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_52
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 998
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6634c84ec8c40894896b4bb9895d0f66
+      internalID: -2587919389979596734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_53
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 998
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a8c46f64a638440b0cda678d73a63d
+      internalID: 4655284478584052895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_54
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 998
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3bf39eb8e8ee8846b2f332c7a5c6b84
+      internalID: 6605334055752636259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_55
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 998
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c166f52b09c75243a7186cf6325fcae
+      internalID: 6586392698485434789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_56
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 961
+        width: 102
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8eaca5aab3c74943b5b3d8377233331
+      internalID: -4234896320072703954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_57
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 961
+        width: 70
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a152b15c4bd5c654e88a6230b4ac6726
+      internalID: -4666185220263391201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_58
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 968
+        width: 70
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b67497a954dbe468fcabbec43469d2
+      internalID: 5860895651149690890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_59
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 953
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36fd3ce071012f4682b563ca1bf0995
+      internalID: -2940428278766952205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_60
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 953
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2689b45256c8f24291d8d36b3bdd620
+      internalID: -3128077248459780262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_61
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 953
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 370894e50f134384db95a811768b8024
+      internalID: 3301037908584569988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_62
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 953
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9dce545da739a4cb29444c38e2e311
+      internalID: 1059680306796553331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_63
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 862
+        width: 73
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7c811a069c6ac47a8dac799ccb2615
+      internalID: 3542614686145780291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_64
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 862
+        width: 73
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947b391d1d4aa684a8f8fcd4d71dcd05
+      internalID: -7756030116229131967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_65
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 862
+        width: 35
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d05a9c4a412e024a95ee14836f63371
+      internalID: -7087772892062829597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_66
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 894
+        width: 73
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e20b4e70bf6a941b8b7fcc136b190a
+      internalID: -4046060119323197182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_67
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 922
+        width: 45
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f8c0c64cdb6d924d9f0e9dc78d58043
+      internalID: 7754473887656953972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_68
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 917
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aae4acef069146043a7865ac08bbeb8a
+      internalID: 837886675078279005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_69
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 917
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb71f13dce763641969d7094b79650e
+      internalID: -833330133532220814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_70
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 913
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd032513b94a254b98ec8af1824ea99
+      internalID: -5272326077434841443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_71
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 903
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a2325a5926ac014b8838937df2d3798
+      internalID: 7171104606702723666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_72
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 903
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b129047861e444e967f1d3baf04a28
+      internalID: 7708584241400827423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_73
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 903
+        width: 21
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f12110c76bea40b46a9f9926c8dd1769
+      internalID: 2066097069071550759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_74
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 903
+        width: 21
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a328c8bab322ca545a1ff575d98e2958
+      internalID: 9184747407461554869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_75
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 862
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb19edfd5a4491048b9e4508fc3a1276
+      internalID: 6208352227539511635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_76
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 873
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1d4e14e1e9d9b459135d5c06ce4aab
+      internalID: -1385412888398948406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_77
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 873
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909c0e7f53a5c814fb95554238403e8c
+      internalID: -7700107990823377541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_78
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 873
+        width: 41
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f9bec2e85250144be88f84a981a30c
+      internalID: -7335564938950159427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_79
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 873
+        width: 41
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50534221b1a7268448d3202234277ef9
+      internalID: -5605017503657749870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_80
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 873
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7527b25464c0ee64ba91de5283445819
+      internalID: 6819081493850843201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_81
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 873
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23e5d1688995374eba8fe3fd4ff6621
+      internalID: 5106575435558358825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_82
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 781
+        width: 73
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823c4ca155096e642ae3f070f2f2e2ad
+      internalID: 6207569635865663569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_83
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 781
+        width: 73
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fcb5ea2ae4a74d4ebdcdd28e05c6860
+      internalID: 1280782256535954324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_84
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 781
+        width: 35
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d440f69b335277478c1e79fc4cc715c
+      internalID: -6377726081035932995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_85
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 813
+        width: 73
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48306dca0785777448b6668e688b076b
+      internalID: 5045043964824007494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_86
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 798
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f758bb261b63e4cad7fa43f10e696e
+      internalID: 309923018104996884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_87
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 798
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993037ae5d28e74499f63cad99935718
+      internalID: -7525264136717584100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_88
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 788
+        width: 41
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e12d5fbf8052d41b572c80518a7082
+      internalID: 4401196925646799413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_89
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 788
+        width: 41
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa654f8ffe8f7a6498815d50c92c547e
+      internalID: -7177218742432360078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_90
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 788
+        width: 41
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d481cc34e07386478c17d39110fca35
+      internalID: -2264284834799352972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_91
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 794
+        width: 42
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0159fae0388a13442830f52fae346d15
+      internalID: 5663396248671513642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_92
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 794
+        width: 74
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67cc9bf70eb6a2f4d922214eeb1b7b98
+      internalID: -1067501381223889274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_93
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 784
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916d20c977c12ec4fb30bb1ecb269b94
+      internalID: 6696424567067309532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_94
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 698
+        width: 41
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02bbdfa733ba8314bb49b585b97393d2
+      internalID: 4509510201149889897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_95
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 698
+        width: 41
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc58094d91497534d99d26c9a2fdff7b
+      internalID: 6310726876923883694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_96
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 698
+        width: 73
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2fc4ea76dddf947961cddfec406c57
+      internalID: 3672323121467397469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_97
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 698
+        width: 73
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40bf51d775de8344e86e5569c052f74c
+      internalID: 3862171635100125074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_98
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 684
+        width: 37
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25648e9596420c247a67e960de59ea16
+      internalID: 5624628409864671029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_99
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 724
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c366cd675128240b301984016f56e3
+      internalID: -859489412324441112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_100
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 724
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f38557fc55f68c04a8c743e316a8d743
+      internalID: 124618403734286117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_101
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 725
+        width: 61
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b197c9bc22336f14b989c62945b77b41
+      internalID: -8987560299541750969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_102
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 701
+        width: 42
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb5a5eed678ff74a972d17509b1ce21
+      internalID: 107915639969461242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_103
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 701
+        width: 74
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa32463fd599534baef8629b9b52245
+      internalID: -8053125721542043399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_104
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 624
+        width: 73
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e7f7714aa1c9204fbd3361862993106
+      internalID: 8409227099871337555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_105
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 624
+        width: 73
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859990578109356459fdaa3eba37545d
+      internalID: 9222312789046604958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_106
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 595
+        width: 37
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c51f4cd2b148d94f88eb4cb9f6339ed
+      internalID: -2767371936954005772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_107
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 610
+        width: 37
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eed0f2291107214eae5c6b3e82cdd65
+      internalID: -1340800094390782163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_108
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 653
+        width: 73
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8def69024f0a847b9982a33e8cd5fd
+      internalID: -2032236198556600673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_109
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 635
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970a945bd2568af4dabb050c0ea0eca7
+      internalID: -3798441115976590748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_110
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 635
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695ab2901d5efc648abe12f5faffdb5c
+      internalID: 8332063400141255299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_111
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 635
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db83d694512b3b740b01a7ea27951c8b
+      internalID: -9213837633579347695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_112
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 635
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b172f2ec63286d048aaf3ae2ba04aff0
+      internalID: 3761478037494340380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_113
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 614
+        width: 42
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d27312a028bb8d428d928cc96a405eb
+      internalID: -8879830124333928335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_114
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 614
+        width: 74
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba65acea4acdbd49ae4132a5b932d0d
+      internalID: 8468838113083793552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_115
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 539
+        width: 73
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ae171f106ba6343a82dc7fa89510bd
+      internalID: -9133201758112562886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_116
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 603
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d80d63b2648ca469c82097433f30f0
+      internalID: -1365940389797215086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_117
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 603
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 957eae47c2447a44bb634a2e32aed488
+      internalID: -2538142823395295435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_118
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 603
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaea00c8783c47b42b6ba1b7b0eb8d83
+      internalID: -2198788518264062524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_119
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 603
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f94e9ad3cba9d0240b42e329436b64f5
+      internalID: -2028913325721098443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_120
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 603
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9904a286a2f5ee45ad67f5ff7737ebf
+      internalID: -4937525964314941960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_121
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 603
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e36e65296da9ed4abcd1f9674128f7a
+      internalID: 871707863524939921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_122
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 527
+        width: 42
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dba31d17c5315b42853c3f0f11fb9ce
+      internalID: -3122798288555671494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_123
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 527
+        width: 74
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30659af6f7568bb4ab4f91324dd551e5
+      internalID: -7163024110120462586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_124
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 536
+        width: 16
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b722e148911b5504daeb67a1bc131368
+      internalID: -605553147562648673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_125
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 539
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab75eec06fe87c9448d4f15f51447853
+      internalID: -2552015516743218805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_126
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 538
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cdda48a8b03fa74a9098565b183b524
+      internalID: 4962786590574355971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_127
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 539
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7c6f7301f707348b576f29454cca58
+      internalID: -3516244480553053611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_128
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 534
+        width: 18
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d9b384dc59009419bcbadf2a58194b
+      internalID: -3324150349432698389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_129
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 534
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f75f86cac4c16441a5a5437edc69723
+      internalID: 7733718018942473303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_130
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 534
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af20f5171ea492e4fb55d47bc9d9a2d8
+      internalID: -6667405462699691320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_131
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 534
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1bce3e6bc8778d47abc4245e09c4f5a
+      internalID: 173983432469878757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_132
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 534
+        width: 18
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea6991d99fa4764ea7519506e7bc0d3
+      internalID: 7075046072524217291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_133
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 534
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe185afd85cf9b44a7b9d8c92b3ed04
+      internalID: -8462937008364866701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_134
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 534
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f6ddc30b5ec45b4996b2a982d5266e1
+      internalID: -6062929148994059365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_135
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 534
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8546201bbf3130f46a1a4ec5fae358b5
+      internalID: -4441915553686020271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_136
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 533
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08dc83635a34c304bb175d1e04a34428
+      internalID: -1087305213920582403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_137
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 532
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1774fabfeb8725a45b41e3c3f52424a4
+      internalID: 160526872031695392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_138
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 429
+        width: 78
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4593465f3197e8a409eb87ce40ba722f
+      internalID: -5398069767627277961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_139
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 429
+        width: 48
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cdfc12fabe033d4a9c6f62cd7f35785
+      internalID: -3697188443853748855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_140
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 429
+        width: 48
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c4161e53b120f54a9d6af6b9b7d5d7f
+      internalID: 4535217313472651749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_141
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 428
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62c96e1ce89391469ccee7d88e6d0e8
+      internalID: -7920744845459880506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_142
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 428
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c2ed6c6d3827946bfbf13711302ea2
+      internalID: -7562911295620539862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_143
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 461
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fdb321a56f6d3d44886c7bd70e55399
+      internalID: -6351038389916941433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_144
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 461
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00a8b79aef096c448a4b6f50811fd35e
+      internalID: 7888272291008157447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_145
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 463
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd410e87ba10054085463fa3edd80f3
+      internalID: -6783674491352412657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_146
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 463
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9ebf3e133327247833f4f0515eedbd
+      internalID: 8106763806585147890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_147
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 461
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28408030fddd4c4f9d96a5ffef777f3
+      internalID: -5998093363065493713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_148
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 461
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ac612619b051f41a6570620aa704de
+      internalID: 6459267863362850845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_149
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 463
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee922a8bede6da4a857048b8a096781
+      internalID: 1310929561002725303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_150
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 463
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df4bb11df24bb947a695147147949c1
+      internalID: 1161724128708320872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_151
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 333
+        width: 78
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f7af334f72cea84b9f9f617d0846476
+      internalID: 1060087556520276794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_152
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 411
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf875bc20299904894c848422dee32f
+      internalID: 4799849966735167735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_153
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 410
+        width: 61
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26b76cbef1e27349b437c4e9c9b6e7d
+      internalID: 6443388702019005433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_154
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 411
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63ae079ba0bd3b40b988733b8b82603
+      internalID: 943829489058290853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_155
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 410
+        width: 61
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a0f645cdcd68847a5e9187b8c47a3d
+      internalID: 1571088777697215936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_156
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 413
+        width: 54
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31914977bf2064047b901449097da95b
+      internalID: 2088935734845475450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_157
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 368
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32871a2d0b9a2654dbcea88278893d6f
+      internalID: 3223828301138769010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_158
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 368
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c326d274b3b128340ac9de12da572268
+      internalID: -7123224785724163529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_159
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 368
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da22fcddc3c0d34aa96faff9c6170ae
+      internalID: -3048935491356359388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_160
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 368
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433239f979be0bd459ded9c0c19c56b1
+      internalID: 4529331253716081008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_161
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 359
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e2506e16bbbe6e47a9956fee252dcb5
+      internalID: 2013027710769382977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_162
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 359
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6a392192813db45bb4656ea0446968
+      internalID: -905346662130386868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_163
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 361
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a23636ec3d82f42a2f205836e08b49
+      internalID: -3898115935972698119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_164
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 361
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c301a923468a77a4c9c5356bd1a759ac
+      internalID: 2534047181916772263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_165
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 348
+        width: 11
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be6ce9ad0294184998e2aff627ea3c3
+      internalID: 8763472038129675493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_166
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 348
+        width: 11
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518673920ab2fa54d88cff0acf088bdb
+      internalID: -3081344731376352557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_167
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 356
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46729c91e9c0c248af729cdb9bb3200
+      internalID: -6161158736137662654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_168
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 356
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c704e23727a8c4e851c5ff7fb1c69a
+      internalID: 6795830138445325824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_169
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 349
+        width: 11
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da1e328caecb59c4c94fca3edaa9abda
+      internalID: 6335490336733045592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_170
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 349
+        width: 11
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3346685a9675034a81d5f2d7ed99e45
+      internalID: 1641059052885377429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_171
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 357
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f365a2b6fb3744ea46e4e7b8d81b5a
+      internalID: 180598226260567604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_172
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 357
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3bd981df26b2c4fb33ccbc08e57d3d
+      internalID: -8878360761736070632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_173
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 340
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6dfaa315d72563488a57c6e2dc2dad7
+      internalID: -3458410028079913321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_174
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 321
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5d6df25c9d52e4ba9494e60bb66eec
+      internalID: 3558187623672155576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_175
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 321
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8452705c341f50c4b80a2c1fce159773
+      internalID: -2291826963390455089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_176
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 309
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49c1664622ed11444a1b8f9479c72b2f
+      internalID: 1733418944751690297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_177
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 308
+        width: 61
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ac29a6e8fc5eb41aeaebce59668663
+      internalID: -4272827663974685968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_178
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 300
+        width: 11
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc9de6019cf05c4b9f6c1868b51a546
+      internalID: -7765309989605173830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_179
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 300
+        width: 11
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c2fcc4e8e954246b4377a4863cc192
+      internalID: 3534716400166864125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_180
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 308
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758771b1f8e6a1647af7ac0bde4aa84a
+      internalID: -7985598116707879196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_181
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 308
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741d227cb8552c143a8589ebb3642745
+      internalID: -7066288783117107074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_182
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 300
+        width: 11
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad0e739564743540bf71a5b9706a9c9
+      internalID: 9103067437045787540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_183
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 300
+        width: 11
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec59319f57dfcaf4486cf43843fecd04
+      internalID: -4627895553941582649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_184
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 308
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f30946124b3004ba8c555f8a9b294e
+      internalID: 7788074382886203772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_185
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 308
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236d1c79cb78c1444a7df1464e894721
+      internalID: 4407333368409473186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_186
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 266
+        width: 39
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017ba1cbb2348c348ba40007f659319f
+      internalID: -1350654774092539794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_187
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 296
+        width: 73
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 887b76d140aeb714aa8a584d80e65f2f
+      internalID: -1672986159190726190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_188
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 312
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8acd0ac20421d74ead52aa67bc27fc5
+      internalID: 7378991834933300559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_189
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 229
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c166705d867a243b14b08c581cff24
+      internalID: -6490806575369714732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_190
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 229
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd91c93de31340549bf9c6eeeccd757d
+      internalID: -2717365439023499899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_191
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 229
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b188dc04bda8f48aaaa3ea23753404
+      internalID: 5620000502543732983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_192
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 229
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913b4c6c7491249489178eb6509a0fd9
+      internalID: -3928504394166937793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_193
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 229
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46bd15e9b3cdbf8408aef7234b16de2d
+      internalID: 5596264107060762639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_194
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 229
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74723c81c001b1c4da263250c23b7550
+      internalID: -1705512074653125307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_195
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 229
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1392afce5aca9734c9c5b1db198b6607
+      internalID: -944618751322616901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_196
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 229
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8457b8f474315864cad0cf66ad6d5dc4
+      internalID: 8702165741029870866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_197
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 229
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db5df8ad3c65b984d8d3974e3ea40775
+      internalID: -2034391750711189808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_198
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 247
+        width: 11
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6375cf3c6e897fd40bd0b27ffa2a5f82
+      internalID: 37760814570338339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_199
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 247
+        width: 11
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7870a8c1c4123974e8b92d40208c5277
+      internalID: -8200034445212559848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_200
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 255
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9967f571cab5644983838a6d09e98fd
+      internalID: 2540878598739619324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_201
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 255
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e4e748d83423042a7d6af006173c90
+      internalID: 3078815209481189085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_202
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 247
+        width: 11
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec106f499096df6469785f0416f68975
+      internalID: 1969455079579153628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_203
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 247
+        width: 11
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dabb7e06f4b528448961081ad03cef6
+      internalID: -5179135237612218471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_204
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 255
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c1a8e5167036da41af4c61d6cc39c2b
+      internalID: 7315309447068811971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_205
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 255
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616dfd4a60888db43a8c0839badc65d3
+      internalID: 1069376235611410904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_206
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 121
+        width: 41
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58355ebf317c8424f898517db146e1fd
+      internalID: -6464115612738730808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_207
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 121
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbcf07d507db87348be8c7288c00e760
+      internalID: -2114777127476665520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_208
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 153
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717c674bbe1bea34eabce401af446eb7
+      internalID: 8064488803537458191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_209
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 153
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac25961992b86114b89e813480b9fd48
+      internalID: 586804602909667918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_210
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 153
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88841c820d3716d47a816fe5544412e4
+      internalID: -7698552263086217545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_211
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 153
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859619417513e4b4cb77f6b26d107f35
+      internalID: 8892661134026349665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_212
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 153
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d33a3e71f083d4387656482b1a2a4d
+      internalID: 6520931754884163018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_213
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 20
+        width: 41
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d0003439df88b46822d9dca6ca00de
+      internalID: -4104183039673175066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_214
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 20
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd791ec1b8c47d40983bf9ffd878fb4
+      internalID: 5462601627727930500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_215
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 84
+        width: 128
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1efee26af72aaa47b69ee0a23e0fb7f
+      internalID: 3209537876463818283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_216
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 85
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b13373f8932607e4189dfaf2ed18258e
+      internalID: -649803555864120386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_217
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 85
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f77b9e2edc571c47bc0e97ca223188f
+      internalID: 5552887463482426643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_218
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 85
+        width: 49
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5f1096d596a4e47964233d4188b850
+      internalID: -1203753501076718595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_219
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 85
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e88f833122dd534dbe4b7f227848e43
+      internalID: -5072356344865754047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_220
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 11
+        width: 96
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3903093f972bd4e8b7529ec56a0b42
+      internalID: 4433515797882443057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_221
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 10
+        width: 96
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72bf84db113580c469fd7b6661a0f90e
+      internalID: -6618278164022431414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_222
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 13
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 783e200cdf8d28243be4b8ac0e9bd791
+      internalID: -8361696998426198107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_223
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 14
+        width: 49
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315101ac55b7a154984847f35233ea03
+      internalID: 8343040634249398147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLACEHOLDER NOT FOR COMMERCIAL USE_224
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 14
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd34fecd5f58954bbc58f30b235fef4
+      internalID: -4207947539380058407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
