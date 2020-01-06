@@ -13,11 +13,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Walls
+  - Wall Deco
+  - Obstructing Furniture
+  - Interactable
   - 
   - 
   - 
@@ -40,6 +40,21 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 699530241
+    locked: 0
+  - name: Walls
+    uniqueID: 1751328469
+    locked: 0
+  - name: Floor Furniture
+    uniqueID: 3446775491
+    locked: 0
+  - name: Furniture
+    uniqueID: 3757693815
+    locked: 0
+  - name: Wall Deco
+    uniqueID: 4211313999
     locked: 0
   - name: Character Sprite
     uniqueID: 2106706721
