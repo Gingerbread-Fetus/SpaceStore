@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shelves : Furniture, IInteractable
 {
+    [SerializeField] ItemInstance heldItem;
     public override int CalculateSellPrice()
     {
         throw new System.NotImplementedException();
@@ -13,6 +14,8 @@ public class Shelves : Furniture, IInteractable
     {
         Debug.Log("Shelf " + name + " interacted with");
         //Open shelf UI
+        ShelfManager shelfManager = FindObjectOfType<UIManager>().shelfManager;
+        shelfManager.HideOrShow();
     }
 
     // Start is called before the first frame update

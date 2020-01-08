@@ -47,6 +47,11 @@ public class StoreInventory : ScriptableObject
         return currency;
     }
 
+    public List<ItemInstance> GetInventory()
+    {
+        return inventory;
+    }
+
     public static void LoadFromJSON(string path)
     {
         if (_instance) DestroyImmediate(_instance);
