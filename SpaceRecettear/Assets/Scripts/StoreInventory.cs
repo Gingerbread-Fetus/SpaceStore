@@ -84,7 +84,6 @@ public class StoreInventory : ScriptableObject
     public void GiveItem(Item addItem)
     {
         ItemInstance newItem = new ItemInstance(addItem);
-        Debug.Log(newItem);
         if (inventory.Contains(newItem))//if it's already in the inventory add number asked for.
         {
             int i = inventory.IndexOf(newItem);
@@ -112,6 +111,16 @@ public class StoreInventory : ScriptableObject
             Debug.Log("New item added.");
             inventory.Add(newItem);
         }
+    }
+
+    public int GetStock(ItemInstance item)
+    {
+        if (inventory.Contains(item))
+        {
+            int i = inventory.IndexOf(item);
+            return inventory[i].stock;
+        }
+        return 0;
     }
 
     /// <summary>

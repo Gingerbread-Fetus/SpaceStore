@@ -232,11 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &93229886
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -359,11 +355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &99246408
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -486,11 +478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &105595146
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -613,11 +601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &116602792
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -740,11 +724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &116998458
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -879,11 +859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &120746099
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1006,11 +982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &124678479
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1288,11 +1260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &129573165
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1415,11 +1383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &153057973
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1591,11 +1555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &176799402
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1718,11 +1678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &183328576
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1845,11 +1801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &197753223
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1972,11 +1924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &204494832
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2099,11 +2047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &248517295
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2226,11 +2170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &272659700
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2353,11 +2293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &285806966
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2480,11 +2416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &307543709
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2607,11 +2539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &322038067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2768,11 +2696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &361809849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3019,11 +2943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &408028765
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3146,11 +3066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &409629289
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3580,11 +3496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &447076565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3707,11 +3619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &471524588
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3834,11 +3742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &497438534
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3961,11 +3865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &510686820
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7078,11 +6978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &541332719
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7205,11 +7101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &544764279
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7332,11 +7224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &562073894
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7459,11 +7347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &618823076
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7586,11 +7470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &627676084
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7713,11 +7593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &653465034
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7813,7 +7689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &661825477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7962,11 +7838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &733187572
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8089,11 +7961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &739172654
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8216,11 +8084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &768552888
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8343,11 +8207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &778202759
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8470,11 +8330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &784771425
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8597,11 +8453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &798685021
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8724,11 +8576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &799739819
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8851,11 +8699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &809875050
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11637,11 +11481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &836597590
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11886,11 +11726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &840478500
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12013,11 +11849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &860634899
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12140,11 +11972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &879594376
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12389,11 +12217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &966341519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12516,11 +12340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &973514234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12772,11 +12592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &997709408
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12956,11 +12772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1110111772
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13083,11 +12895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1112922079
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13210,11 +13018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1131120660
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13337,11 +13141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1138377381
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13464,11 +13264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1176730405
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13591,11 +13387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1262034511
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13718,11 +13510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1271396408
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13845,11 +13633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1277321644
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13972,11 +13756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1295617560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14099,11 +13879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1296138311
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14226,11 +14002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1299862145
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14353,11 +14125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1326629328
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14480,11 +14248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1340245719
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14607,11 +14371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1346407612
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14734,11 +14494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1360050773
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14882,11 +14638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1394176544
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15009,11 +14761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1400958071
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15136,11 +14884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1405727397
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15263,11 +15007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1415294422
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15390,11 +15130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1421626673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15517,11 +15253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1450829877
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15897,11 +15629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1523483290
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21672,11 +21400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1556110490
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21799,11 +21523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1576340051
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21926,11 +21646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1616129600
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22053,11 +21769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1653065605
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22288,11 +22000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1673434423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22415,11 +22123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1681766862
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22542,11 +22246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1716924581
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22669,11 +22369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1721552230
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22796,11 +22492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1730471230
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22923,11 +22615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1790853526
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23050,11 +22738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1792618288
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23405,11 +23089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1819683831
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23532,11 +23212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1820228816
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23659,11 +23335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1844741695
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23786,11 +23458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1858414944
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23913,11 +23581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1887146018
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24119,11 +23783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1939752983
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24258,11 +23918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1950022869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24542,11 +24198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1986212572
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24669,11 +24321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &1990094618
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24796,11 +24444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &2010881809
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24923,11 +24567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &2020020441
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25050,11 +24690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &2031757578
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25177,11 +24813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &2059410588
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25304,11 +24936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &2097661621
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25431,11 +25059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 0
-    quality: 0
+  heldItems: []
 --- !u!61 &2109016880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26051,12 +25675,12 @@ PrefabInstance:
     - target: {fileID: 8113572925423308915, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.0321693
+      value: -3.0171223
       objectReference: {fileID: 0}
     - target: {fileID: 8113572925423308915, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6345787
+      value: 1.634542
       objectReference: {fileID: 0}
     - target: {fileID: 8113572925423308915, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
         type: 3}

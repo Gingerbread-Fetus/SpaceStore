@@ -42,9 +42,11 @@ public class ItemInstance
     public Item item;
     int sellPrice;
     // Object-specific data.
-    [SerializeField] bool boomItem;
+    [SerializeField] bool boomItem = false;
     [SerializeField] public int stock = 1;
-    [SerializeField, Range(0, 10)] public int quality;
+    [SerializeField, Range(0, 10)] public int quality = 0;
+
+    public ItemInstance() { }//Actually don't know what I may need to do with this.
 
     public ItemInstance(Item item)
     {
@@ -66,6 +68,7 @@ public class ItemInstance
         this.quality = itemInstance.quality;
         this.sellPrice = CalculateItemPrice();
     }
+
 
     public override bool Equals(object obj)
     {
