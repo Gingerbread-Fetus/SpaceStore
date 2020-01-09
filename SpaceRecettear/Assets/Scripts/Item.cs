@@ -45,6 +45,7 @@ public class ItemInstance
     [SerializeField] bool boomItem = false;
     [SerializeField] public int stock = 1;
     [SerializeField, Range(0, 10)] public int quality = 0;
+    [SerializeField] public GameObject shelf;//Serializing for debugging purposes
 
     public ItemInstance() { }//Actually don't know what I may need to do with this.
 

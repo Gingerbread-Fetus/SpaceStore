@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
-        interactableLayerMask = LayerMask.GetMask("Interactable"); //Using this in case I want to add more layers for some reason.
+        interactableLayerMask = LayerMask.GetMask("Interactable", "Customers"); 
     }
 
     // Update is called once per frame

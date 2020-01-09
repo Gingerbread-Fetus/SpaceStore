@@ -7,20 +7,23 @@ using UnityEngine.UI;
 
 public class ShelfManager : MonoBehaviour
 {
-    private bool isShowing;
+    
     [SerializeField] StoreInventory playerInventory;
     [SerializeField] GameObject playerInventoryPanel;
     [SerializeField] GameObject shelfInventoryPanel;
     [SerializeField] Button itemButtonPrefab;
 
+    private bool isShowing;
     ItemInstance shelvedItem;
     Shelves activeShelf = null;
     List<ItemInstance> items;
+    List<ItemInstance> shelvedItems;//this is what the customers will use to reference what is on the shelves for their purchases.
     private bool isModified = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        shelvedItems = new List<ItemInstance>();
         //For every item in the player inventory, populate the inventory panel with an item button
         items = playerInventory.GetInventory();
         foreach(ItemInstance item in items)
@@ -31,7 +34,6 @@ public class ShelfManager : MonoBehaviour
         isShowing = false;
         gameObject.SetActive(false);
     }
-
 
     // Update is called once per frame
     void Update()
@@ -67,6 +69,16 @@ public class ShelfManager : MonoBehaviour
             } 
         }
         isModified = false;
+    }
+
+    public List<ItemInstance> GetShelvedItems()
+    {
+        return shelvedItems;
+    }
+
+    public void SetActiveShelf(GameObject newActiveShelf)
+    {
+        this.activeShelf = newActiveShelf.GetComponent<Shelves>();
     }
 
     /// <summary>
@@ -107,11 +119,13 @@ public class ShelfManager : MonoBehaviour
                     ItemInstance newItemInstance = new ItemInstance();
                     newItemInstance.item = itemButton.heldItem.item;
                     ItemButton newItemButton = AddNewItemButton(newItemInstance, shelfInventoryPanel);
-                    activeShelf.heldItems.Add(newItemButton); 
+                    activeShelf.heldItems.Add(newItemButton);
+                    ShelfItem(newItemButton.heldItem, 1);
                 }
                 else
                 {
                     activeShelf.changeStock(itemButton, 1);
+                    ShelfItem(itemButton.heldItem, 1);
                 }
             }
             else
@@ -127,7 +141,7 @@ public class ShelfManager : MonoBehaviour
             {
                 playerInventory.GiveItem(itemInstance.item);
                 activeShelf.changeStock(itemButton, -1);
-                int itemIndex = activeShelf.heldItems.IndexOf(itemButton);//May need to check that it actually exists in the list
+                int itemIndex = activeShelf.heldItems.IndexOf(itemButton);
                 int stock = activeShelf.heldItems[itemIndex].heldItem.stock;
                 itemButton.stockNumberText.text = stock.ToString();
             }
@@ -136,30 +150,26 @@ public class ShelfManager : MonoBehaviour
                 playerInventory.GiveItem(itemInstance.item);
                 activeShelf.heldItems.Remove(itemButton);
                 Destroy(interactedButton.gameObject);
+                shelvedItems.Remove(itemButton.heldItem);
             }
 
         }
         isModified = true;
     }
-       
-    public void SetActiveShelf(GameObject newActiveShelf)
-    {
-        this.activeShelf = newActiveShelf.GetComponent<Shelves>();
-    }
 
-    /// <summary>
-    /// This method is called when a shelf is interacted with. It displays on this
-    /// UI what item, if any, is on that shelf.
-    /// </summary>
-    /// <param name="displayItem"></param>
-    public void ChangeDisplayItem(ItemInstance displayItem)
+    private void ShelfItem(ItemInstance heldItem, int amount)
     {
-        if (displayItem != null)
+        ItemInstance itemReference = new ItemInstance(heldItem);
+        itemReference.stock = amount;
+        if (shelvedItems.Contains(itemReference))
         {
-            Button newButton = Instantiate(itemButtonPrefab);
-            Image image = newButton.GetComponent<Image>();
-            image.sprite = displayItem.item.itemIcon;
-            newButton.transform.SetParent(shelfInventoryPanel.transform, false); 
+            int itemIndex = shelvedItems.IndexOf(itemReference);
+            shelvedItems[itemIndex].stock += amount;
+        }
+        else
+        {
+            shelvedItems.Add(itemReference);
+            itemReference.shelf = activeShelf.gameObject;
         }
     }
 
@@ -180,7 +190,10 @@ public class ShelfManager : MonoBehaviour
             newButton.transform.SetParent(shelfInventoryPanel.transform, false);
             Image image = newButton.GetComponent<Image>();
             image.sprite = itemButton.heldItem.item.itemIcon;
-            newButton.GetComponent<ItemButton>().heldItem = itemButton.heldItem;
+
+            ItemButton newItemButton = newButton.GetComponent<ItemButton>();
+            newItemButton.heldItem = itemButton.heldItem;
+            newItemButton.stockNumberText.text = itemButton.heldItem.stock.ToString();
             newButton.onClick.AddListener(delegate { MoveItem(newButton); });
         }
         

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shelves : Furniture, IInteractable
 {
     [SerializeField] public List<ItemButton> heldItems;
+    [SerializeField] public SpriteRenderer spriteHolder;
     ShelfManager shelfManager;
 
     public override int CalculateSellPrice()
@@ -39,6 +40,13 @@ public class Shelves : Furniture, IInteractable
     // Update is called once per frame
     void Update()
     {
-        
+        if (heldItems.Count > 0)
+        {
+            spriteHolder.sprite = heldItems[0].heldItem.item.itemIcon; 
+        }
+        else
+        {
+            spriteHolder.sprite = null;
+        }
     }
 }
