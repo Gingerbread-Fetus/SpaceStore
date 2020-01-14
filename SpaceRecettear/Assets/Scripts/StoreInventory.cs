@@ -77,7 +77,6 @@ public class StoreInventory : ScriptableObject
         
     /// <summary>
     /// Adds an item to the inventory. Functional command for purchasing something with this inventory. Decrements currency.
-    /// TODO: NPCs should have infinite money, but for now I've just given them 2 billion instead.
     /// </summary>
     /// <param name="newItem">The instance of the item to add to the dictionary</param>
     /// <param name="count">The number of this item to add</param>

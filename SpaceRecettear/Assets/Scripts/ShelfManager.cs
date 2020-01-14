@@ -7,15 +7,15 @@ using UnityEngine.UI;
 
 public class ShelfManager : MonoBehaviour
 {
-    
     [SerializeField] StoreInventory playerInventory;
+    [SerializeField] GameObject ShelfCanvas;
     [SerializeField] GameObject playerInventoryPanel;
     [SerializeField] GameObject shelfInventoryPanel;
     [SerializeField] Button itemButtonPrefab;
 
     private bool isShowing;
     ItemInstance shelvedItem;
-    Shelves activeShelf = null;
+    Shelf activeShelf = null;
     List<ItemInstance> items;
     List<ItemInstance> shelvedItems;//this is what the customers will use to reference what is on the shelves for their purchases.
     private bool isModified = false;
@@ -32,7 +32,7 @@ public class ShelfManager : MonoBehaviour
         }
 
         isShowing = false;
-        gameObject.SetActive(false);
+        ShelfCanvas.SetActive(isShowing);
     }
 
     // Update is called once per frame
@@ -78,7 +78,7 @@ public class ShelfManager : MonoBehaviour
 
     public void SetActiveShelf(GameObject newActiveShelf)
     {
-        this.activeShelf = newActiveShelf.GetComponent<Shelves>();
+        this.activeShelf = newActiveShelf.GetComponent<Shelf>();
     }
 
     /// <summary>
@@ -161,16 +161,10 @@ public class ShelfManager : MonoBehaviour
     {
         ItemInstance itemReference = new ItemInstance(heldItem);
         itemReference.stock = amount;
-        if (shelvedItems.Contains(itemReference))
-        {
-            int itemIndex = shelvedItems.IndexOf(itemReference);
-            shelvedItems[itemIndex].stock += amount;
-        }
-        else
-        {
-            shelvedItems.Add(itemReference);
-            itemReference.shelf = activeShelf.gameObject;
-        }
+        
+        shelvedItems.Add(itemReference);
+        itemReference.shelf = activeShelf.gameObject;
+        
     }
 
     public void HideOrShow()
@@ -179,7 +173,6 @@ public class ShelfManager : MonoBehaviour
 
         foreach (Transform item in shelfInventoryPanel.transform)
         {
-            Debug.Log("destroying shelf item buttons");
             Destroy(item.gameObject);
         }
 
@@ -197,6 +190,6 @@ public class ShelfManager : MonoBehaviour
             newButton.onClick.AddListener(delegate { MoveItem(newButton); });
         }
         
-        gameObject.SetActive(isShowing);
+        ShelfCanvas.SetActive(isShowing);
     }
 }

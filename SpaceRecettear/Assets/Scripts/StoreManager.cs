@@ -7,7 +7,6 @@ public class StoreManager : MonoBehaviour
     [SerializeField] StoreInventory storeInventory;
     //During "battle" scenes, this is the NPC inventory, but during shopping scenes this is the players inventory.
     [SerializeField] StoreInventory customerInventory;
-    //TODO: Implement movement between inventories
     // Start is called before the first frame update
     void Start()
     {

@@ -1038,7 +1038,7 @@ namespace RotaryHeart.Lib.SerializableDictionary
                 evt.Use();
             }
 
-            /* TODO This is buggy. The reason for this is to allow selection and dragging of an element using the header, or top row (if any)
+            /* This is buggy. The reason for this is to allow selection and dragging of an element using the header, or top row (if any)
 			 * The main issue here is determining whether the element has an "expandable" drop down arrow, which if it does, will capture the mouse event *without* the code below
 			 * Because of property drawers and certain property types, it's impossible to know this automatically (without dirty reflection)
 			 * So if the below code is active and we determine that the property is expandable but isn't actually. Then we'll accidently capture the mouse focus and prevent anything else from receiving it :(

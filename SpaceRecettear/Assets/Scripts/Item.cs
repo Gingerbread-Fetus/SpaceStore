@@ -65,7 +65,7 @@ public class ItemInstance
     {
         this.item = itemInstance.item;
         this.boomItem = itemInstance.boomItem;
-        this.stock = itemInstance.stock;//TODO: This doesn't seem quite right, make sure that stock is changed and set correctly
+        this.stock = itemInstance.stock;
         this.quality = itemInstance.quality;
         this.sellPrice = CalculateItemPrice();
     }
@@ -88,7 +88,6 @@ public class ItemInstance
 
     /// <summary>
     /// Item price is based off of the base price and the quality of the item.
-    /// TODO: determine pricing function
     /// </summary>
     /// <returns></returns>
     public int CalculateItemPrice()
