@@ -1,16 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class CustomerController : MonoBehaviour, IInteractable
-{
+{    
     [SerializeField] float walkSpeed = 5f;
-    [SerializeField] ItemInstance desiredItem;
+    [SerializeField] public ItemInstance desiredItem;
     [SerializeField] public CustomerProfile customerProfile;
 
+    CustomerPath path;
     Rigidbody2D myRigidBody;
     Animator myAnimator;
-    LayerMask interactableLayerMask;
     ShelfManager shelves;
     List<ItemInstance> shelvedItems;
     float lastDirY;
@@ -21,14 +20,15 @@ public class CustomerController : MonoBehaviour, IInteractable
     void Start()
     {
         SetUpCustomerProfile();
-        FindItem();
+        path = GetComponent<CustomerPath>();
+        FindNewItem();
     }
 
     // Update is called once per frame
     void Update()
     {
         Move();
-        if(desiredItem == null) { FindItem(); }
+        if(desiredItem == null) { FindNewItem(); }
     }
 
     /// <summary>
@@ -70,7 +70,7 @@ public class CustomerController : MonoBehaviour, IInteractable
         sr.sprite = customerProfile.customerSprite;
     }
 
-    private void FindItem()
+    private void FindNewItem()
     {
         //TODO: I feel customers should be choosing from a list of preferred items, but for now I'm just choose randomly from shelved things
         if (shelvedItems.Count > 0)
@@ -78,6 +78,10 @@ public class CustomerController : MonoBehaviour, IInteractable
             Debug.Log("Finding item");
             int itemIndex = Random.Range(0, shelvedItems.Count);
             desiredItem = shelvedItems[itemIndex];
+            Vector3 itemLocation = desiredItem.shelf.transform.position;
+            path.SetEndingPosition(itemLocation);
+
+            path.FindPathAStar();
             return;
         }
         desiredItem = null;
