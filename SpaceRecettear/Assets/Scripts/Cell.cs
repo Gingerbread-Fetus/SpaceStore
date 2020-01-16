@@ -5,21 +5,24 @@ using UnityEngine;
 [Serializable]
 public class Cell : IComparable
 {
-    Vector3 position;//Position in game world of the cell.
+
+    public Cell parent;
+    public Vector3 Position { get; }//Position in game world of the cell.
+    
 
     //f = g + h
-    double Heuristic { get; }//Distance from cell to goal, this is h.
-    double MovementCost { get; }//The cost of moving from starting point to cell on the grid. This is g.
-    double FinalWeight { get; }//The weight used to prioritize the path, A* prioritizes lowest finalWeight. This is f
+    public double Heuristic { get; }//Distance from cell to goal, this is h.
+    public double MovementCost { get; }//The cost of moving from starting point to cell on the grid. This is g.
+    public double FinalWeight { get; }//The weight used to prioritize the path, A* prioritizes lowest finalWeight. This is f
 
     
 
-    public Cell(double heuristic, double movementCost, Vector3 position)
+    public Cell(double movementCost, Vector3 position, Vector3 goalPosition)
     {
         this.MovementCost = movementCost;
-        this.Heuristic = heuristic;
-        this.FinalWeight = heuristic + movementCost;
-        this.position = position;
+        this.Heuristic = Vector3.Distance(position, goalPosition);
+        this.FinalWeight = this.Heuristic + movementCost;
+        this.Position = position;
     }
 
     /// <summary>
@@ -44,7 +47,7 @@ public class Cell : IComparable
     public override bool Equals(object obj)
     {
         if (obj == null) { return false; }
-        if (obj is Cell otherCell) { return otherCell.position.Equals(this.position); }
+        if (obj is Cell otherCell) { return otherCell.Position.Equals(this.Position); }
         return false;
     }
 
@@ -54,7 +57,7 @@ public class Cell : IComparable
         hashCode = hashCode * -1521134295 + Heuristic.GetHashCode();
         hashCode = hashCode * -1521134295 + MovementCost.GetHashCode();
         hashCode = hashCode * -1521134295 + FinalWeight.GetHashCode();
-        hashCode = hashCode * -1521134295 + EqualityComparer<Vector3>.Default.GetHashCode(position);
+        hashCode = hashCode * -1521134295 + EqualityComparer<Vector3>.Default.GetHashCode(Position);
         return hashCode;
     }
 }

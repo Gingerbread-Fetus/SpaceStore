@@ -12,6 +12,8 @@ public class CustomerController : MonoBehaviour, IInteractable
     Animator myAnimator;
     ShelfManager shelves;
     List<ItemInstance> shelvedItems;
+    IList<Cell> customerPath;
+    int pathIndex;
     float lastDirY;
     float lastDirX;
     private bool isDebug;
@@ -19,6 +21,7 @@ public class CustomerController : MonoBehaviour, IInteractable
     // Start is called before the first frame update
     void Start()
     {
+        pathIndex = 0;
         SetUpCustomerProfile();
         path = GetComponent<CustomerPath>();
         FindNewItem();
@@ -38,25 +41,32 @@ public class CustomerController : MonoBehaviour, IInteractable
     /// </summary>
     private void Move()
     {
-        float verticalAxis = -1f;
-        float horizontalAxis = 0f;
-        
+
+        bool playerIsMoving = myRigidBody.velocity.magnitude > Mathf.Epsilon;
+        myAnimator.SetBool("IsWalking", playerIsMoving);
+
+        if (pathIndex < customerPath.Count)//-1?
+        {
+            var targetPosition = customerPath[pathIndex].Position;
+            myRigidBody.MovePosition(targetPosition);
+
+            if(transform.position == targetPosition)
+            {
+                pathIndex++;
+            }
+        }
+
+        float verticalAxis = myRigidBody.velocity.y;
+        float horizontalAxis = myRigidBody.velocity.x;
+
         lastDirX = horizontalAxis;
         lastDirY = verticalAxis;
-        
+
         //set animator parameters
         myAnimator.SetFloat("VelocityX", horizontalAxis);
         myAnimator.SetFloat("LastXFace", lastDirX);
         myAnimator.SetFloat("VelocityY", verticalAxis);
         myAnimator.SetFloat("LastYFace", lastDirY);
-        //move player
-        myRigidBody.velocity = new Vector2(
-            horizontalAxis * walkSpeed * Time.deltaTime,
-            verticalAxis * walkSpeed * Time.deltaTime
-            );
-
-        bool playerIsMoving = myRigidBody.velocity.magnitude > Mathf.Epsilon;
-        myAnimator.SetBool("IsWalking", playerIsMoving);
     }
 
     private void SetUpCustomerProfile()
@@ -79,9 +89,11 @@ public class CustomerController : MonoBehaviour, IInteractable
             int itemIndex = Random.Range(0, shelvedItems.Count);
             desiredItem = shelvedItems[itemIndex];
             Vector3 itemLocation = desiredItem.shelf.transform.position;
-            path.SetEndingPosition(itemLocation);
+            path.SetEndPoints(transform.position,itemLocation);
 
             path.FindPathAStar();
+
+            customerPath = path.GetPath();
             return;
         }
         desiredItem = null;

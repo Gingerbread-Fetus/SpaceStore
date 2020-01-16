@@ -7,7 +7,7 @@ public class CustomerManager : MonoBehaviour
     [SerializeField] CustomerPool customerPool;
     [SerializeField] GameObject customerPrefab;
     [SerializeField] GameObject entrance;
-    [SerializeField] float spawnWait;
+    [SerializeField] float spawnWait = 5f;
 
     public bool waveSpawning;
     // Start is called before the first frame update
