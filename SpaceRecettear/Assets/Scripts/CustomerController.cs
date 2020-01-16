@@ -88,9 +88,8 @@ public class CustomerController : MonoBehaviour, IInteractable
             Debug.Log("Finding item");
             int itemIndex = Random.Range(0, shelvedItems.Count);
             desiredItem = shelvedItems[itemIndex];
-            Vector3 itemLocation = desiredItem.shelf.transform.position;
+            Vector3 itemLocation = desiredItem.shelf.GetPosition();
             path.SetEndPoints(transform.position,itemLocation);
-
             path.FindPathAStar();
 
             customerPath = path.GetPath();

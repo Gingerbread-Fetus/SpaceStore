@@ -34,13 +34,14 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Debug"))
         {
+            Debug.Log("Debug pressed");
             isDebug = !isDebug;
         }
 
         if (isDebug)
         {
             Vector3 rayDir = new Vector3(lastDirX, lastDirY, 0).normalized;
-            //Debug.DrawLine(transform.position, rayDir);
+            Debug.DrawLine(transform.position, rayDir);
             Debug.DrawRay(transform.position, rayDir, Color.red);
         }
     }

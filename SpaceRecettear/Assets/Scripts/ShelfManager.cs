@@ -163,7 +163,7 @@ public class ShelfManager : MonoBehaviour
         itemReference.stock = amount;
         
         shelvedItems.Add(itemReference);
-        itemReference.shelf = activeShelf.gameObject;
+        itemReference.shelf = activeShelf;
         
     }
 
