@@ -45,7 +45,7 @@ public class CustomerController : MonoBehaviour, IInteractable
         bool playerIsMoving = myRigidBody.velocity.magnitude > Mathf.Epsilon;
         myAnimator.SetBool("IsWalking", playerIsMoving);
 
-        if (pathIndex < customerPath.Count)//-1?
+        if (customerPath != null && pathIndex < customerPath.Count)//-1?
         {
             var targetPosition = customerPath[pathIndex].Position;
             myRigidBody.MovePosition(targetPosition);
@@ -54,6 +54,11 @@ public class CustomerController : MonoBehaviour, IInteractable
             {
                 pathIndex++;
             }
+        }
+
+        if(customerPath == null)
+        {
+            Debug.Log(gameObject.name + "path is null for some reason");
         }
 
         float verticalAxis = myRigidBody.velocity.y;
@@ -85,7 +90,6 @@ public class CustomerController : MonoBehaviour, IInteractable
         //TODO: I feel customers should be choosing from a list of preferred items, but for now I'm just choose randomly from shelved things
         if (shelvedItems.Count > 0)
         {
-            Debug.Log("Finding item");
             int itemIndex = Random.Range(0, shelvedItems.Count);
             desiredItem = shelvedItems[itemIndex];
             Vector3 itemLocation = desiredItem.shelf.GetPosition();

@@ -39,7 +39,7 @@ public class Shelf : Furniture, IInteractable
 
     public void Interact()
     {
-        Debug.Log("Shelf " + name + " interacted with");
+        Debug.Log(name + " interacted with");
         //Open shelf UI
         shelfManager.SetActiveShelf(this.gameObject);
         shelfManager.HideOrShow();

@@ -23,7 +23,6 @@ public class CustomerPath : MonoBehaviour
 
     private void Update()
     {
-        
     }
 
     public List<Cell> GetPath() => solutionList;
@@ -49,7 +48,7 @@ public class CustomerPath : MonoBehaviour
         {
             //Find the node with the lowest cost off the OPEN list.
             Cell currentCell = openList.Values[0];
-            openList.Remove(currentCell);
+            Debug.Log(openList.Remove(currentCell));
 
             //If the cell is the solution, populate the solution list.
             if (currentCell.Position.Equals(endingPosition))
@@ -69,12 +68,12 @@ public class CustomerPath : MonoBehaviour
             foreach (Cell successor in successors)
             {
                 //First check if successor is in the open list
+                //If it is, check the finalWeight, and discard it if it is higher.
                 Cell openCell = null;
                 if (openList.ContainsKey(successor))
                 {
                     openCell = openList[successor];
                 }
-                //If it is, check the finalWeight, and discard it if it is higher.
                 if(openCell != null && successor.FinalWeight > openCell.FinalWeight)
                 {
                     continue;
@@ -106,8 +105,9 @@ public class CustomerPath : MonoBehaviour
             }//end(for loop)
 
             //Add the currentCell to the closed list.
-            Debug.Log(currentCell.Position);
-            closedList.Add(currentCell,currentCell);//TODO: There seems to be a problem with this line and items with the same key being added. Giving a ArgumentException.
+            ///TODO: There seems to be a problem with this line and items with
+            ///the same key being added. Giving a ArgumentException.
+            closedList.Add(currentCell,currentCell);
 
         }//end(while loop)
     }
@@ -122,15 +122,26 @@ public class CustomerPath : MonoBehaviour
             {
                 Vector3 tmp = new Vector3(x, y, 0);
                 Vector3 nextPos = tmp + cell.Position;
+                if(x==0 && y == 0) { continue; }//skip over the 'center' cell.
                 Cell nextSuccessor = new Cell(cell.MovementCost + 1, nextPos, endingPosition);
                 Debug.Log(cell.Position + " to " + nextSuccessor.Position);
-                Debug.DrawRay(cell.Position, nextSuccessor.Position, Color.green);
-                RaycastHit2D hit = Physics2D.Raycast(cell.Position, nextSuccessor.Position, 1f, layerMask);
-                Debug.Log(hit + " at " + hit.collider.gameObject.name);
-                if (!hit)//TODO: Doesn't work. Only seems to be hitting the door. Doesn't seem to be raycasting in the right direction.
+                RaycastHit2D hit = Physics2D.Raycast(cell.Position, (nextSuccessor.Position - cell.Position).normalized, 1f, layerMask);
+
+                if (hit)//If fraction <= 0 then the collision came from inside the collider.
+                {
+                    Debug.Log(hit + ": hit detected by raycast on " + hit.collider.gameObject.name);
+                    //TODO: Handle edge cases of collision here. EG: if the collider hit is this collider, we still want to add it to successors.
+                    if (hit.collider.gameObject.Equals(gameObject))//This doesn't work.
+                    {
+                        Debug.Log("Self containing cell was hit");
+                        successors.Add(nextSuccessor);
+                    }
+                    continue;
+                }
+                else
                 {
                     nextSuccessor.parent = cell;
-                    successors.Add(nextSuccessor); 
+                    successors.Add(nextSuccessor);
                 }
             }
         }
