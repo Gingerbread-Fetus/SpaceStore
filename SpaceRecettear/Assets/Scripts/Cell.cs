@@ -26,7 +26,7 @@ public class Cell : IComparable
     }
 
     /// <summary>
-    /// TODO, this really needs testing.
+    /// TODO, this really needs testing. I think the problem is here.
     /// </summary>
     /// <param name="obj"></param>
     /// <returns></returns>

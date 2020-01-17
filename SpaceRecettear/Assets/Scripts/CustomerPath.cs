@@ -107,6 +107,8 @@ public class CustomerPath : MonoBehaviour
             //Add the currentCell to the closed list.
             ///TODO: There seems to be a problem with this line and items with
             ///the same key being added. Giving a ArgumentException.
+            bool test = closedList.ContainsKey(currentCell);
+            Debug.Log(test);
             closedList.Add(currentCell,currentCell);
 
         }//end(while loop)
