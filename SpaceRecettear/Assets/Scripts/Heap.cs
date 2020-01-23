@@ -9,14 +9,16 @@ public class Heap : IList, ICloneable
     private ArrayList FList;
     private IComparer FComparer = null;
     private bool FUseObjectsComparison;
+    private bool FIsFixedSise;
+    
 
-    public object this[int index] { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public object this[int index] { get => FList[index]; set => FList[index] = value; }
 
     public bool IsFixedSize => throw new NotImplementedException();
 
     public bool IsReadOnly => throw new NotImplementedException();
 
-    public int Count => throw new NotImplementedException();
+    public int Count => FList.Count;
 
     public bool IsSynchronized => throw new NotImplementedException();
 
@@ -59,7 +61,7 @@ public class Heap : IList, ICloneable
 
     public void Insert(int index, object value)
     {
-        throw new NotImplementedException();
+        throw new NotImplementedException("Heap does not support inserting");
     }
 
     public void Remove(object value)
