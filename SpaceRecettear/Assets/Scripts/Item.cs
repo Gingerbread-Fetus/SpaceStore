@@ -45,12 +45,14 @@ public class ItemInstance
     [SerializeField] bool boomItem = false;
     [SerializeField] public int stock = 1;
     [SerializeField, Range(0, 10)] public int quality = 0;
-    [SerializeField] public Shelf shelf;//Serializing for debugging purposes
+    [SerializeField] private Shelf shelf = null;
+    public Shelf Shelf { get => shelf; set => shelf = value; }//Serializing for debugging purposes
 
     public ItemInstance() { }//Actually don't know what I may need to do with this.
 
     public ItemInstance(Item item)
     {
+        shelf = null;
         this.item = item;
         quality = 0;
     }
@@ -93,5 +95,15 @@ public class ItemInstance
     public int CalculateItemPrice()
     {
         return item.baseSellPrice + (10 * quality);
+    }
+
+    /// <summary>
+    /// This method just checks that items are of the same type by their name.
+    /// </summary>
+    /// <param name="otherItem"></param>
+    /// <returns></returns>
+    public bool ItemEqualsByType(ItemInstance otherItem)
+    {
+        return this.item.name.Equals(otherItem.item.name);
     }
 }
