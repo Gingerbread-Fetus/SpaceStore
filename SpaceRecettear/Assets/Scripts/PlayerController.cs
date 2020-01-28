@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float walkSpeed = 5f;
+    [SerializeField] GameObject cameras;
 
+    List<GameObject> cameraList;
     Rigidbody2D myRigidBody;
     Animator myAnimator;
     LayerMask interactableLayerMask;
@@ -18,7 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
-        interactableLayerMask = LayerMask.GetMask("Interactable", "Customers"); 
+        interactableLayerMask = LayerMask.GetMask("Interactable", "Customers");
     }
 
     // Update is called once per frame
@@ -27,6 +30,15 @@ public class PlayerController : MonoBehaviour
         Move();
         PlayerInteract();
         DrawDebug();
+        ChangeCamera();
+    }
+
+    private void ChangeCamera()
+    {
+        if (Input.GetButtonDown("Camera"))
+        {
+            
+        }
     }
 
     private void DrawDebug()
