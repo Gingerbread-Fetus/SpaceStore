@@ -4,19 +4,28 @@ using UnityEngine;
 
 public class Shelf : Furniture, IInteractable
 {
-    [SerializeField] public List<ItemButton> heldItems;//TODO: I don't like what this does in the editor, and it makes some testing harder, I should change it.
+    [SerializeField] public List<ItemInstance> heldItems = new List<ItemInstance>();//TODO: I don't like what this does in the editor, and it makes some testing harder, I should change it.
     [SerializeField] public SpriteRenderer spriteHolder;
     [SerializeField] public GameObject standArea;
 
     ShelfManager shelfManager;
+    CustomerManager customerManager;
     Collider2D standAreaCollider;
     
     // Start is called before the first frame update
     void Start()
     {
-        heldItems = new List<ItemButton>();
         shelfManager = FindObjectOfType<ShelfManager>();
+        customerManager = FindObjectOfType<CustomerManager>();
         standAreaCollider = standArea.GetComponent<CircleCollider2D>();
+        if(heldItems.Count > 0)
+        {
+            foreach (ItemInstance item in heldItems)
+            {
+                item.Shelf = this;
+                customerManager.UnclaimItem(item);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -24,7 +33,7 @@ public class Shelf : Furniture, IInteractable
     {
         if (heldItems.Count > 0)
         {
-            spriteHolder.sprite = heldItems[0].heldItem.item.itemIcon; 
+            spriteHolder.sprite = heldItems[0].item.itemIcon;
         }
         else
         {
@@ -45,12 +54,12 @@ public class Shelf : Furniture, IInteractable
         shelfManager.HideOrShow();
     }
     
-    public void changeStock(ItemButton item, int stockChange)
+    public void changeStock(ItemInstance item, int stockChange)
     {
         int itemIndex = heldItems.IndexOf(item);
         if (itemIndex >= 0)
         {
-            heldItems[itemIndex].heldItem.stock += stockChange;
+            heldItems[itemIndex].stock += stockChange;
         }
     }
 

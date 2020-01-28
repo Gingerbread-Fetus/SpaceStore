@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b90e9e20b807ac4c901a1dc71cf488b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drawDebugging: 1
   startingPosition: {x: 0, y: 0, z: 0}
   endingPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &6449653314689777156

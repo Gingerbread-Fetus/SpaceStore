@@ -5,118 +5,119 @@ using UnityEngine;
 
 public class CustomerPath : MonoBehaviour
 {
-    [SerializeField] bool drawDebugging;
+    [SerializeField] bool drawDebugging = false;
     [SerializeField] Vector3 startingPosition;//Serializing for debugging
     [SerializeField] Vector3 endingPosition;//Serializing for debugging
     
     Cell startingCell;
     LayerMask layerMask;
-    SortedList<Cell,Cell> openList;
-    SortedList<Cell, Cell> closedList;
+    MinHeap<Cell> frontier;
+    Dictionary<Cell, double> costSoFar;//This is the set of visited nodes.
     List<Cell> solutionList;
+
+    private Cell goalCell;
+
+    public List<Cell> GetPath() => solutionList;
 
     private void Start()
     {
         layerMask = LayerMask.GetMask("Interactable", "Customers",  "Walls");
         solutionList = new List<Cell>();
+
+         // A* Search Algorithm
+        frontier = new MinHeap<Cell>();
+        costSoFar = new Dictionary<Cell,double>();
+
+        //put the starting node on the open
+        //list(you can leave its f at zero)
+        startingPosition = gameObject.transform.position;
+        Cell startingCell = new Cell(startingPosition, endingPosition);
+        frontier.Add(startingCell);
+        costSoFar[startingCell] = 0;
     }
 
     private void Update()
     {
+        
     }
 
-    public List<Cell> GetPath() => solutionList;
+    private List<Cell> ConstructPath()
+    {
+        
+        Cell parentCell = goalCell;
+
+        while (parentCell != null)
+        {
+            solutionList.Add(parentCell);
+            parentCell = parentCell.parent;
+        }
+
+        solutionList.Reverse();
+        if (drawDebugging)
+        {
+            printSolution(); 
+        }
+        return solutionList;
+    }
+
+    //TODO delete this helper when finished.
+    private string printSolution()
+    {
+        string sb = "";
+        foreach(Cell cell in solutionList)
+        {
+            Debug.DrawRay(cell.Position, Vector3.up * .5f, Color.blue, 3.0f);
+            sb += cell.ToString() + "\n";
+        }
+        return sb;
+    }
 
     public void SetEndPoints(Vector3 newStartPos ,Vector3 newEndingPos)
     {
         startingPosition = newStartPos;
         endingPosition = newEndingPos;
+        goalCell = new Cell(endingPosition, endingPosition);
     }
 
+    /// <summary>
+    /// TODO I'm gonna redo this so it looks for a new cell every frame instead.
+    /// </summary>
     public void FindPathAStar()
     {
-        // A* Search Algorithm
-        openList = new SortedList<Cell, Cell>();
-        closedList = new SortedList<Cell, Cell>();
-
-        //put the starting node on the open
-        //list(you can leave its f at zero)
-        Cell startingCell = new Cell(0, startingPosition, endingPosition);
-        openList.Add(startingCell, startingCell);
-        //3.  while the open list is not empty
-        while (openList.Count > 0)
+        while(frontier.Count > 0)//TODO: Rewrote this, needs testing.
         {
-            //Find the node with the lowest cost off the OPEN list.
-            Cell currentCell = openList.Values[0];
-            Debug.Log(openList.Remove(currentCell));
-
-            //If the cell is the solution, populate the solution list.
-            if (currentCell.Position.Equals(endingPosition))
+            Cell currentCell = frontier.RemoveMin();
+            if (currentCell.CompareTo(goalCell) == 0)
             {
-                while(currentCell != null)
-                {
-                    solutionList.Add(currentCell);
-                    currentCell = currentCell.parent;
-                }
-                solutionList.Reverse();
+                goalCell = currentCell;
+                Debug.Log("Goal Cell found: " + goalCell.ToString());
+                ConstructPath();
+                //Debug.Break();//This is great for debugging purposes
                 break;
             }
-
-            //generate cells successors and set their parent to the cell.
-            List<Cell> successors = GetSuccessors(currentCell);
-            //    d) for each successor
-            foreach (Cell successor in successors)
+            //for neighbors of current:
+            foreach (Cell neighbor in GetNeighbors(currentCell))
             {
-                //First check if successor is in the open list
-                //If it is, check the finalWeight, and discard it if it is higher.
-                Cell openCell = null;
-                if (openList.ContainsKey(successor))
-                {
-                    openCell = openList[successor];
-                }
-                if(openCell != null && successor.FinalWeight > openCell.FinalWeight)
-                {
-                    continue;
-                }
-                else if(openCell != null)
-                {
-                    //Remove the old successor from the open list
-                    openList.Remove(openCell);
-                }
+                double newCost = costSoFar[currentCell] + neighbor.cellMovementCost;
 
-                //Then do the same thing on the CLOSED list
-                Cell closedCell = null;
-                if (closedList.ContainsKey(successor))
+                if(!costSoFar.ContainsKey(neighbor) || newCost < costSoFar[neighbor])
                 {
-                    closedCell = closedList[successor];
+                    costSoFar[neighbor] = newCost;
+                    frontier.Add(neighbor);
                 }
-                if(closedCell != null && successor.FinalWeight > closedCell.FinalWeight)
-                {
-                    continue;
-                }
-                else if(closedCell != null)
-                {
-                    //Remove the old successor from the closed list
-                    closedList.Remove(closedCell);
-                }
-
-                //Add the current successor to the open list
-                openList.Add(successor,successor);
-            }//end(for loop)
-
-            //Add the currentCell to the closed list.
-            ///TODO: There seems to be a problem with this line and items with
-            ///the same key being added. Giving a ArgumentException.
-            bool test = closedList.ContainsKey(currentCell);
-            Debug.Log(test);
-            closedList.Add(currentCell,currentCell);
-
+            }
         }//end(while loop)
     }
 
-    private List<Cell> GetSuccessors(Cell cell)
+    /// <summary>
+    /// Gets the neighboring cells that are valid for pathfinding.
+    /// TODO I think there's a problem here
+    /// </summary>
+    /// <param name="cell"></param>
+    /// <returns></returns>
+    private List<Cell> GetNeighbors(Cell cell)
     {
-        List<Cell> successors = new List<Cell>();
+        List<Cell> neighbors = new List<Cell>();
 
         for(int x = -1; x <= 1; x++)
         {
@@ -125,29 +126,23 @@ public class CustomerPath : MonoBehaviour
                 Vector3 tmp = new Vector3(x, y, 0);
                 Vector3 nextPos = tmp + cell.Position;
                 if(x==0 && y == 0) { continue; }//skip over the 'center' cell.
-                Cell nextSuccessor = new Cell(cell.MovementCost + 1, nextPos, endingPosition);
-                Debug.Log(cell.Position + " to " + nextSuccessor.Position);
+                Cell nextSuccessor = new Cell(cell, nextPos, endingPosition);////for neighbors of current: cost = g(current) + movementcost(current, neighbor)
                 RaycastHit2D hit = Physics2D.Raycast(cell.Position, (nextSuccessor.Position - cell.Position).normalized, 1f, layerMask);
 
                 if (hit)//If fraction <= 0 then the collision came from inside the collider.
                 {
-                    Debug.Log(hit + ": hit detected by raycast on " + hit.collider.gameObject.name);
-                    //TODO: Handle edge cases of collision here. EG: if the collider hit is this collider, we still want to add it to successors.
-                    if (hit.collider.gameObject.Equals(gameObject))//This doesn't work.
-                    {
-                        Debug.Log("Self containing cell was hit");
-                        successors.Add(nextSuccessor);
-                    }
+                    //Debug.Log(hit + ": hit detected by raycast on " + hit.collider.gameObject.name);
+                    ////TODO: Handle edge cases of collision here. EG: if the collider hit is this collider, we still want to add it to successors.
                     continue;
                 }
                 else
                 {
+                    if (drawDebugging){ Debug.DrawRay(nextSuccessor.Position, Vector3.right * .5f, Color.yellow, 3.0f);}
                     nextSuccessor.parent = cell;
-                    successors.Add(nextSuccessor);
+                    neighbors.Add(nextSuccessor);
                 }
             }
         }
-
-        return successors;
+        return neighbors;
     }
 }

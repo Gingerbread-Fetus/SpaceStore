@@ -19,11 +19,13 @@ public class ShelfManager : MonoBehaviour
     List<ItemInstance> items;
     List<ItemInstance> shelvedItems;//this is what the customers will use to reference what is on the shelves for their purchases.
     private bool isModified = false;
+    private CustomerManager CustomerManager;
 
     // Start is called before the first frame update
     void Start()
     {
         shelvedItems = new List<ItemInstance>();
+        CustomerManager = FindObjectOfType<CustomerManager>();
         //For every item in the player inventory, populate the inventory panel with an item button
         items = playerInventory.GetInventory();
         foreach(ItemInstance item in items)
@@ -51,14 +53,14 @@ public class ShelfManager : MonoBehaviour
                 List<ItemButton> itemButtons = new List<ItemButton>(itemButtonsArray);
                 foreach (ItemButton itemButton in itemButtons)
                 {
-                    if (activeShelf.heldItems.Contains(itemButton))
+                    if (activeShelf.heldItems.Contains(itemButton.heldItem))
                     {
-                        int itemIndex = activeShelf.heldItems.IndexOf(itemButton);
-                        int itemStock = activeShelf.heldItems[itemIndex].heldItem.stock;
+                        int itemIndex = activeShelf.heldItems.IndexOf(itemButton.heldItem);
+                        int itemStock = activeShelf.heldItems[itemIndex].stock;
                         itemButton.stockNumberText.text = itemStock.ToString(); 
                     }
                 }
-                foreach(ItemButton itemButton in activeShelf.heldItems)
+                foreach(ItemButton itemButton in itemButtons)
                 {
                     if (!itemButtons.Contains(itemButton))
                     {
@@ -102,7 +104,11 @@ public class ShelfManager : MonoBehaviour
         return itemButton;
     }
 
-    //Moves item from inventory to shelf
+    /// <summary>
+    /// Moves item between inventories.
+    /// TODO: Need to make sure that items are gettting claimed and unclaimed
+    /// </summary>
+    /// <param name="interactedButton"></param>
     private void MoveItem(Button interactedButton)
     {
         ItemButton itemButton = interactedButton.GetComponent<ItemButton>();
@@ -114,17 +120,18 @@ public class ShelfManager : MonoBehaviour
             if (itemInstance.stock > 1)
             {
                 playerInventory.TakeItem(itemInstance);
-                if (!activeShelf.heldItems.Contains(itemButton))
+                //If the active shelf does not have this item then we have to create a new button.
+                if (!activeShelf.heldItems.Contains(itemButton.heldItem))
                 {
                     ItemInstance newItemInstance = new ItemInstance();
                     newItemInstance.item = itemButton.heldItem.item;
                     ItemButton newItemButton = AddNewItemButton(newItemInstance, shelfInventoryPanel);
-                    activeShelf.heldItems.Add(newItemButton);
+                    activeShelf.heldItems.Add(newItemButton.heldItem);//Mistakenly created another item instance that will always be null.
                     ShelfItem(newItemButton.heldItem, 1);
                 }
                 else
                 {
-                    activeShelf.changeStock(itemButton, 1);
+                    activeShelf.changeStock(itemButton.heldItem, 1);
                     ShelfItem(itemButton.heldItem, 1);
                 }
             }
@@ -140,15 +147,15 @@ public class ShelfManager : MonoBehaviour
             if (itemInstance.stock > 1)
             {
                 playerInventory.GiveItem(itemInstance.item);
-                activeShelf.changeStock(itemButton, -1);
-                int itemIndex = activeShelf.heldItems.IndexOf(itemButton);
-                int stock = activeShelf.heldItems[itemIndex].heldItem.stock;
+                activeShelf.changeStock(itemButton.heldItem, -1);
+                int itemIndex = activeShelf.heldItems.IndexOf(itemButton.heldItem);
+                int stock = activeShelf.heldItems[itemIndex].stock;
                 itemButton.stockNumberText.text = stock.ToString();
             }
             else
             {
                 playerInventory.GiveItem(itemInstance.item);
-                activeShelf.heldItems.Remove(itemButton);
+                activeShelf.heldItems.Remove(itemButton.heldItem);
                 Destroy(interactedButton.gameObject);
                 shelvedItems.Remove(itemButton.heldItem);
             }
@@ -156,15 +163,15 @@ public class ShelfManager : MonoBehaviour
         }
         isModified = true;
     }
-
+    
     private void ShelfItem(ItemInstance heldItem, int amount)
     {
-        ItemInstance itemReference = new ItemInstance(heldItem);
-        itemReference.stock = amount;
-        
-        shelvedItems.Add(itemReference);
-        itemReference.shelf = activeShelf;
-        
+        heldItem.stock = amount;
+        heldItem.Shelf = activeShelf;
+
+        shelvedItems.Add(heldItem);
+
+        CustomerManager.UnclaimItem(heldItem);
     }
 
     public void HideOrShow()
@@ -177,16 +184,16 @@ public class ShelfManager : MonoBehaviour
         }
 
         //If the active shelf has an item on it, make a button for that item and place it.
-        foreach (ItemButton itemButton in activeShelf.heldItems)
+        foreach (ItemInstance itemInstance in activeShelf.heldItems)
         {
             Button newButton = Instantiate(itemButtonPrefab);
             newButton.transform.SetParent(shelfInventoryPanel.transform, false);
             Image image = newButton.GetComponent<Image>();
-            image.sprite = itemButton.heldItem.item.itemIcon;
+            image.sprite = itemInstance.item.itemIcon;
 
             ItemButton newItemButton = newButton.GetComponent<ItemButton>();
-            newItemButton.heldItem = itemButton.heldItem;
-            newItemButton.stockNumberText.text = itemButton.heldItem.stock.ToString();
+            newItemButton.heldItem = itemInstance;
+            newItemButton.stockNumberText.text = itemInstance.stock.ToString();
             newButton.onClick.AddListener(delegate { MoveItem(newButton); });
         }
         

@@ -70,7 +70,6 @@ public class PlayerController : MonoBehaviour
             {
                 //If an object is hit, check if it's interactable. Should be if it's on that layer
                 IInteractable interactable = hit.transform.gameObject.GetComponent<IInteractable>();
-                
                 if(interactable != null)
                 {
                     interactable.Interact();

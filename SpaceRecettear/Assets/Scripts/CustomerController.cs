@@ -10,8 +10,8 @@ public class CustomerController : MonoBehaviour, IInteractable
     CustomerPath path;
     Rigidbody2D myRigidBody;
     Animator myAnimator;
-    ShelfManager shelves;
-    List<ItemInstance> shelvedItems;
+    CustomerManager customerManager;
+    List<ItemInstance> unclaimedItems;
     IList<Cell> customerPath;
     int pathIndex;
     float lastDirY;
@@ -35,9 +35,16 @@ public class CustomerController : MonoBehaviour, IInteractable
     }
 
     /// <summary>
-    /// TODO: This was copied from the player movement script. It will need to 
-    /// be changed. Probably changed to not use the physics velocity, make sure
-    /// that whatever is used is updating the animator parameters accurately.
+    /// Sells the desiredItem to the customer.
+    /// TODO implement and test this
+    /// </summary>
+    public void BuyItem()
+    {
+        desiredItem.Shelf.heldItems.Remove(desiredItem);
+    }
+
+    /// <summary>
+    /// TODO: Customers move between cells instantly, needs to be slowed down.
     /// </summary>
     private void Move()
     {
@@ -58,7 +65,8 @@ public class CustomerController : MonoBehaviour, IInteractable
 
         if(customerPath == null)
         {
-            Debug.Log(gameObject.name + "path is null for some reason");
+            Debug.LogError(gameObject.name + "path is null for some reason. Destroying Customer.");
+            Destroy(gameObject);//TODO: Make sure you delete this later.
         }
 
         float verticalAxis = myRigidBody.velocity.y;
@@ -78,8 +86,7 @@ public class CustomerController : MonoBehaviour, IInteractable
     {
         myAnimator = GetComponent<Animator>();
         myRigidBody = GetComponent<Rigidbody2D>();
-        shelves = FindObjectOfType<ShelfManager>();
-        shelvedItems = shelves.GetShelvedItems();
+        customerManager = FindObjectOfType<CustomerManager>();
         myAnimator.runtimeAnimatorController = customerProfile.animatorController;
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         sr.sprite = customerProfile.customerSprite;
@@ -87,12 +94,16 @@ public class CustomerController : MonoBehaviour, IInteractable
 
     private void FindNewItem()
     {
-        //TODO: I feel customers should be choosing from a list of preferred items, but for now I'm just choose randomly from shelved things
-        if (shelvedItems.Count > 0)
+        unclaimedItems = customerManager.unclaimedItems;
+        //TODO: I feel customers should be choosing from a list of preferred items, but for now I'm just choosing randomly from shelved things
+        if (unclaimedItems.Count > 0)
         {
-            int itemIndex = Random.Range(0, shelvedItems.Count);
-            desiredItem = shelvedItems[itemIndex];
-            Vector3 itemLocation = desiredItem.shelf.GetPosition();
+            //TODO later, I plan to change this part right here to check for a random item from prefered items. 
+            int itemIndex = Random.Range(0, unclaimedItems.Count);
+            desiredItem = unclaimedItems[itemIndex];//For now it's just getting a random item on the shelves and calling the method I've placed for later.
+            desiredItem = customerManager.ClaimItem(desiredItem);//TODO need to decide what to do if this returns null.
+
+            Vector3 itemLocation = desiredItem.Shelf.GetPosition();
             path.SetEndPoints(transform.position,itemLocation);
             path.FindPathAStar();
 

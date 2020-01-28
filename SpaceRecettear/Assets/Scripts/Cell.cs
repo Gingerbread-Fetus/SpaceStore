@@ -5,27 +5,56 @@ using UnityEngine;
 [Serializable]
 public class Cell : IComparable
 {
+    private int D => 1;//Minimum cost for moving between spaces
+    private int D2 => 1;//Minimum cost for moving diagonally.
+    public double cellMovementCost = 1f;
 
     public Cell parent;
     public Vector3 Position { get; }//Position in game world of the cell.
-    
+    public Vector3 Goal { get; private set; }
 
     //f = g + h
-    public double Heuristic { get; }//Distance from cell to goal, this is h.
-    public double MovementCost { get; }//The cost of moving from starting point to cell on the grid. This is g.
-    public double FinalWeight { get; }//The weight used to prioritize the path, A* prioritizes lowest finalWeight. This is f
+    //f want the lowest value to sort them by
+    //g represents the exact cost of the path from the starting point to any vertex n
+    //h represents the heuristic estimated cost
+    public double Heuristic { get; set; }//Distance from cell to goal, this is h.
+    public double MovementCost { get; set; }//Distance from start to this cell. This is g.
+    public double FinalWeight { get; set; }//The weight used to prioritize the path, A* prioritizes lowest finalWeight. This is f
 
-    
-
-    public Cell(double movementCost, Vector3 position, Vector3 goalPosition)
+    /// <summary>
+    /// This constructor will be used to make the original node, so it won't have  parent.
+    /// </summary>
+    /// <param name="position">Position of cell.</param>
+    /// <param name="goalPosition">The cell we are trying to go to</param>
+    public Cell(Vector3 position, Vector3 goalPosition)
     {
-        this.MovementCost = movementCost;
-        this.Heuristic = Vector3.Distance(position, goalPosition);
-        this.FinalWeight = this.Heuristic + movementCost;
+        //distance from goal
+        this.parent = null;
+        this.MovementCost = 0;
         this.Position = position;
+        this.Goal = goalPosition;
+        this.Heuristic = GetHeuristic(this);
+        this.FinalWeight = MovementCost + Heuristic;
     }
 
     /// <summary>
+    /// </summary>
+    /// <param name="movementCost"></param>
+    /// <param name="position"></param>
+    /// <param name="goalPosition"></param>
+    public Cell(Cell parent, Vector3 position, Vector3 goalPosition)
+    {
+        //distance from goal
+        this.parent = parent;
+        this.MovementCost = parent.MovementCost + cellMovementCost;
+        this.Position = position;
+        this.Goal = goalPosition;
+        this.Heuristic = GetHeuristic(this);
+        this.FinalWeight = MovementCost + Heuristic;
+    }
+
+    /// <summary>
+    /// 
     /// TODO, this really needs testing. I think the problem is here.
     /// </summary>
     /// <param name="obj"></param>
@@ -34,9 +63,24 @@ public class Cell : IComparable
     {
         if (obj == null) { return 1; }
 
-        if (obj is Cell otherCell)//Especially this part.
+        if (obj is Cell otherCell)
         {
-            return this.FinalWeight.CompareTo(otherCell.FinalWeight);
+            int distanceCheck = this.Heuristic.CompareTo(otherCell.Heuristic);
+            if(distanceCheck == 0)//if they have the same weight we have to check the postion.
+            {
+                if (this.Equals(otherCell))
+                {
+                    return 0;//Return 0 if they are indeed the same object
+                }
+                else
+                {
+                    return 1;//Otherwise we'll sort it after the cell.
+                }
+            }
+            else//Otherwise we can just return weight check
+            {
+                return distanceCheck;
+            }
         }
         else
         {
@@ -53,11 +97,25 @@ public class Cell : IComparable
 
     public override int GetHashCode()
     {
-        var hashCode = -615065587;
-        hashCode = hashCode * -1521134295 + Heuristic.GetHashCode();
-        hashCode = hashCode * -1521134295 + MovementCost.GetHashCode();
-        hashCode = hashCode * -1521134295 + FinalWeight.GetHashCode();
-        hashCode = hashCode * -1521134295 + EqualityComparer<Vector3>.Default.GetHashCode(Position);
-        return hashCode;
+        return Position.GetHashCode();
+    }
+
+    public override string ToString()
+    {
+        return "(Position: " + Position.ToString() + ", Weight: " + FinalWeight.ToString() + ")";
+    }
+
+    /// <summary>
+    /// Returns the manhattan distance for the given cell.
+    /// </summary>
+    /// <param name="cell"></param>
+    /// <returns></returns>
+    private double GetHeuristic(Cell cell)
+    {
+        Vector3 pos = cell.Position;
+        Vector3 goal = cell.Goal;
+        double dx = Math.Abs(pos.x - goal.x);
+        double dy = Math.Abs(pos.y - goal.y);
+        return D * (dx + dy) + (D2 - 2 * D) * Math.Min(dx, dy);
     }
 }
