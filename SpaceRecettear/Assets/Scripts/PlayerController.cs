@@ -7,7 +7,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float walkSpeed = 5f;
-    [SerializeField] GameObject cameras;
+    [SerializeField] CinemachineStateDrivenCamera cameras;
+    [SerializeField] GameObject walkCam;
+    [SerializeField] GameObject boomCam;
 
     List<GameObject> cameraList;
     Rigidbody2D myRigidBody;
@@ -16,12 +18,14 @@ public class PlayerController : MonoBehaviour
     float lastDirY;
     float lastDirX;
     private bool isDebug;
+    private bool cameraBoomed = false;
 
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         interactableLayerMask = LayerMask.GetMask("Interactable", "Customers");
+        boomCam.gameObject.SetActive(cameraBoomed);
     }
 
     // Update is called once per frame
@@ -30,14 +34,15 @@ public class PlayerController : MonoBehaviour
         Move();
         PlayerInteract();
         DrawDebug();
-        ChangeCamera();
+        BoomCamera();
     }
 
-    private void ChangeCamera()
+    private void BoomCamera()
     {
         if (Input.GetButtonDown("Camera"))
         {
-            
+            cameraBoomed = !cameraBoomed;
+            boomCam.gameObject.SetActive(cameraBoomed);
         }
     }
 

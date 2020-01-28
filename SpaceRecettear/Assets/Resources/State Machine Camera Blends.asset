@@ -14,12 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CustomBlends:
   - m_From: Player Walk Camera
-    m_To: Player Idle Cam
+    m_To: Player Boom Cam
     m_Blend:
       m_Style: 1
       m_Time: 2
-  - m_From: Player Idle Cam
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: Player Boom Cam
     m_To: Player Walk Camera
     m_Blend:
       m_Style: 1
-      m_Time: 1
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
