@@ -30,8 +30,13 @@ public class CustomerController : MonoBehaviour, IInteractable
     // Update is called once per frame
     void Update()
     {
-        Move();
+        
         if(desiredItem == null) { FindNewItem(); }
+    }
+
+    void FixedUpdate()
+    {
+        Move();
     }
 
     /// <summary>
@@ -54,10 +59,12 @@ public class CustomerController : MonoBehaviour, IInteractable
 
         if (customerPath != null && pathIndex < customerPath.Count)//-1?
         {
-            var targetPosition = customerPath[pathIndex].Position;
-            myRigidBody.MovePosition(targetPosition);
+            var target = customerPath[pathIndex].Position;
+            Vector2 direction = (target - transform.position).normalized;
+            Vector2.Lerp(target, direction,1);
 
-            if(transform.position == targetPosition)
+
+            if (transform.position == target)
             {
                 pathIndex++;
             }

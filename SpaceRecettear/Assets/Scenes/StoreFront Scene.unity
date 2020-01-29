@@ -4483,6 +4483,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1638886162336730056, guid: 573ea8cdaa09afa4e976d8ccbebc285a,
+        type: 3}
+      propertyPath: heldItems.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638886162336730056, guid: 573ea8cdaa09afa4e976d8ccbebc285a,
+        type: 3}
+      propertyPath: heldItems.Array.data[0].item
+      value: 
+      objectReference: {fileID: 11400000, guid: ed22bfaf86b0a2c4daa9a1d156624849,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 573ea8cdaa09afa4e976d8ccbebc285a, type: 3}
 --- !u!4 &614183806 stripped
@@ -18196,6 +18207,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cameras
       objectReference: {fileID: 0}
+    - target: {fileID: 8113572927231682119, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113572927231682119, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
+        type: 3}
+      propertyPath: m_Name
+      value: Player Boom Cam
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113572927231682112, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
+        type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 1552602135}
+    - target: {fileID: 8113572927231682112, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
+        type: 3}
+      propertyPath: m_Priority
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113572926882269906, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113572926882269919, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
+        type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 118751695}
+    - target: {fileID: 8113572926882269919, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
+        type: 3}
+      propertyPath: m_Priority
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8113572925423308912, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
         type: 3}
       propertyPath: orthographic size
@@ -18274,7 +18320,7 @@ PrefabInstance:
     - target: {fileID: 8113572925423308915, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.1848497
+      value: 5.18486
       objectReference: {fileID: 0}
     - target: {fileID: 8113572925423308915, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
         type: 3}
@@ -18331,11 +18377,6 @@ PrefabInstance:
       propertyPath: m_ChildCameras.Array.data[1]
       value: 
       objectReference: {fileID: 426735798}
-    - target: {fileID: 8113572926882269906, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8113572926882269917, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18355,36 +18396,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 11.661148
-      objectReference: {fileID: 0}
-    - target: {fileID: 8113572926882269919, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
-        type: 3}
-      propertyPath: m_Follow
-      value: 
-      objectReference: {fileID: 118751695}
-    - target: {fileID: 8113572926882269919, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
-        type: 3}
-      propertyPath: m_Priority
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8113572927231682119, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8113572927231682119, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
-        type: 3}
-      propertyPath: m_Name
-      value: Player Boom Cam
-      objectReference: {fileID: 0}
-    - target: {fileID: 8113572927231682112, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
-        type: 3}
-      propertyPath: m_Follow
-      value: 
-      objectReference: {fileID: 1552602135}
-    - target: {fileID: 8113572927231682112, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
-        type: 3}
-      propertyPath: m_Priority
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8113572927058312494, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
         type: 3}
