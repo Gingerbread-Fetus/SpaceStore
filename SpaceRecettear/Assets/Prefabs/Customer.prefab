@@ -204,3 +204,4 @@ MonoBehaviour:
     quality: 0
     shelf: {fileID: 0}
   customerProfile: {fileID: 0}
+  maxRange: 0.01

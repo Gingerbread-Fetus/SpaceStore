@@ -6,6 +6,7 @@ public class CustomerController : MonoBehaviour, IInteractable
     [SerializeField] float walkSpeed = 5f;
     [SerializeField] public ItemInstance desiredItem;
     [SerializeField] public CustomerProfile customerProfile;
+    [SerializeField] float maxRange = .001f;
 
     CustomerPath path;
     Rigidbody2D myRigidBody;
@@ -30,7 +31,6 @@ public class CustomerController : MonoBehaviour, IInteractable
     // Update is called once per frame
     void Update()
     {
-        
         if(desiredItem == null) { FindNewItem(); }
     }
 
@@ -53,21 +53,39 @@ public class CustomerController : MonoBehaviour, IInteractable
     /// </summary>
     private void Move()
     {
-
-        bool playerIsMoving = myRigidBody.velocity.magnitude > Mathf.Epsilon;
-        myAnimator.SetBool("IsWalking", playerIsMoving);
-
-        if (customerPath != null && pathIndex < customerPath.Count)//-1?
+        myAnimator.SetBool("IsWalking", true);
+        if (customerPath != null && pathIndex < customerPath.Count)
         {
             var target = customerPath[pathIndex].Position;
-            Vector2 direction = (target - transform.position).normalized;
-            Vector2.Lerp(target, direction,1);
+            Vector2 heading = target - transform.position;
+            float distance = heading.magnitude;
+            Vector2 direction = heading / distance;
 
-
-            if (transform.position == target)
+            myRigidBody.velocity = direction * walkSpeed;
+                        
+            if (heading.sqrMagnitude < maxRange * maxRange)
             {
+                myRigidBody.velocity = new Vector2();//Set velocity to zero.
                 pathIndex++;
             }
+            else
+            {
+                float verticalAxis = myRigidBody.velocity.y;
+                float horizontalAxis = myRigidBody.velocity.x;
+
+                lastDirX = horizontalAxis;
+                lastDirY = verticalAxis;
+
+                //set animator parameters
+                myAnimator.SetFloat("VelocityX", horizontalAxis);
+                myAnimator.SetFloat("LastXFace", lastDirX);
+                myAnimator.SetFloat("VelocityY", verticalAxis);
+                myAnimator.SetFloat("LastYFace", lastDirY);
+            }
+        }
+        else
+        {
+            myAnimator.SetBool("IsWalking", false);
         }
 
         if(customerPath == null)
@@ -75,18 +93,6 @@ public class CustomerController : MonoBehaviour, IInteractable
             Debug.LogError(gameObject.name + "path is null for some reason. Destroying Customer.");
             Destroy(gameObject);//TODO: Make sure you delete this later.
         }
-
-        float verticalAxis = myRigidBody.velocity.y;
-        float horizontalAxis = myRigidBody.velocity.x;
-
-        lastDirX = horizontalAxis;
-        lastDirY = verticalAxis;
-
-        //set animator parameters
-        myAnimator.SetFloat("VelocityX", horizontalAxis);
-        myAnimator.SetFloat("LastXFace", lastDirX);
-        myAnimator.SetFloat("VelocityY", verticalAxis);
-        myAnimator.SetFloat("LastYFace", lastDirY);
     }
 
     private void SetUpCustomerProfile()
