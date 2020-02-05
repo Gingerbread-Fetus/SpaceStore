@@ -12,11 +12,12 @@ public class HagglingManager : MonoBehaviour
 {
     private bool introShown;
     private ItemInstance itemForSale;
-    private bool isCanvasActive;
 
+    [SerializeField] bool isCanvasActive;
     [SerializeField] float gameSpeed;
     [SerializeField] bool playerTurn;
     [SerializeField] StoreInventory playerInventory;
+    [SerializeField] PlayerProfile playerProfile;
     [SerializeField] StoreInventory customerInventory;
     [SerializeField] Image imageHolder;
     [SerializeField] TextMeshProUGUI offerText;
@@ -27,7 +28,7 @@ public class HagglingManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isCanvasActive = false;
+        hagglingCanvas.SetActive(isCanvasActive);
         itemForSale = playerInventory.RandomItem();
         currentOffer = itemForSale.CalculateItemPrice();
         imageHolder.sprite = itemForSale.item.itemIcon;
@@ -76,13 +77,27 @@ public class HagglingManager : MonoBehaviour
         if (playerTurn)
         {
             //The important part is that these methods end the turn
-            playerTurn = false; 
+            playerTurn = false;
         }
     }
 
     public void Sell()
     {
         playerInventory.SellItem(itemForSale, currentOffer);
+        //TODO: Handle experience and gold animations
+        HideCanvas();
+    }
+
+    public void Deal()
+    {
+        //TODO: Handle deal selection and invoking.
+        HideCanvas();
+    }
+
+    public void NoDeal()
+    {
+        //TODO: Handle no deal stuff
+        HideCanvas();
     }
 
     private void PlayIntro()
@@ -91,10 +106,20 @@ public class HagglingManager : MonoBehaviour
         introShown = true;
     }
 
-    public void HideShowCanvas()
+    public void ToggleCanvas()
     {
         isCanvasActive = !isCanvasActive;
 
         hagglingCanvas.SetActive(isCanvasActive);
+    }
+
+    public void HideCanvas()
+    {
+        hagglingCanvas.SetActive(false);
+    }
+
+    public void ShowCanvas()
+    {
+        hagglingCanvas.SetActive(true);
     }
 }

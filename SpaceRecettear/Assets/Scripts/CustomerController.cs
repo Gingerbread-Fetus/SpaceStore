@@ -131,7 +131,7 @@ public class CustomerController : MonoBehaviour, IInteractable
         if (!isWalking)
         {
             Debug.Log("Customer interacted with.");
-            
+            hagglingManager.ShowCanvas();
         }
     }
 }

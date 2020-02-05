@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] CinemachineStateDrivenCamera cameras;
     [SerializeField] GameObject walkCam;
     [SerializeField] GameObject boomCam;
+    [SerializeField] PlayerProfile playerProfile;
 
     List<GameObject> cameraList;
     Rigidbody2D myRigidBody;
@@ -35,6 +36,12 @@ public class PlayerController : MonoBehaviour
         PlayerInteract();
         DrawDebug();
         BoomCamera();
+    }
+
+    public void CastAbility()
+    {
+        //TODO: implement using abilities.
+        throw new NotImplementedException();
     }
 
     private void BoomCamera()
