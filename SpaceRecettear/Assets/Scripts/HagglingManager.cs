@@ -12,6 +12,8 @@ public class HagglingManager : MonoBehaviour
 {
     private bool introShown;
     private ItemInstance itemForSale;
+    private bool isCanvasActive;
+
     [SerializeField] float gameSpeed;
     [SerializeField] bool playerTurn;
     [SerializeField] StoreInventory playerInventory;
@@ -19,21 +21,23 @@ public class HagglingManager : MonoBehaviour
     [SerializeField] Image imageHolder;
     [SerializeField] TextMeshProUGUI offerText;
     [SerializeField] TextMeshProUGUI goldText;
+    [SerializeField] GameObject hagglingCanvas;
 
     int currentOffer;
     // Start is called before the first frame update
     void Start()
     {
-        //GetCustomer()//Don't know if I should do this, or just set the customer when the encounter manager finds one.
+        isCanvasActive = false;
         itemForSale = playerInventory.RandomItem();
         currentOffer = itemForSale.CalculateItemPrice();
         imageHolder.sprite = itemForSale.item.itemIcon;
         offerText.text = currentOffer.ToString();
+        goldText.text = playerInventory.GetCurrency().ToString();
     }
 
     void OnEnable()
     {
-        PrintIntro();
+        PlayIntro();
     }
 
     // Update is called once per frame
@@ -43,8 +47,13 @@ public class HagglingManager : MonoBehaviour
         if (!playerTurn)
         {
             HandleCustomerTurn();
-            
         }
+    }
+
+    public void SetItemForSale(ItemInstance item)
+    {
+        itemForSale = item;
+        imageHolder.sprite = itemForSale.item.itemIcon;
     }
 
     private void HandleCustomerTurn()
@@ -76,9 +85,16 @@ public class HagglingManager : MonoBehaviour
         playerInventory.SellItem(itemForSale, currentOffer);
     }
 
-    private void PrintIntro()
+    private void PlayIntro()
     {
         //Play customer intro text
         introShown = true;
+    }
+
+    public void HideShowCanvas()
+    {
+        isCanvasActive = !isCanvasActive;
+
+        hagglingCanvas.SetActive(isCanvasActive);
     }
 }

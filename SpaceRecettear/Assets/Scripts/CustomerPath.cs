@@ -21,7 +21,7 @@ public class CustomerPath : MonoBehaviour
 
     private void Start()
     {
-        layerMask = LayerMask.GetMask("Interactable", "Customers",  "Walls");
+        layerMask = LayerMask.GetMask("Interactable", "Walls");
         solutionList = new List<Cell>();
 
          // A* Search Algorithm

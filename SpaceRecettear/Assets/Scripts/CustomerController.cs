@@ -7,7 +7,9 @@ public class CustomerController : MonoBehaviour, IInteractable
     [SerializeField] public ItemInstance desiredItem;
     [SerializeField] public CustomerProfile customerProfile;
     [SerializeField] float maxRange = .001f;
+    [SerializeField] public bool isWalking;
 
+    HagglingManager hagglingManager;
     CustomerPath path;
     Rigidbody2D myRigidBody;
     Animator myAnimator;
@@ -18,6 +20,11 @@ public class CustomerController : MonoBehaviour, IInteractable
     float lastDirY;
     float lastDirX;
     private bool isDebug;
+
+    void Awake()
+    {
+        hagglingManager = FindObjectOfType<HagglingManager>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -49,43 +56,36 @@ public class CustomerController : MonoBehaviour, IInteractable
     }
 
     /// <summary>
-    /// TODO: Customers move between cells instantly, needs to be slowed down.
+    /// Moves the character from place to place.
     /// </summary>
     private void Move()
     {
-        myAnimator.SetBool("IsWalking", true);
         if (customerPath != null && pathIndex < customerPath.Count)
         {
+            isWalking = true;
             var target = customerPath[pathIndex].Position;
             Vector2 heading = target - transform.position;
             float distance = heading.magnitude;
             Vector2 direction = heading / distance;
 
-            myRigidBody.velocity = direction * walkSpeed;
-                        
-            if (heading.sqrMagnitude < maxRange * maxRange)
+            transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * walkSpeed);
+            myAnimator.SetBool("IsWalking", isWalking);
+            myAnimator.SetFloat("VelocityX", direction.x);
+            myAnimator.SetFloat("LastXFace", direction.x);
+            myAnimator.SetFloat("VelocityY", direction.y);
+            myAnimator.SetFloat("LastYFace", direction.y);
+
+
+            if (transform.position.Equals(target))
             {
-                myRigidBody.velocity = new Vector2();//Set velocity to zero.
                 pathIndex++;
-            }
-            else
-            {
-                float verticalAxis = myRigidBody.velocity.y;
-                float horizontalAxis = myRigidBody.velocity.x;
-
-                lastDirX = horizontalAxis;
-                lastDirY = verticalAxis;
-
-                //set animator parameters
-                myAnimator.SetFloat("VelocityX", horizontalAxis);
-                myAnimator.SetFloat("LastXFace", lastDirX);
-                myAnimator.SetFloat("VelocityY", verticalAxis);
-                myAnimator.SetFloat("LastYFace", lastDirY);
             }
         }
         else
         {
-            myAnimator.SetBool("IsWalking", false);
+            isWalking = false;
+            myAnimator.SetBool("IsWalking", isWalking);
+            hagglingManager.SetItemForSale(desiredItem);
         }
 
         if(customerPath == null)
@@ -128,6 +128,10 @@ public class CustomerController : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Debug.Log("Customer interacted with.");
+        if (!isWalking)
+        {
+            Debug.Log("Customer interacted with.");
+            
+        }
     }
 }
