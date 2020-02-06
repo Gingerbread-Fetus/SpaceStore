@@ -17,6 +17,8 @@ public class PlayerProfile : ScriptableObject
     [SerializeField, Range(0,4)] int difficultyLevel;
     [SerializeField] List<Ability> abilities;
 
+    public List<Ability> Abilities => abilities;
+
     public void SetName(string newName)
     {
         playerName = newName;
@@ -29,4 +31,5 @@ public class PlayerProfile : ScriptableObject
             difficultyLevel = newDifficulty;
         }
     }
+
 }

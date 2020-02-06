@@ -23,17 +23,33 @@ public class HagglingManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI offerText;
     [SerializeField] TextMeshProUGUI goldText;
     [SerializeField] GameObject hagglingCanvas;
+    [SerializeField] GameObject abilityPanel;
+    [SerializeField] Button abilityButtonPrefab;
 
     int currentOffer;
     // Start is called before the first frame update
     void Start()
     {
+        InstantiateAbilityButtons();
+        abilityPanel.SetActive(false);
         hagglingCanvas.SetActive(isCanvasActive);
         itemForSale = playerInventory.RandomItem();
         currentOffer = itemForSale.CalculateItemPrice();
         imageHolder.sprite = itemForSale.item.itemIcon;
         offerText.text = currentOffer.ToString();
         goldText.text = playerInventory.GetCurrency().ToString();
+    }
+
+    private void InstantiateAbilityButtons()
+    {
+        foreach(Ability ability in playerProfile.Abilities)
+        {
+            Button newButton = Instantiate(abilityButtonPrefab, abilityPanel.transform);
+            AbilityButton abilityButton = newButton.GetComponent<AbilityButton>();
+            abilityButton.SetAbility(ability);
+
+            //TODO: Add on click event here?
+        }
     }
 
     void OnEnable()
@@ -91,7 +107,7 @@ public class HagglingManager : MonoBehaviour
     public void Deal()
     {
         //TODO: Handle deal selection and invoking.
-        HideCanvas();
+        abilityPanel.SetActive(true);
     }
 
     public void NoDeal()
