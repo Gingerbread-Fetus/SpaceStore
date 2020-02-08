@@ -9,13 +9,16 @@ public class ThrowInHitBox : MonoBehaviour
     [SerializeField] Animator spaceKeyAnimator;
     [SerializeField] Animator thrownItemAnimator;
     [SerializeField] SpritePathMovement spriteMover;
+    [SerializeField] TextMeshProUGUI HitOrMissTextObject;
 
     bool isInHitbox;
     private bool hasTriggered = false;
+    TextMeshProUGUI notificationText;
 
     // Start is called before the first frame update
     void Start()
     {
+        HitOrMissTextObject.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,11 +38,15 @@ public class ThrowInHitBox : MonoBehaviour
         {
             thrownItemAnimator.SetBool("throwItem", true);
             thrownItemAnimator.SetBool("itemHit", true);
+            HitOrMissTextObject.gameObject.SetActive(true);
         }
         else
         {
             thrownItemAnimator.SetBool("throwItem", true);
             thrownItemAnimator.SetBool("itemHit", false);
+            HitOrMissTextObject.gameObject.SetActive(true);
+            HitOrMissTextObject.text = "Miss!";
+            HitOrMissTextObject.color = Color.red;
         }
     }
 

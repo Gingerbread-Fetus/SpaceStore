@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89c25208384339a4ea37260ebd64a1c3, type: 3}
-  m_Name: I'll Throw In
+  m_Script: {fileID: 11500000, guid: 5bccb94490a6e2e45a9716d9a31237ab, type: 3}
+  m_Name: I'llThrowIn
   m_EditorClassIdentifier: 
-  aName: I'll Throw In
+  aName: I'll Throw In...
   aSprite: {fileID: 0}
   aCost: 1
   aSound: {fileID: 0}

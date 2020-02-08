@@ -18,4 +18,4 @@ MonoBehaviour:
   level: 1
   difficultyLevel: 0
   abilities:
-  - {fileID: 11400000, guid: cfb0df910cd9c154da8df3f33d802942, type: 2}
+  - {fileID: 11400000, guid: 19ac3364b66792c4b999f8f1da6b5400, type: 2}
