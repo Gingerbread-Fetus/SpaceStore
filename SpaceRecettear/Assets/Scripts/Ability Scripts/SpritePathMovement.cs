@@ -2,21 +2,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpritePathMovement : MonoBehaviour
 {
     [SerializeField]float moveSpeed = 5f;
+    [SerializeField]GameObject activeCustomer;
+    [HideInInspector] public bool isMoving;
+    [HideInInspector] public bool success;
 
     List<Transform> waypoints = new List<Transform>();
     int waypointIndex = 0;
-    RectTransform rectTransform;
+    RectTransform movingRectTransform;
     GameObject waypointPathPrefab;
-    [HideInInspector]public bool isMoving;
+    Image imageRenderer;
+
+    private bool hasTriggered;
 
     // Start is called before the first frame update
     void Start()
     {
-        rectTransform = GetComponent<RectTransform>();
+        movingRectTransform = activeCustomer.GetComponent<RectTransform>();
+        imageRenderer = activeCustomer.GetComponent<Image>();
+        hasTriggered = false;
     }
     
     // Update is called once per frame
@@ -26,11 +34,15 @@ public class SpritePathMovement : MonoBehaviour
         {
             Move(); 
         }
-    }
 
-    public void PauseMovement()
-    {
-        isMoving = !isMoving;
+        if (success)
+        {
+            SetResults();
+        }
+        else if(!success && !isMoving)
+        {
+            Invoke("DestroyGameObject", 3.0f);
+        }
     }
 
     private void Move()
@@ -40,19 +52,30 @@ public class SpritePathMovement : MonoBehaviour
         {            
             var targetPosition = waypoints[waypointIndex].position;
             var movementThisFrame = moveSpeed * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(
-                transform.position,
+            movingRectTransform.position = Vector2.MoveTowards(
+                movingRectTransform.position,
                 targetPosition,
                 movementThisFrame);
-            if (transform.position == targetPosition)
+            if (movingRectTransform.position == targetPosition)
             {
                 waypointIndex++;
             }
         }
         else
         {
-            Destroy(gameObject);
+            isMoving = false;
         }
+    }
+
+    private void SetResults()
+    {
+        //TODO: Implement the logic handling for the ability here.
+        Invoke("DestroyGameObject", 3.0f);
+    }
+
+    private void DestroyGameObject()
+    {
+        Destroy(gameObject);
     }
 
     public void SetWaypoints(GameObject waypointObject)
@@ -63,5 +86,15 @@ public class SpritePathMovement : MonoBehaviour
         }
         transform.position = waypoints[0].position;
         isMoving = true;
+    }
+
+    public void ChangeSprite(Sprite newSprite)
+    {
+        imageRenderer.sprite = newSprite;
+    }
+
+    public void PauseMovement()
+    {
+        isMoving = !isMoving;
     }
 }

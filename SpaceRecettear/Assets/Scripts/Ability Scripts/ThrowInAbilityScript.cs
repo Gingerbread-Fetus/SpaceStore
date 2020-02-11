@@ -15,7 +15,11 @@ public class ThrowInAbilityScript : Ability
 
     public override void Initialize(GameObject obj)
     {
-        //TODO: Set up the properties of the ability
+        //Select item from inventory.
+
+        //Set this to the active item to be 'thrown'
+
+        //Display mini-game canvas
         canvas = Instantiate(aMinigameCanvas, null,true);
         canvas.gameObject.GetComponent<Canvas>().worldCamera = Camera.main;
 
@@ -23,6 +27,7 @@ public class ThrowInAbilityScript : Ability
         movementComponent = canvas.GetComponentInChildren<SpritePathMovement>();
         
         GameObject pathobject = Instantiate(path, canvas.transform, true);
+        pathobject.transform.localPosition = new Vector3();
         movementComponent.SetWaypoints(pathobject);
     }
 
@@ -32,7 +37,6 @@ public class ThrowInAbilityScript : Ability
 
     public void Cleanup()
     {
-        Destroy(canvas);
     }
 
     private GameObject ChooseRandomPath()

@@ -11,6 +11,7 @@ public class ThrowInHitBox : MonoBehaviour
     [SerializeField] SpritePathMovement spriteMover;
     [SerializeField] TextMeshProUGUI HitOrMissTextObject;
 
+
     bool isInHitbox;
     private bool hasTriggered = false;
     TextMeshProUGUI notificationText;
@@ -39,6 +40,7 @@ public class ThrowInHitBox : MonoBehaviour
             thrownItemAnimator.SetBool("throwItem", true);
             thrownItemAnimator.SetBool("itemHit", true);
             HitOrMissTextObject.gameObject.SetActive(true);
+            spriteMover.success = true;
         }
         else
         {
@@ -47,6 +49,7 @@ public class ThrowInHitBox : MonoBehaviour
             HitOrMissTextObject.gameObject.SetActive(true);
             HitOrMissTextObject.text = "Miss!";
             HitOrMissTextObject.color = Color.red;
+            spriteMover.success = false;
         }
     }
 
