@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c4f104b0c8c0fc41b2aecd71a76ddc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 1
+  walkSpeed: 3
   desiredItem:
     item: {fileID: 0}
     boomItem: 0
@@ -205,3 +205,4 @@ MonoBehaviour:
     shelf: {fileID: 0}
   customerProfile: {fileID: 0}
   maxRange: 0.01
+  isWalking: 0

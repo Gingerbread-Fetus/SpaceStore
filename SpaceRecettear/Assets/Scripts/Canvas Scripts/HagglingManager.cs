@@ -11,6 +11,7 @@ using UnityEngine.UI;
 public class HagglingManager : MonoBehaviour
 {
     private bool introShown;
+    private bool isAbilitiesVisible = false;
     private ItemInstance itemForSale;
 
     [SerializeField] bool isCanvasActive;
@@ -32,7 +33,7 @@ public class HagglingManager : MonoBehaviour
     {
         InstantiateAbilityButtons();
         abilityPanel.SetActive(false);
-        hagglingCanvas.SetActive(isCanvasActive);
+        //hagglingCanvas.SetActive(isCanvasActive);//TODO: Make sure to uncomment this later
         itemForSale = playerInventory.RandomItem();
         currentOffer = itemForSale.CalculateItemPrice();
         imageHolder.sprite = itemForSale.item.itemIcon;
@@ -48,7 +49,8 @@ public class HagglingManager : MonoBehaviour
             AbilityButton abilityButton = newButton.GetComponent<AbilityButton>();
             abilityButton.SetAbility(ability);
 
-            //TODO: Add on click event here?
+            //TODO: Does this work?
+            newButton.onClick.AddListener(delegate { ability.Initialize(gameObject); });
         }
     }
 
@@ -107,7 +109,8 @@ public class HagglingManager : MonoBehaviour
     public void Deal()
     {
         //TODO: Handle deal selection and invoking.
-        abilityPanel.SetActive(true);
+        isAbilitiesVisible = !isAbilitiesVisible;
+        abilityPanel.SetActive(isAbilitiesVisible);
     }
 
     public void NoDeal()

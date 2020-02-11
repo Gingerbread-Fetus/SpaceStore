@@ -5,27 +5,20 @@ using UnityEngine;
 
 public class SpritePathMovement : MonoBehaviour
 {
-    [SerializeField]GameObject waypointPathPrefab;
-    [SerializeField]float moveSpeed;
+    [SerializeField]float moveSpeed = 5f;
 
     List<Transform> waypoints = new List<Transform>();
     int waypointIndex = 0;
     RectTransform rectTransform;
-    [HideInInspector]public bool isMoving = true;
+    GameObject waypointPathPrefab;
+    [HideInInspector]public bool isMoving;
 
     // Start is called before the first frame update
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
-        InstantiateWayPoints();
-        GetWaypoints();
     }
-
-    private void InstantiateWayPoints()
-    {
-        Instantiate(waypointPathPrefab, transform.parent.transform, true);
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -35,7 +28,7 @@ public class SpritePathMovement : MonoBehaviour
         }
     }
 
-    public void pauseMovement()
+    public void PauseMovement()
     {
         isMoving = !isMoving;
     }
@@ -62,13 +55,13 @@ public class SpritePathMovement : MonoBehaviour
         }
     }
 
-    private void GetWaypoints()
+    public void SetWaypoints(GameObject waypointObject)
     {
-        foreach(Transform child in waypointPathPrefab.transform)
+        foreach(Transform waypoint in waypointObject.transform)
         {
-            waypoints.Add(child);
+            waypoints.Add(waypoint.transform);
         }
-
-        transform.position = waypoints[0].transform.position;
+        transform.position = waypoints[0].position;
+        isMoving = true;
     }
 }
