@@ -41,19 +41,6 @@ public class HagglingManager : MonoBehaviour
         goldText.text = playerInventory.GetCurrency().ToString();
     }
 
-    private void InstantiateAbilityButtons()
-    {
-        foreach(Ability ability in playerProfile.Abilities)
-        {
-            Button newButton = Instantiate(abilityButtonPrefab, abilityPanel.transform);
-            AbilityButton abilityButton = newButton.GetComponent<AbilityButton>();
-            abilityButton.SetAbility(ability);
-
-            //TODO: Does this work?
-            newButton.onClick.AddListener(delegate { ability.Initialize(gameObject); });
-        }
-    }
-
     void OnEnable()
     {
         PlayIntro();
@@ -69,10 +56,17 @@ public class HagglingManager : MonoBehaviour
         }
     }
 
-    public void SetItemForSale(ItemInstance item)
+    private void InstantiateAbilityButtons()
     {
-        itemForSale = item;
-        imageHolder.sprite = itemForSale.item.itemIcon;
+        foreach(Ability ability in playerProfile.Abilities)
+        {
+            Button newButton = Instantiate(abilityButtonPrefab, abilityPanel.transform);
+            AbilityButton abilityButton = newButton.GetComponent<AbilityButton>();
+            abilityButton.SetAbility(ability);
+
+            //TODO: Does this work?
+            newButton.onClick.AddListener(delegate { ability.Initialize(gameObject); });
+        }
     }
 
     private void HandleCustomerTurn()
@@ -140,5 +134,11 @@ public class HagglingManager : MonoBehaviour
     public void ShowCanvas()
     {
         hagglingCanvas.SetActive(true);
+    }
+
+    public void SetItemForSale(ItemInstance item)
+    {
+        itemForSale = item;
+        imageHolder.sprite = itemForSale.item.itemIcon;
     }
 }

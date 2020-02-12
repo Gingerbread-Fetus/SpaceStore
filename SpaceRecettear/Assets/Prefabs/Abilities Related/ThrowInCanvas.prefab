@@ -580,6 +580,7 @@ MonoBehaviour:
   moveSpeed: 300
   activeCustomer: {fileID: 3682406708432265203}
   isMoving: 0
+  success: 0
 --- !u!1 &3682406708802846848
 GameObject:
   m_ObjectHideFlags: 0

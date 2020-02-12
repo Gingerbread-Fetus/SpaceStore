@@ -6,16 +6,19 @@ using UnityEngine.UI;
 
 public class SpritePathMovement : MonoBehaviour
 {
-    [SerializeField]float moveSpeed = 5f;
-    [SerializeField]GameObject activeCustomer;
+    [SerializeField] float moveSpeed = 5f;
+    [SerializeField] GameObject activeCustomer;
+    [SerializeField] Image itemImage;
     [HideInInspector] public bool isMoving;
     [HideInInspector] public bool success;
+    [HideInInspector] public AbilityInventoryHandler inventoryHandler;
 
     List<Transform> waypoints = new List<Transform>();
     int waypointIndex = 0;
     RectTransform movingRectTransform;
     GameObject waypointPathPrefab;
-    Image imageRenderer;
+    Image customerImageRenderer;
+    
 
     private bool hasTriggered;
 
@@ -23,7 +26,7 @@ public class SpritePathMovement : MonoBehaviour
     void Start()
     {
         movingRectTransform = activeCustomer.GetComponent<RectTransform>();
-        imageRenderer = activeCustomer.GetComponent<Image>();
+        customerImageRenderer = activeCustomer.GetComponent<Image>();
         hasTriggered = false;
     }
     
@@ -73,8 +76,9 @@ public class SpritePathMovement : MonoBehaviour
         Invoke("DestroyGameObject", 3.0f);
     }
 
-    private void DestroyGameObject()
+    private void ExitMiniGame()
     {
+        FindObjectOfType<HagglingManager>().ShowCanvas();
         Destroy(gameObject);
     }
 
@@ -85,12 +89,11 @@ public class SpritePathMovement : MonoBehaviour
             waypoints.Add(waypoint.transform);
         }
         transform.position = waypoints[0].position;
-        isMoving = true;
     }
 
-    public void ChangeSprite(Sprite newSprite)
+    public void ChangeCustomer(Sprite newSprite)
     {
-        imageRenderer.sprite = newSprite;
+        customerImageRenderer.sprite = newSprite;
     }
 
     public void PauseMovement()
