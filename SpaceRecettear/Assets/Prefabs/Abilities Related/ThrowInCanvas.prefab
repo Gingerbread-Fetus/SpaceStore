@@ -579,6 +579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 300
   activeCustomer: {fileID: 3682406708432265203}
+  itemImage: {fileID: 3682406708127753612}
   isMoving: 0
   success: 0
 --- !u!1 &3682406708802846848

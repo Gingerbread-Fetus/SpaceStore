@@ -12,9 +12,10 @@ public class AbilityInventoryHandler : MonoBehaviour
 {
     [SerializeField] StoreInventory playerInventory;
     [SerializeField] GameObject playerInventoryPanel;
+    [SerializeField] GameObject selectedItemPanel;
     [SerializeField] Button itemButtonPrefab;
     [SerializeField] TextMeshProUGUI flavorTextObject;
-
+    [SerializeField] Ability ability;
     [HideInInspector] public ItemInstance selectedItem;
 
     GameObject miniGameObject;
@@ -39,10 +40,10 @@ public class AbilityInventoryHandler : MonoBehaviour
         
     }
 
-    private void AddNewItemButton(ItemInstance item, GameObject playerInventoryPanel)
+    private void AddNewItemButton(ItemInstance item, GameObject parentPanel)
     {
         Button newButton = Instantiate(itemButtonPrefab);
-        newButton.transform.SetParent(playerInventoryPanel.transform, false);
+        newButton.transform.SetParent(parentPanel.transform, false);
         Image image = newButton.GetComponent<Image>();
         image.sprite = item.item.itemIcon;
 
@@ -50,17 +51,61 @@ public class AbilityInventoryHandler : MonoBehaviour
         itemButton.heldItem = item;
         itemButton.stockNumberText.text = item.stock.ToString();
 
-        newButton.onClick.AddListener(delegate { SelectItem(itemButton.heldItem); });
+        newButton.onClick.AddListener(delegate { SelectItem(itemButton.heldItem, newButton); });
     }
 
-    private void SelectItem(ItemInstance heldItem)
+    /// <summary>
+    /// TODO: Implement decreasing inventory here.
+    /// TODO: Implement swaping inventory back and forth.
+    /// </summary>
+    /// <param name="heldItem"></param>
+    /// <param name="interactedButton"></param>
+    private void SelectItem(ItemInstance heldItem, Button interactedButton)
     {
-        selectedItem = heldItem;
+        ItemButton itemButton = interactedButton.GetComponent<ItemButton>();
+        ItemInstance itemInstance = itemButton.heldItem;
+        int itemStock = playerInventory.GetStock(itemInstance);
+
+        if (interactedButton.transform.IsChildOf(playerInventoryPanel.transform))
+        {
+            selectedItem = heldItem;
+            if(selectedItemPanel.transform.childCount > 0)
+            {
+                //swap
+                Destroy(selectedItemPanel.transform.GetChild(0).gameObject);
+                AddNewItemButton(itemInstance, selectedItemPanel);
+                selectedItem = heldItem;
+            }
+            else
+            {
+                AddNewItemButton(itemInstance, selectedItemPanel);
+                selectedItem = heldItem;
+            }
+        }
+        else
+        {
+            Destroy(interactedButton.gameObject);
+            selectedItem = null;
+        }
     }
 
     public void SetFlavortext(string newText)
     {
         flavorTextObject.text = newText;
+    }
+
+    public void Confirm()
+    {
+        if (selectedItem != null)
+        {
+            ability.TriggerAbility();
+            gameObject.SetActive(false); 
+        }
+    }
+
+    public void SetAbility(Ability newAbility)
+    {
+        ability = newAbility;
     }
     
 }

@@ -7,12 +7,13 @@ using UnityEngine;
 public class ThrowInAbilityScript : Ability
 {
     [SerializeField] List<GameObject> paths;
-    [SerializeField] AbilityInventoryHandler inventoryDisplay;
+    [SerializeField] GameObject inventoryDisplayPrefab;
 
     TextMeshProUGUI hitOrMissText;
     GameObject path;
-    GameObject canvas;
-    GameObject inventoryCanvas;
+    GameObject miniGameCanvas;
+    GameObject inventoryDisplay;
+    AbilityInventoryHandler inventoryHandler;
     SpritePathMovement movementComponent;
 
     public override void Initialize(GameObject obj)
@@ -25,31 +26,35 @@ public class ThrowInAbilityScript : Ability
         HagglingManager hagglingManager = FindObjectOfType<HagglingManager>();
         hagglingManager.HideCanvas();
 
-        //Display mini-game canvas
-        canvas = Instantiate(aMinigameCanvas, null,true);
-        canvas.gameObject.GetComponent<Canvas>().worldCamera = Camera.main;
+        //Create mini-game canvas
+        miniGameCanvas = Instantiate(aMinigameCanvas, null,true);
+        miniGameCanvas.gameObject.GetComponent<Canvas>().worldCamera = Camera.main;
         
         //Create and display inventory canvas to select item
-        inventoryCanvas = Instantiate(inventoryDisplay.gameObject, null, true);
-        inventoryCanvas.gameObject.GetComponent<Canvas>().worldCamera = Camera.main;
+        inventoryDisplay = Instantiate(inventoryDisplayPrefab.gameObject, null, true);
+        inventoryDisplay.gameObject.GetComponent<Canvas>().worldCamera = Camera.main;
+        inventoryHandler = inventoryDisplay.GetComponent<AbilityInventoryHandler>();
         
         //Choose a path and instantiate it.
         path = ChooseRandomPath();
-        movementComponent = canvas.GetComponentInChildren<SpritePathMovement>();
+        movementComponent = miniGameCanvas.GetComponentInChildren<SpritePathMovement>();
         
-        GameObject pathobject = Instantiate(path, canvas.transform, true);
+        GameObject pathobject = Instantiate(path, miniGameCanvas.transform, true);
         pathobject.transform.localPosition = new Vector3();
 
-        inventoryDisplay.MiniGameObject = canvas;
+        inventoryHandler.MiniGameObject = miniGameCanvas;
+        inventoryHandler.SetAbility(this);
         movementComponent.SetWaypoints(pathobject);
-        movementComponent.inventoryHandler = inventoryDisplay;
         //Hiding the mini-game canvas so that the inventory handler shows on top
-        canvas.SetActive(false);
+        miniGameCanvas.SetActive(false);
     }
 
     public override void TriggerAbility()
     {
-        //movementComponent.isMoving = true;
+        miniGameCanvas.SetActive(true);
+        movementComponent.ChangeItem(inventoryHandler.selectedItem.item.itemIcon);
+        //movementComponent.ChangeCustomer(activeCustomer.sprite);//TODO: Implement reference to the active customer
+        movementComponent.isMoving = true;
     }
 
     public void Cleanup()

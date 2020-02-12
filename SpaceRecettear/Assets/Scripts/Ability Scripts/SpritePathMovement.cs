@@ -11,7 +11,6 @@ public class SpritePathMovement : MonoBehaviour
     [SerializeField] Image itemImage;
     [HideInInspector] public bool isMoving;
     [HideInInspector] public bool success;
-    [HideInInspector] public AbilityInventoryHandler inventoryHandler;
 
     List<Transform> waypoints = new List<Transform>();
     int waypointIndex = 0;
@@ -44,7 +43,7 @@ public class SpritePathMovement : MonoBehaviour
         }
         else if(!success && !isMoving)
         {
-            Invoke("DestroyGameObject", 3.0f);
+            Invoke("ExitMiniGame", 3.0f);
         }
     }
 
@@ -59,7 +58,8 @@ public class SpritePathMovement : MonoBehaviour
                 movingRectTransform.position,
                 targetPosition,
                 movementThisFrame);
-            if (movingRectTransform.position == targetPosition)
+            float distance = Vector2.Distance(movingRectTransform.position, targetPosition);
+            if (distance < .0001f)
             {
                 waypointIndex++;
             }
@@ -73,7 +73,7 @@ public class SpritePathMovement : MonoBehaviour
     private void SetResults()
     {
         //TODO: Implement the logic handling for the ability here.
-        Invoke("DestroyGameObject", 3.0f);
+        Invoke("ExitMiniGame", 3.0f);
     }
 
     private void ExitMiniGame()
@@ -94,6 +94,11 @@ public class SpritePathMovement : MonoBehaviour
     public void ChangeCustomer(Sprite newSprite)
     {
         customerImageRenderer.sprite = newSprite;
+    }
+
+    public void ChangeItem(Sprite newItemSprite)
+    {
+        itemImage.sprite = newItemSprite;
     }
 
     public void PauseMovement()

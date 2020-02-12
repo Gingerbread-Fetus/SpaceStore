@@ -18,6 +18,14 @@ MonoBehaviour:
   aSound: {fileID: 0}
   aMinigameCanvas: {fileID: 3682406708637218168, guid: 9d7bde1bdb7498c46a8ffa450ce4972a,
     type: 3}
+  aItemInstance:
+    item: {fileID: 0}
+    boomItem: 0
+    stock: 1
+    quality: 0
+    shelf: {fileID: 0}
   paths:
   - {fileID: 2209765483694317112, guid: 4028e0646ec79494ab0fadf12d2653fd, type: 3}
   - {fileID: 2209765483694317112, guid: f21e778c9f1c2fc4fa9ffdb3607e9bf4, type: 3}
+  inventoryDisplayPrefab: {fileID: 190522416287707529, guid: c7bec604772bc7e4291bd91926e731c4,
+    type: 3}

@@ -12,7 +12,7 @@ public class ThrowInHitBox : MonoBehaviour
     [SerializeField] TextMeshProUGUI HitOrMissTextObject;
 
 
-    bool isInHitbox;
+    [HideInInspector]public bool isInHitbox;
     private bool hasTriggered = false;
     TextMeshProUGUI notificationText;
 

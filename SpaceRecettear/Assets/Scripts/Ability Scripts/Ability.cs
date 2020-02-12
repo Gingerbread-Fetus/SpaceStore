@@ -9,6 +9,7 @@ public abstract class Ability : ScriptableObject
     public int aCost = 1;
     public AudioClip aSound;
     public GameObject aMinigameCanvas;
+    public ItemInstance aItemInstance;
 
     public abstract void Initialize(GameObject obj);
     public abstract void TriggerAbility();
