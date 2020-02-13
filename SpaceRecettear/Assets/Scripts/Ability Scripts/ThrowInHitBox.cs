@@ -51,6 +51,7 @@ public class ThrowInHitBox : MonoBehaviour
             HitOrMissTextObject.color = Color.red;
             spriteMover.success = false;
         }
+        spriteMover.SetResults();
     }
 
     private void OnTriggerStay2D(Collider2D other)

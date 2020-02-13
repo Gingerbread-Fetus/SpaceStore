@@ -54,7 +54,7 @@ public class ThrowInAbilityScript : Ability
     public override void TriggerAbility()
     {
         miniGameCanvas.SetActive(true);
-        movementComponent.ChangeItem(inventoryHandler.selectedItem.item.itemIcon);
+        movementComponent.ChangeItem(inventoryHandler.selectedItem);
         //movementComponent.ChangeCustomer(activeCustomer.sprite);//TODO: Implement reference to the active customer
         movementComponent.isMoving = true;
     }

@@ -24,13 +24,17 @@ public class HagglingManager : MonoBehaviour
     [SerializeField] PlayerProfile playerProfile;
     [SerializeField] StoreInventory customerInventory;
     [Header("Haggling Canvas References")]
+    [SerializeField] GameObject offeredItemsCanvas;
+    [SerializeField] GameObject hagglingCanvas;
+    [SerializeField] GameObject abilityPanel;
     [SerializeField] Image imageHolder;
     [SerializeField] TextMeshProUGUI offerText;
     [SerializeField] TextMeshProUGUI goldText;
-    [SerializeField] GameObject hagglingCanvas;
-    [SerializeField] GameObject abilityPanel;
     [SerializeField] Button abilityButtonPrefab;
     [SerializeField] Slider staminaBar;
+    [Header("Item Prefabs")]
+    [SerializeField] GameObject itemImage;
+    [SerializeField] GameObject itemButton;
 
     int currentOffer;
 
@@ -158,5 +162,12 @@ public class HagglingManager : MonoBehaviour
     {
         this.Stamina -= usedStamina;
         staminaBar.value = this.Stamina;
+    }
+
+    public void AddItemOffer(ItemInstance item)
+    {
+        GameObject newItemImage = Instantiate(itemImage, offeredItemsCanvas.transform);
+        newItemImage.GetComponent<Image>().sprite = item.item.itemIcon;
+        playerInventory.TakeItem(item);
     }
 }

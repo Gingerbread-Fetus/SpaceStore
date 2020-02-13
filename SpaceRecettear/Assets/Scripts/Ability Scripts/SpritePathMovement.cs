@@ -12,6 +12,8 @@ public class SpritePathMovement : MonoBehaviour
     [HideInInspector] public bool isMoving;
     [HideInInspector] public bool success;
 
+    HagglingManager hagglingManager;
+    ItemInstance selectedItem;
     List<Transform> waypoints = new List<Transform>();
     int waypointIndex = 0;
     RectTransform movingRectTransform;
@@ -24,6 +26,7 @@ public class SpritePathMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        hagglingManager = FindObjectOfType<HagglingManager>();
         movingRectTransform = activeCustomer.GetComponent<RectTransform>();
         customerImageRenderer = activeCustomer.GetComponent<Image>();
         hasTriggered = false;
@@ -35,15 +38,6 @@ public class SpritePathMovement : MonoBehaviour
         if (isMoving)
         {
             Move(); 
-        }
-
-        if (success)
-        {
-            SetResults();
-        }
-        else if(!success && !isMoving)
-        {
-            Invoke("ExitMiniGame", 3.0f);
         }
     }
 
@@ -70,9 +64,14 @@ public class SpritePathMovement : MonoBehaviour
         }
     }
 
-    private void SetResults()
+    public void SetResults()
     {
         //TODO: Implement the logic handling for the ability here.
+        if (success)
+        {
+            //Add to offered items
+            hagglingManager.AddItemOffer(selectedItem);
+        }
         Invoke("ExitMiniGame", 3.0f);
     }
 
@@ -96,9 +95,10 @@ public class SpritePathMovement : MonoBehaviour
         customerImageRenderer.sprite = newSprite;
     }
 
-    public void ChangeItem(Sprite newItemSprite)
+    public void ChangeItem(ItemInstance newItem)
     {
-        itemImage.sprite = newItemSprite;
+        selectedItem = newItem;
+        itemImage.sprite = newItem.item.itemIcon;
     }
 
     public void PauseMovement()
