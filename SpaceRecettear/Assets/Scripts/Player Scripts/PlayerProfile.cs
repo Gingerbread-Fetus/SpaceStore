@@ -32,4 +32,9 @@ public class PlayerProfile : ScriptableObject
         }
     }
 
+    public int GetStamina()
+    {
+        return stamina;
+    }
+
 }

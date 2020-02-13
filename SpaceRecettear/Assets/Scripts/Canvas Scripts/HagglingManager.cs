@@ -14,20 +14,28 @@ public class HagglingManager : MonoBehaviour
     private bool isAbilitiesVisible = false;
     private ItemInstance itemForSale;
 
+    [Header("Game Session Properties")]
     [SerializeField] bool isCanvasActive;
     [SerializeField] float gameSpeed;
+    [SerializeField] int stamina = 50;
     [SerializeField] bool playerTurn;
+    [Header("Inventory references")]
     [SerializeField] StoreInventory playerInventory;
     [SerializeField] PlayerProfile playerProfile;
     [SerializeField] StoreInventory customerInventory;
+    [Header("Haggling Canvas References")]
     [SerializeField] Image imageHolder;
     [SerializeField] TextMeshProUGUI offerText;
     [SerializeField] TextMeshProUGUI goldText;
     [SerializeField] GameObject hagglingCanvas;
     [SerializeField] GameObject abilityPanel;
     [SerializeField] Button abilityButtonPrefab;
+    [SerializeField] Slider staminaBar;
 
     int currentOffer;
+
+    public int Stamina { get => stamina; set => stamina = value; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +47,9 @@ public class HagglingManager : MonoBehaviour
         imageHolder.sprite = itemForSale.item.itemIcon;
         offerText.text = currentOffer.ToString();
         goldText.text = playerInventory.GetCurrency().ToString();
+        stamina = playerProfile.GetStamina();
+        staminaBar.maxValue = stamina;
+        staminaBar.value = stamina;
     }
 
     void OnEnable()
@@ -66,6 +77,7 @@ public class HagglingManager : MonoBehaviour
 
             //TODO: Does this work?
             newButton.onClick.AddListener(delegate { ability.Initialize(gameObject); });
+            newButton.onClick.AddListener(delegate { UseStamina(ability.aAbilityCost); });
         }
     }
 
@@ -140,5 +152,11 @@ public class HagglingManager : MonoBehaviour
     {
         itemForSale = item;
         imageHolder.sprite = itemForSale.item.itemIcon;
+    }
+
+    public void UseStamina(int usedStamina)
+    {
+        this.Stamina -= usedStamina;
+        staminaBar.value = this.Stamina;
     }
 }

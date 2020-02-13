@@ -10,6 +10,7 @@ public class ThrowInAbilityScript : Ability
     [SerializeField] GameObject inventoryDisplayPrefab;
 
     TextMeshProUGUI hitOrMissText;
+    HagglingManager hagglingManager;
     GameObject path;
     GameObject miniGameCanvas;
     GameObject inventoryDisplay;
@@ -23,7 +24,7 @@ public class ThrowInAbilityScript : Ability
         //Set this to the active item to be 'thrown'
 
         //Disable the haggling canvas
-        HagglingManager hagglingManager = FindObjectOfType<HagglingManager>();
+        hagglingManager = FindObjectOfType<HagglingManager>();
         hagglingManager.HideCanvas();
 
         //Create mini-game canvas
@@ -44,6 +45,7 @@ public class ThrowInAbilityScript : Ability
 
         inventoryHandler.MiniGameObject = miniGameCanvas;
         inventoryHandler.SetAbility(this);
+        inventoryHandler.SetFlavortext(this.abilityDescription);
         movementComponent.SetWaypoints(pathobject);
         //Hiding the mini-game canvas so that the inventory handler shows on top
         miniGameCanvas.SetActive(false);

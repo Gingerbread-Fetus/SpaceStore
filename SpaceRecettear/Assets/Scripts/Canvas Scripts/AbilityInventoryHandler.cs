@@ -66,6 +66,9 @@ public class AbilityInventoryHandler : MonoBehaviour
         ItemInstance itemInstance = itemButton.heldItem;
         int itemStock = playerInventory.GetStock(itemInstance);
 
+        ItemInstance newItem = new ItemInstance(itemInstance);
+        newItem.stock = 1;
+
         if (interactedButton.transform.IsChildOf(playerInventoryPanel.transform))
         {
             selectedItem = heldItem;
@@ -73,13 +76,13 @@ public class AbilityInventoryHandler : MonoBehaviour
             {
                 //swap
                 Destroy(selectedItemPanel.transform.GetChild(0).gameObject);
-                AddNewItemButton(itemInstance, selectedItemPanel);
-                selectedItem = heldItem;
+                AddNewItemButton(newItem, selectedItemPanel);
+                selectedItem = newItem;
             }
             else
             {
-                AddNewItemButton(itemInstance, selectedItemPanel);
-                selectedItem = heldItem;
+                AddNewItemButton(newItem, selectedItemPanel);
+                selectedItem = newItem;
             }
         }
         else

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aName: I'll Throw In...
   aSprite: {fileID: 0}
-  aCost: 1
+  aAbilityCost: 5
   aSound: {fileID: 0}
   aMinigameCanvas: {fileID: 3682406708637218168, guid: 9d7bde1bdb7498c46a8ffa450ce4972a,
     type: 3}
@@ -24,6 +24,7 @@ MonoBehaviour:
     stock: 1
     quality: 0
     shelf: {fileID: 0}
+  abilityDescription: Select an item to throw in and sweeten the deal.
   paths:
   - {fileID: 2209765483694317112, guid: 4028e0646ec79494ab0fadf12d2653fd, type: 3}
   - {fileID: 2209765483694317112, guid: f21e778c9f1c2fc4fa9ffdb3607e9bf4, type: 3}

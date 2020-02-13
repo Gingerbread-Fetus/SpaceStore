@@ -126,7 +126,7 @@ public class ShelfManager : MonoBehaviour
                     ItemInstance newItemInstance = new ItemInstance();
                     newItemInstance.item = itemButton.heldItem.item;
                     ItemButton newItemButton = AddNewItemButton(newItemInstance, shelfInventoryPanel);
-                    activeShelf.heldItems.Add(newItemButton.heldItem);//Mistakenly created another item instance that will always be null.
+                    activeShelf.heldItems.Add(newItemButton.heldItem);
                     ShelfItem(newItemButton.heldItem, 1);
                 }
                 else
