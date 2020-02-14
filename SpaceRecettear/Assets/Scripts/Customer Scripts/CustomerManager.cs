@@ -42,6 +42,7 @@ public class CustomerManager : MonoBehaviour
                     GameObject newCustomer = Instantiate(customerPrefab, entrance.transform.position, Quaternion.identity);
                     CustomerController newCustomerController = newCustomer.GetComponent<CustomerController>();
                     newCustomerController.customerProfile = customerProfile;
+                    newCustomerController.levelExit = entrance;
                     yield return new WaitForSecondsRealtime(spawnWait);
                 }
             }

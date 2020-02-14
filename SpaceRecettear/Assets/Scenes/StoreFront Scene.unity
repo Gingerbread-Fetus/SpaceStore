@@ -4457,7 +4457,7 @@ PrefabInstance:
         type: 3}
       propertyPath: heldItems.Array.data[0].item
       value: 
-      objectReference: {fileID: 11400000, guid: 01cc6a52cdea1284bbdb8c474c58dedd,
+      objectReference: {fileID: 11400000, guid: 10b591890c2f8a34bbe4b4074f4db942,
         type: 2}
     - target: {fileID: 1638886162336730056, guid: 573ea8cdaa09afa4e976d8ccbebc285a,
         type: 3}
@@ -17777,6 +17777,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1715976141904877975, guid: 8d51f81b00dd2614ca250226e03cda7d,
+        type: 3}
+      propertyPath: m_Name
+      value: Items Offered
+      objectReference: {fileID: 0}
     - target: {fileID: 2745137863896782593, guid: 8d51f81b00dd2614ca250226e03cda7d,
         type: 3}
       propertyPath: m_IsActive
@@ -18392,11 +18397,6 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1715976141904877975, guid: 8d51f81b00dd2614ca250226e03cda7d,
-        type: 3}
-      propertyPath: m_Name
-      value: Items Offered
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d51f81b00dd2614ca250226e03cda7d, type: 3}
 --- !u!1 &4474076957322925001 stripped
@@ -18498,6 +18498,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7031054137622440380, guid: b30393979c6a2324488970e5cf07539e,
         type: 3}
+      propertyPath: offeredItemsCanvas
+      value: 
+      objectReference: {fileID: 734297100}
+    - target: {fileID: 7031054137622440380, guid: b30393979c6a2324488970e5cf07539e,
+        type: 3}
+      propertyPath: hagglingCanvas
+      value: 
+      objectReference: {fileID: 1864144090}
+    - target: {fileID: 7031054137622440380, guid: b30393979c6a2324488970e5cf07539e,
+        type: 3}
+      propertyPath: abilityPanel
+      value: 
+      objectReference: {fileID: 1744164021}
+    - target: {fileID: 7031054137622440380, guid: b30393979c6a2324488970e5cf07539e,
+        type: 3}
       propertyPath: imageHolder
       value: 
       objectReference: {fileID: 1032425069}
@@ -18513,36 +18528,9 @@ PrefabInstance:
       objectReference: {fileID: 4474076957322925002}
     - target: {fileID: 7031054137622440380, guid: b30393979c6a2324488970e5cf07539e,
         type: 3}
-      propertyPath: hagglingCanvas
-      value: 
-      objectReference: {fileID: 1864144090}
-    - target: {fileID: 7031054137622440380, guid: b30393979c6a2324488970e5cf07539e,
-        type: 3}
-      propertyPath: abilityPanel
-      value: 
-      objectReference: {fileID: 1744164021}
-    - target: {fileID: 7031054137622440380, guid: b30393979c6a2324488970e5cf07539e,
-        type: 3}
       propertyPath: staminaBar
       value: 
       objectReference: {fileID: 4474076957322925003}
-    - target: {fileID: 7031054137622440380, guid: b30393979c6a2324488970e5cf07539e,
-        type: 3}
-      propertyPath: offeredItemsCanvas
-      value: 
-      objectReference: {fileID: 734297100}
-    - target: {fileID: 7031054137622440380, guid: b30393979c6a2324488970e5cf07539e,
-        type: 3}
-      propertyPath: itemImage
-      value: 
-      objectReference: {fileID: 8926425530834608082, guid: bf40ab5fecd4b8c4ba453bae6c1dc6a2,
-        type: 3}
-    - target: {fileID: 7031054137622440380, guid: b30393979c6a2324488970e5cf07539e,
-        type: 3}
-      propertyPath: itemButton
-      value: 
-      objectReference: {fileID: 2564019832923634244, guid: a2ed51db81fdfd1498731f2bc722d057,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b30393979c6a2324488970e5cf07539e, type: 3}
 --- !u!114 &5147317069909154545 stripped
@@ -18697,7 +18685,7 @@ PrefabInstance:
     - target: {fileID: 8113572925423308912, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
         type: 3}
       propertyPath: orthographic size
-      value: 6
+      value: 9.54
       objectReference: {fileID: 0}
     - target: {fileID: 8113572925423308912, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
         type: 3}
@@ -18767,12 +18755,12 @@ PrefabInstance:
     - target: {fileID: 8113572925423308915, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.0772295
+      value: -3.027443
       objectReference: {fileID: 0}
     - target: {fileID: 8113572925423308915, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.184863
+      value: 1.6345673
       objectReference: {fileID: 0}
     - target: {fileID: 8113572925423308915, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
         type: 3}

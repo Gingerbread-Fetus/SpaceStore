@@ -59,8 +59,7 @@ public class CustomerPath : MonoBehaviour
         }
         return solutionList;
     }
-
-    //TODO delete this helper when finished.
+    
     private string printSolution()
     {
         string sb = "";

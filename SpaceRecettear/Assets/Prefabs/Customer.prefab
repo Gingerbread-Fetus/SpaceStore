@@ -197,12 +197,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 3
+  customerProfile: {fileID: 0}
+  maxRange: 0.01
+  isWalking: 0
+  levelExit: {fileID: 0}
   desiredItem:
     item: {fileID: 0}
     boomItem: 0
     stock: 1
     quality: 0
     shelf: {fileID: 0}
-  customerProfile: {fileID: 0}
-  maxRange: 0.01
-  isWalking: 0
+  isFinishedShopping: 0

@@ -5,6 +5,33 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+[Serializable]
+public struct Transaction
+{
+    [SerializeField] public List<ItemInstance> offeredItems;
+    int totalValue;
+    int offer;
+
+    public int Offer { get => offer; set => offer = value; }
+
+    public void AddItem(ItemInstance newItem)
+    {
+        offeredItems.Add(newItem);
+        totalValue = totalValue += newItem.item.baseSellPrice;
+    }
+
+    public void ClearItems()
+    {
+        offeredItems.Clear();
+        totalValue = 0;
+    }
+
+    public int GetValue()
+    {
+        return totalValue;
+    }
+}
+
 /// <summary>
 /// HagglingManager handles turns in the haggling screen.
 /// </summary>
@@ -13,6 +40,8 @@ public class HagglingManager : MonoBehaviour
     private bool introShown;
     private bool isAbilitiesVisible = false;
     private ItemInstance itemForSale;
+    [SerializeField]private CustomerController activeCustomer;//Serialized for debugging
+    private CustomerProfile activeCustomerProfile;
 
     [Header("Game Session Properties")]
     [SerializeField] bool isCanvasActive;
@@ -35,6 +64,8 @@ public class HagglingManager : MonoBehaviour
     [Header("Item Prefabs")]
     [SerializeField] GameObject itemImage;
     [SerializeField] GameObject itemButton;
+    [Header("Transaction")]
+    [SerializeField]public Transaction currentTransaction;
 
     int currentOffer;
 
@@ -46,14 +77,6 @@ public class HagglingManager : MonoBehaviour
         InstantiateAbilityButtons();
         abilityPanel.SetActive(false);
         //hagglingCanvas.SetActive(isCanvasActive);//TODO: Make sure to uncomment this later
-        itemForSale = playerInventory.RandomItem();
-        currentOffer = itemForSale.CalculateItemPrice();
-        imageHolder.sprite = itemForSale.item.itemIcon;
-        offerText.text = currentOffer.ToString();
-        goldText.text = playerInventory.GetCurrency().ToString();
-        stamina = playerProfile.GetStamina();
-        staminaBar.maxValue = stamina;
-        staminaBar.value = stamina;
     }
 
     void OnEnable()
@@ -87,8 +110,6 @@ public class HagglingManager : MonoBehaviour
 
     private void HandleCustomerTurn()
     {
-        currentOffer += 10;
-        offerText.text = currentOffer.ToString();
         playerTurn = true;
     }
 
@@ -104,6 +125,9 @@ public class HagglingManager : MonoBehaviour
     {
         if (playerTurn)
         {
+            currentOffer += 10;
+            currentTransaction.Offer = currentOffer;
+            offerText.text = currentOffer.ToString();
             //The important part is that these methods end the turn
             playerTurn = false;
         }
@@ -111,9 +135,18 @@ public class HagglingManager : MonoBehaviour
 
     public void Sell()
     {
-        playerInventory.SellItem(itemForSale, currentOffer);
-        //TODO: Handle experience and gold animations
-        HideCanvas();
+        if (activeCustomerProfile.ProcessTransaction(currentTransaction))
+        {
+            playerInventory.AddCurrency(currentOffer);
+            activeCustomer.desiredItem.Shelf.changeStock(activeCustomer.desiredItem, -1);
+            //TODO: Handle experience and gold animations
+            HideCanvas();
+            activeCustomer.isFinishedShopping = true;//TODO: Temp, maybe later tie this to a list that when exhausted they willhead for the exit.
+            if (activeCustomer.isFinishedShopping)
+            {
+                activeCustomer.GoToExit(); 
+            }
+        }
     }
 
     public void Deal()
@@ -126,7 +159,17 @@ public class HagglingManager : MonoBehaviour
     public void NoDeal()
     {
         //TODO: Handle no deal stuff
+        foreach(Transform transform in offeredItemsCanvas.transform) { Destroy(transform.gameObject); }
+        ReturnItems();
         HideCanvas();
+    }
+
+    private void ReturnItems()
+    {
+        foreach(ItemInstance item in currentTransaction.offeredItems)
+        {
+            playerInventory.GiveItem(item.item);
+        }
     }
 
     private void PlayIntro()
@@ -138,17 +181,36 @@ public class HagglingManager : MonoBehaviour
     public void ToggleCanvas()
     {
         isCanvasActive = !isCanvasActive;
-
         hagglingCanvas.SetActive(isCanvasActive);
     }
 
     public void HideCanvas()
     {
+        currentTransaction.ClearItems();
         hagglingCanvas.SetActive(false);
+    }
+
+    public void SetActiveCustomer(GameObject gameObject)
+    {
+        activeCustomer = gameObject.GetComponent<CustomerController>();
+        activeCustomerProfile = activeCustomer.customerProfile;
     }
 
     public void ShowCanvas()
     {
+        //Get and set up the item for sale.
+        itemForSale = activeCustomer.desiredItem;
+        currentOffer = itemForSale.CalculateItemPrice();
+        imageHolder.sprite = itemForSale.item.itemIcon;
+        //Remove item for sale from player inventory and add it to transaction
+        playerInventory.TakeItem(itemForSale);
+        currentTransaction.AddItem(itemForSale);
+        //Set up UI
+        offerText.text = currentOffer.ToString();
+        goldText.text = playerInventory.GetCurrency().ToString();
+        stamina = playerProfile.GetStamina();
+        staminaBar.maxValue = stamina;
+        staminaBar.value = stamina;
         hagglingCanvas.SetActive(true);
     }
 
@@ -168,6 +230,7 @@ public class HagglingManager : MonoBehaviour
     {
         GameObject newItemImage = Instantiate(itemImage, offeredItemsCanvas.transform);
         newItemImage.GetComponent<Image>().sprite = item.item.itemIcon;
+        currentTransaction.AddItem(item);
         playerInventory.TakeItem(item);
     }
 }

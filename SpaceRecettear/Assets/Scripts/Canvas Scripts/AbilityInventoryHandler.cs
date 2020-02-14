@@ -27,6 +27,17 @@ public class AbilityInventoryHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CreateInventoryButtons();
+    }
+    
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    
+    private void CreateInventoryButtons()
+    {
         items = playerInventory.GetInventory();
         foreach (ItemInstance item in items)
         {
@@ -34,10 +45,12 @@ public class AbilityInventoryHandler : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void UpdateButtons()
     {
-        
+        foreach (ItemButton itemButton in playerInventoryPanel.transform.GetComponentsInChildren<ItemButton>())
+        {
+            itemButton.stockNumberText.text = playerInventory.GetStock(itemButton.heldItem).ToString();
+        }
     }
 
     private void AddNewItemButton(ItemInstance item, GameObject parentPanel)
@@ -64,7 +77,6 @@ public class AbilityInventoryHandler : MonoBehaviour
     {
         ItemButton itemButton = interactedButton.GetComponent<ItemButton>();
         ItemInstance itemInstance = itemButton.heldItem;
-        int itemStock = playerInventory.GetStock(itemInstance);
 
         ItemInstance newItem = new ItemInstance(itemInstance);
         newItem.stock = 1;
@@ -74,21 +86,34 @@ public class AbilityInventoryHandler : MonoBehaviour
             selectedItem = heldItem;
             if(selectedItemPanel.transform.childCount > 0)
             {
-                //swap
+                //Take desired item from player inventory
+                playerInventory.TakeItem(itemInstance);
+                itemButton.stockNumberText.text = playerInventory.GetStock(itemInstance).ToString();
+                //Get the item currently on the item panel.
+                GameObject existingItem = selectedItemPanel.transform.GetChild(0).gameObject;
+                ItemInstance itemOnPanel = existingItem.GetComponent<ItemButton>().heldItem;
+                //Return item to player, dispose of button, create new button in its place.
+                playerInventory.GiveItem(itemOnPanel.item);
+                UpdateButtons();
                 Destroy(selectedItemPanel.transform.GetChild(0).gameObject);
                 AddNewItemButton(newItem, selectedItemPanel);
                 selectedItem = newItem;
             }
             else
             {
+                playerInventory.TakeItem(itemInstance);
+                itemButton.stockNumberText.text = playerInventory.GetStock(itemInstance).ToString();
                 AddNewItemButton(newItem, selectedItemPanel);
                 selectedItem = newItem;
+                UpdateButtons();
             }
         }
         else
         {
+            playerInventory.GiveItem(heldItem.item);
             Destroy(interactedButton.gameObject);
             selectedItem = null;
+            UpdateButtons();
         }
     }
 

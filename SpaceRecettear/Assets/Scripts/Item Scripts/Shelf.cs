@@ -60,6 +60,7 @@ public class Shelf : Furniture, IInteractable
         if (itemIndex >= 0)
         {
             heldItems[itemIndex].stock += stockChange;
+            if(heldItems[itemIndex].stock <= 0) { heldItems.Remove(item); }
         }
     }
 

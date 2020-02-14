@@ -45,14 +45,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCanvasActive: 0
   gameSpeed: 1
+  stamina: 50
   playerTurn: 1
   playerInventory: {fileID: 11400000, guid: 1c4ab54a659735b4685f72c82d4c99c3, type: 2}
   playerProfile: {fileID: 11400000, guid: 18599a1db187cd841ae5f284a4d58323, type: 2}
   customerInventory: {fileID: 11400000, guid: 6fb6b6c48748cd34b9e8c81c5c92826b, type: 2}
+  offeredItemsCanvas: {fileID: 0}
+  hagglingCanvas: {fileID: 0}
+  abilityPanel: {fileID: 0}
   imageHolder: {fileID: 0}
   offerText: {fileID: 0}
   goldText: {fileID: 0}
-  hagglingCanvas: {fileID: 0}
-  abilityPanel: {fileID: 0}
   abilityButtonPrefab: {fileID: 7403922659120186030, guid: 15ba6181d7787824b8a83311ae902b65,
+    type: 3}
+  staminaBar: {fileID: 0}
+  itemImage: {fileID: 8926425530834608082, guid: bf40ab5fecd4b8c4ba453bae6c1dc6a2,
+    type: 3}
+  itemButton: {fileID: 2564019832923634244, guid: a2ed51db81fdfd1498731f2bc722d057,
     type: 3}

@@ -47,6 +47,11 @@ public class StoreInventory : ScriptableObject
         return currency;
     }
 
+    public void AddCurrency(int payment)
+    {
+        currency += payment;
+    }
+
     public List<ItemInstance> GetInventory()
     {
         return inventory;
@@ -179,6 +184,11 @@ public class StoreInventory : ScriptableObject
         }
         Debug.Log("This item was not found in the inventory");
         return false;
+    }
+
+    public bool TakeItem(ItemInstance itemToTake, int amountToTake)
+    {
+        throw new NotImplementedException();
     }
 
     public void SellItem(ItemInstance itemToSell, int itemPrice)

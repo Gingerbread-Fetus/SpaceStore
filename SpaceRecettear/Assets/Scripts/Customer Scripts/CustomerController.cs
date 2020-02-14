@@ -4,10 +4,13 @@ using UnityEngine;
 public class CustomerController : MonoBehaviour, IInteractable
 {    
     [SerializeField] float walkSpeed = 5f;
-    [SerializeField] public ItemInstance desiredItem;
     [SerializeField] public CustomerProfile customerProfile;
     [SerializeField] float maxRange = .001f;
     [SerializeField] public bool isWalking;
+    [SerializeField] public GameObject levelExit;
+
+    [HideInInspector] public ItemInstance desiredItem;
+    [HideInInspector] public bool isFinishedShopping;
 
     HagglingManager hagglingManager;
     CustomerPath path;
@@ -53,6 +56,15 @@ public class CustomerController : MonoBehaviour, IInteractable
     public void BuyItem()
     {
         desiredItem.Shelf.heldItems.Remove(desiredItem);
+    }
+
+    public void GoToExit()
+    {
+        pathIndex = 0;
+        customerPath.Clear();
+        path.SetEndPoints(transform.position, levelExit.transform.position);
+        path.FindPathAStar();
+        isWalking = true;
     }
 
     /// <summary>
@@ -130,7 +142,7 @@ public class CustomerController : MonoBehaviour, IInteractable
     {
         if (!isWalking)
         {
-            Debug.Log("Customer interacted with.");
+            hagglingManager.SetActiveCustomer(gameObject);
             hagglingManager.ShowCanvas();
         }
     }
