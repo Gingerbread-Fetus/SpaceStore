@@ -141,7 +141,7 @@ public class HagglingManager : MonoBehaviour
             activeCustomer.desiredItem.Shelf.changeStock(activeCustomer.desiredItem, -1);
             //TODO: Handle experience and gold animations
             HideCanvas();
-            activeCustomer.isFinishedShopping = true;//TODO: Temp, maybe later tie this to a list that when exhausted they willhead for the exit.
+            activeCustomer.isFinishedShopping = true;//TODO: Temp, maybe later tie this to a list that when exhausted they will head for the exit.
             if (activeCustomer.isFinishedShopping)
             {
                 activeCustomer.GoToExit(); 

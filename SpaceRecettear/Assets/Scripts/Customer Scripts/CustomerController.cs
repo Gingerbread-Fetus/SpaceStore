@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CustomerController : MonoBehaviour, IInteractable
@@ -145,5 +146,19 @@ public class CustomerController : MonoBehaviour, IInteractable
             hagglingManager.SetActiveCustomer(gameObject);
             hagglingManager.ShowCanvas();
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag.Equals("Exit") && isFinishedShopping)
+        {
+            StartCoroutine(WaitAndDestroy());
+        }
+    }
+
+    IEnumerator WaitAndDestroy()
+    {
+        yield return new WaitUntil(() => isWalking == false);
+        Destroy(gameObject);
     }
 }

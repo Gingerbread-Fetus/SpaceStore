@@ -17044,9 +17044,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2004410634}
   - component: {fileID: 2004410635}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Entry Point
-  m_TagString: Untagged
+  m_TagString: Exit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17078,7 +17078,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.38}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.47
 --- !u!1001 &2010378780
@@ -18685,7 +18685,7 @@ PrefabInstance:
     - target: {fileID: 8113572925423308912, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
         type: 3}
       propertyPath: orthographic size
-      value: 9.54
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8113572925423308912, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
         type: 3}
@@ -18755,12 +18755,12 @@ PrefabInstance:
     - target: {fileID: 8113572925423308915, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.027443
+      value: -5.0772295
       objectReference: {fileID: 0}
     - target: {fileID: 8113572925423308915, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6345673
+      value: 5.184863
       objectReference: {fileID: 0}
     - target: {fileID: 8113572925423308915, guid: 7bf7d8ce20f3e334a8abdd03e6954d68,
         type: 3}

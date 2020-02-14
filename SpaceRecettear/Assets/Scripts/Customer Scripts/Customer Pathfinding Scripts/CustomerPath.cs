@@ -27,13 +27,13 @@ public class CustomerPath : MonoBehaviour
          // A* Search Algorithm
         frontier = new MinHeap<Cell>();
         costSoFar = new Dictionary<Cell,double>();
-
-        //put the starting node on the open
-        //list(you can leave its f at zero)
         startingPosition = gameObject.transform.position;
-        Cell startingCell = new Cell(startingPosition, endingPosition);
-        frontier.Add(startingCell);
-        costSoFar[startingCell] = 0;
+        SetEndPoints(startingPosition, endingPosition);
+        
+
+        //Cell startingCell = new Cell(startingPosition, endingPosition);
+        //frontier.Add(startingCell);
+        //costSoFar[startingCell] = 0;
     }
 
     private void Update()
@@ -76,6 +76,11 @@ public class CustomerPath : MonoBehaviour
         startingPosition = newStartPos;
         endingPosition = newEndingPos;
         goalCell = new Cell(endingPosition, endingPosition);
+        frontier = new MinHeap<Cell>();
+        costSoFar = new Dictionary<Cell, double>();
+        Cell startingCell = new Cell(startingPosition, endingPosition);
+        frontier.Add(startingCell);
+        costSoFar[startingCell] = 0;
     }
 
     /// <summary>
