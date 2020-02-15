@@ -68,8 +68,6 @@ public class AbilityInventoryHandler : MonoBehaviour
     }
 
     /// <summary>
-    /// TODO: Implement decreasing inventory here.
-    /// TODO: Implement swaping inventory back and forth.
     /// </summary>
     /// <param name="heldItem"></param>
     /// <param name="interactedButton"></param>

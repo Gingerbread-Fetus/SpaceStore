@@ -193,7 +193,7 @@ public class MinHeap<T> : IList<T>, ICloneable where T : IComparable
     private void Heapify(int index)
     {
         //If the parent is greater, filter it up.
-        if (GetParent(index).CompareTo(FList[index]) > 0)//TODO this is where the problem with the accessor getting a too large index is happening
+        if (GetParent(index).CompareTo(FList[index]) > 0)
         {
             FilterUp(index);
         }

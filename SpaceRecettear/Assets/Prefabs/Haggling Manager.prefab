@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 012391362de498c4ea9602cf59773c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeCustomer: {fileID: 0}
+  playerController: {fileID: 0}
   isCanvasActive: 0
   gameSpeed: 1
   stamina: 50
@@ -53,8 +55,10 @@ MonoBehaviour:
   offeredItemsCanvas: {fileID: 0}
   hagglingCanvas: {fileID: 0}
   abilityPanel: {fileID: 0}
+  satisfactionBubble: {fileID: 0}
   imageHolder: {fileID: 0}
   offerText: {fileID: 0}
+  transactionValueText: {fileID: 0}
   goldText: {fileID: 0}
   abilityButtonPrefab: {fileID: 7403922659120186030, guid: 15ba6181d7787824b8a83311ae902b65,
     type: 3}
@@ -63,3 +67,6 @@ MonoBehaviour:
     type: 3}
   itemButton: {fileID: 2564019832923634244, guid: a2ed51db81fdfd1498731f2bc722d057,
     type: 3}
+  currentTransaction:
+    offeredItems: []
+  haggleCost: 5

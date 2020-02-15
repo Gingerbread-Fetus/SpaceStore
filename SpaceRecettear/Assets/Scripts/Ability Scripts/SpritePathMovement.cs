@@ -66,7 +66,6 @@ public class SpritePathMovement : MonoBehaviour
 
     public void SetResults()
     {
-        //TODO: Implement the logic handling for the ability here.
         if (success)
         {
             //Add to offered items
@@ -77,7 +76,9 @@ public class SpritePathMovement : MonoBehaviour
 
     private void ExitMiniGame()
     {
-        FindObjectOfType<HagglingManager>().ShowCanvas();
+        HagglingManager hagglingManager = FindObjectOfType<HagglingManager>();
+        hagglingManager.ShowCanvas();
+        hagglingManager.EndTurn();
         Destroy(gameObject);
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shelf : Furniture, IInteractable
 {
-    [SerializeField] public List<ItemInstance> heldItems = new List<ItemInstance>();//TODO: I don't like what this does in the editor, and it makes some testing harder, I should change it.
+    [SerializeField] public List<ItemInstance> heldItems = new List<ItemInstance>();
     [SerializeField] public SpriteRenderer spriteHolder;
     [SerializeField] public GameObject standArea;
 

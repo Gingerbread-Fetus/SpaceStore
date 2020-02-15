@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject boomCam;
     [SerializeField] PlayerProfile playerProfile;
 
+    [HideInInspector] public bool controlActive = true;
+
     List<GameObject> cameraList;
     Rigidbody2D myRigidBody;
     Animator myAnimator;
@@ -20,6 +22,7 @@ public class PlayerController : MonoBehaviour
     float lastDirX;
     private bool isDebug;
     private bool cameraBoomed = false;
+    
 
     void Start()
     {
@@ -37,13 +40,7 @@ public class PlayerController : MonoBehaviour
         DrawDebug();
         BoomCamera();
     }
-
-    public void CastAbility()
-    {
-        //TODO: implement using abilities.
-        throw new NotImplementedException();
-    }
-
+    
     private void BoomCamera()
     {
         if (Input.GetButtonDown("Camera"))
@@ -86,31 +83,33 @@ public class PlayerController : MonoBehaviour
                 {
                     interactable.Interact();
                 }
-                    
             }
         }
     }
 
     private void Move()
     {
-        float verticalAxis = Input.GetAxis("Vertical");
-        float horizontalAxis = Input.GetAxis("Horizontal");
-
-        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        if (controlActive)
         {
-            lastDirX = horizontalAxis;
-            lastDirY = verticalAxis;
-        }
-        //set animator parameters
-        myAnimator.SetFloat("InputX", horizontalAxis);
-        myAnimator.SetFloat("LastXFace", lastDirX);
-        myAnimator.SetFloat("InputY", verticalAxis);
-        myAnimator.SetFloat("LastYFace", lastDirY);
-        //move player
-        myRigidBody.velocity = new Vector2(horizontalAxis * walkSpeed * Time.deltaTime, verticalAxis * walkSpeed * Time.deltaTime);
+            float verticalAxis = Input.GetAxis("Vertical");
+            float horizontalAxis = Input.GetAxis("Horizontal");
 
-        bool playerIsMoving = myRigidBody.velocity.magnitude > Mathf.Epsilon;
-        myAnimator.SetBool("Moving", playerIsMoving); 
+            if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+            {
+                lastDirX = horizontalAxis;
+                lastDirY = verticalAxis;
+            }
+            //set animator parameters
+            myAnimator.SetFloat("InputX", horizontalAxis);
+            myAnimator.SetFloat("LastXFace", lastDirX);
+            myAnimator.SetFloat("InputY", verticalAxis);
+            myAnimator.SetFloat("LastYFace", lastDirY);
+            //move player
+            myRigidBody.velocity = new Vector2(horizontalAxis * walkSpeed * Time.deltaTime, verticalAxis * walkSpeed * Time.deltaTime);
+
+            bool playerIsMoving = myRigidBody.velocity.magnitude > Mathf.Epsilon;
+            myAnimator.SetBool("Moving", playerIsMoving);  
+        }
         
     }
 }

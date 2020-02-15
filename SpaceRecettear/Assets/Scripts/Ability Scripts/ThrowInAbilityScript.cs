@@ -19,10 +19,6 @@ public class ThrowInAbilityScript : Ability
 
     public override void Initialize(GameObject obj)
     {
-        //Select item from inventory.
-
-        //Set this to the active item to be 'thrown'
-
         //Disable the haggling canvas
         hagglingManager = FindObjectOfType<HagglingManager>();
         hagglingManager.HideCanvas();
@@ -42,7 +38,7 @@ public class ThrowInAbilityScript : Ability
         
         GameObject pathobject = Instantiate(path, miniGameCanvas.transform, true);
         pathobject.transform.localPosition = new Vector3();
-
+        //Select item from inventory. Set this to the active item to be 'thrown'
         inventoryHandler.MiniGameObject = miniGameCanvas;
         inventoryHandler.SetAbility(this);
         inventoryHandler.SetFlavortext(this.abilityDescription);

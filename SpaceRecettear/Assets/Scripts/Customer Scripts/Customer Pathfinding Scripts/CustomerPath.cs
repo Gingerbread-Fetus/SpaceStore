@@ -84,17 +84,16 @@ public class CustomerPath : MonoBehaviour
     }
 
     /// <summary>
-    /// TODO I'm gonna redo this so it looks for a new cell every frame instead.
     /// </summary>
     public void FindPathAStar()
     {
-        while(frontier.Count > 0)//TODO: Rewrote this, needs testing.
+        while(frontier.Count > 0)
         {
             Cell currentCell = frontier.RemoveMin();
             if (currentCell.CompareTo(goalCell) == 0)
             {
                 goalCell = currentCell;
-                Debug.Log("Goal Cell found: " + goalCell.ToString());
+                //Debug.Log("Goal Cell found: " + goalCell.ToString());
                 ConstructPath();
                 //Debug.Break();//This is great for debugging purposes
                 break;
@@ -115,7 +114,6 @@ public class CustomerPath : MonoBehaviour
 
     /// <summary>
     /// Gets the neighboring cells that are valid for pathfinding.
-    /// TODO I think there's a problem here
     /// </summary>
     /// <param name="cell"></param>
     /// <returns></returns>
@@ -136,7 +134,6 @@ public class CustomerPath : MonoBehaviour
                 if (hit)//If fraction <= 0 then the collision came from inside the collider.
                 {
                     //Debug.Log(hit + ": hit detected by raycast on " + hit.collider.gameObject.name);
-                    ////TODO: Handle edge cases of collision here. EG: if the collider hit is this collider, we still want to add it to successors.
                     continue;
                 }
                 else

@@ -106,7 +106,6 @@ public class ShelfManager : MonoBehaviour
 
     /// <summary>
     /// Moves item between inventories.
-    /// TODO: Need to make sure that items are gettting claimed and unclaimed
     /// </summary>
     /// <param name="interactedButton"></param>
     private void MoveItem(Button interactedButton)

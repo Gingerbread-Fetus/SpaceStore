@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c06c86f8b32231843b8575866e2c291b, type: 3}
   m_Name: Cust3
   m_EditorClassIdentifier: 
+  saleThreshold: 5
   favoriteItems: []
+  hatedItems: []
   customerSprite: {fileID: -508559515292579403, guid: ab305807e6722ea49be486e1b1610701,
     type: 3}
   animatorController: {fileID: 22100000, guid: 2a3d71aac2a3b2640a885ee0430ec501, type: 2}

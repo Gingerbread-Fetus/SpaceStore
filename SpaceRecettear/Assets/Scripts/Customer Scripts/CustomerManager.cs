@@ -50,7 +50,6 @@ public class CustomerManager : MonoBehaviour
         }
     }
 
-    //TODO Test this
     public ItemInstance ClaimItem(ItemInstance item)
     {
         int itemIndex = 0;
@@ -77,7 +76,6 @@ public class CustomerManager : MonoBehaviour
         }
         return claimedItem;
     }
-    //TODO test this, also not fully implemented
     public void UnclaimItem(ItemInstance item)
     {
         if (claimedItems.Contains(item))

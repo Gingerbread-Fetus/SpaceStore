@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class CustomerController : MonoBehaviour, IInteractable
 {    
@@ -8,8 +10,9 @@ public class CustomerController : MonoBehaviour, IInteractable
     [SerializeField] public CustomerProfile customerProfile;
     [SerializeField] float maxRange = .001f;
     [SerializeField] public bool isWalking;
-    [SerializeField] public GameObject levelExit;
+    [SerializeField] GameObject Bulletin;
 
+    [SerializeField] public GameObject levelExit;
     [HideInInspector] public ItemInstance desiredItem;
     [HideInInspector] public bool isFinishedShopping;
 
@@ -33,6 +36,7 @@ public class CustomerController : MonoBehaviour, IInteractable
     // Start is called before the first frame update
     void Start()
     {
+        Bulletin.gameObject.SetActive(false);
         pathIndex = 0;
         SetUpCustomerProfile();
         path = GetComponent<CustomerPath>();
@@ -52,7 +56,6 @@ public class CustomerController : MonoBehaviour, IInteractable
 
     /// <summary>
     /// Sells the desiredItem to the customer.
-    /// TODO implement and test this
     /// </summary>
     public void BuyItem()
     {
@@ -76,6 +79,7 @@ public class CustomerController : MonoBehaviour, IInteractable
         if (customerPath != null && pathIndex < customerPath.Count)
         {
             isWalking = true;
+            SetReady(false);
             var target = customerPath[pathIndex].Position;
             Vector2 heading = target - transform.position;
             float distance = heading.magnitude;
@@ -98,14 +102,19 @@ public class CustomerController : MonoBehaviour, IInteractable
         {
             isWalking = false;
             myAnimator.SetBool("IsWalking", isWalking);
-            hagglingManager.SetItemForSale(desiredItem);
+            SetReady(true);
         }
 
         if(customerPath == null)
         {
             Debug.LogError(gameObject.name + "path is null for some reason. Destroying Customer.");
-            Destroy(gameObject);//TODO: Make sure you delete this later.
+            Destroy(gameObject);//TODO: Make them wander instead?
         }
+    }
+
+    private void SetReady(bool status)
+    {
+        Bulletin.SetActive(status);
     }
 
     private void SetUpCustomerProfile()
@@ -144,6 +153,7 @@ public class CustomerController : MonoBehaviour, IInteractable
         if (!isWalking)
         {
             hagglingManager.SetActiveCustomer(gameObject);
+            hagglingManager.SetItemForSale(desiredItem);
             hagglingManager.ShowCanvas();
         }
     }
