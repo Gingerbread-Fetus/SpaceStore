@@ -5,17 +5,21 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class CustomerController : MonoBehaviour, IInteractable
-{    
+{
+    [Tooltip("Length of path generated if the customer can't find an item.")]
+    [SerializeField] int nullPathLength = 5;
     [SerializeField] float walkSpeed = 5f;
     [SerializeField] public CustomerProfile customerProfile;
     [SerializeField] float maxRange = .001f;
     [SerializeField] public bool isWalking;
+    [SerializeField] public bool drawDebugging = true;
     [SerializeField] GameObject Bulletin;
 
     [SerializeField] public GameObject levelExit;
     [HideInInspector] public ItemInstance desiredItem;
     [HideInInspector] public bool isFinishedShopping;
 
+    LayerMask layerMask;
     HagglingManager hagglingManager;
     CustomerPath path;
     Rigidbody2D myRigidBody;
@@ -36,6 +40,7 @@ public class CustomerController : MonoBehaviour, IInteractable
     // Start is called before the first frame update
     void Start()
     {
+        layerMask = LayerMask.GetMask("Interactable", "Walls");
         Bulletin.gameObject.SetActive(false);
         pathIndex = 0;
         SetUpCustomerProfile();
@@ -100,16 +105,70 @@ public class CustomerController : MonoBehaviour, IInteractable
         }
         else
         {
-            isWalking = false;
-            myAnimator.SetBool("IsWalking", isWalking);
-            SetReady(true);
+            if (desiredItem != null)
+            {
+                isWalking = false;
+                myAnimator.SetBool("IsWalking", isWalking);
+                SetReady(true); 
+            }
+            else
+            {
+                customerPath = new List<Cell>();
+                customerPath = GenerateWanderingPath();
+            }
         }
 
         if(customerPath == null)
         {
-            Debug.LogError(gameObject.name + "path is null for some reason. Destroying Customer.");
-            Destroy(gameObject);//TODO: Make them wander instead?
+            SetReady(false);
+            Debug.LogError(gameObject.name + "path is null for some reason. Wandering Customer.");
+            customerPath = GenerateWanderingPath();
+            isWalking = true;
         }
+    }
+
+    private IList<Cell> GenerateWanderingPath()
+    {
+        pathIndex = 0;
+        List<Cell> newPath = new List<Cell>();
+        Cell startingCell = new Cell(transform.position, transform.position);//The heuristic won't matter for this case, so we can just ignore the goal.
+        Cell currentCell = startingCell;
+        for(int i = 0; i < nullPathLength; i++)
+        {
+            Cell nextCell = GetRandomNeighbor(currentCell);
+            newPath.Add(nextCell);
+        }
+        return newPath;
+    }
+
+    private Cell GetRandomNeighbor(Cell currentCell)
+    {
+        List<Cell> neighbors = new List<Cell>();
+
+        for (int x = -1; x <= 1; x++)
+        {
+            for (int y = -1; y <= 1; y++)
+            {
+                Vector3 tmp = new Vector3(x, y, 0);
+                Vector3 nextPos = tmp + currentCell.Position;
+                if (x == 0 && y == 0) { continue; }//skip over the 'center' cell.
+                Cell nextSuccessor = new Cell(currentCell, nextPos, nextPos);////for neighbors of current: cost = g(current) + movementcost(current, neighbor)
+                RaycastHit2D hit = Physics2D.Raycast(currentCell.Position, (nextSuccessor.Position - currentCell.Position).normalized, 1f, layerMask);
+
+                if (hit)//If fraction <= 0 then the collision came from inside the collider.
+                {
+                    //Debug.Log(hit + ": hit detected by raycast on " + hit.collider.gameObject.name);
+                    continue;
+                }
+                else
+                {
+                    if (drawDebugging) { Debug.DrawRay(nextSuccessor.Position, Vector3.right * .5f, Color.yellow, 3.0f); }
+                    nextSuccessor.parent = currentCell;
+                    neighbors.Add(nextSuccessor);
+                }
+            }
+        }
+        return neighbors[Random.Range(0,neighbors.Count)];
     }
 
     private void SetReady(bool status)

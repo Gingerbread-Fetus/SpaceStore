@@ -69,8 +69,12 @@ public class CustomerProfile : ScriptableObject
 
     private int GetTransactionWeight(Transaction currentTransaction)
     {
+        float approvalPercentage = 0f;
         int transactionWeight = currentTransaction.GetValue() - currentTransaction.Offer;
-        float approvalPercentage = (float)transactionWeight / (float)currentTransaction.Offer;
+        if (currentTransaction.Offer > 0)
+        {
+            approvalPercentage = (float)transactionWeight / (float)currentTransaction.Offer; 
+        }
         double roundedWeight = Math.Round(approvalPercentage, 1);
         int finalWeight = (int)(roundedWeight * 10);
         if (finalWeight >= 10)

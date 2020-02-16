@@ -29,11 +29,6 @@ public class CustomerPath : MonoBehaviour
         costSoFar = new Dictionary<Cell,double>();
         startingPosition = gameObject.transform.position;
         SetEndPoints(startingPosition, endingPosition);
-        
-
-        //Cell startingCell = new Cell(startingPosition, endingPosition);
-        //frontier.Add(startingCell);
-        //costSoFar[startingCell] = 0;
     }
 
     private void Update()
