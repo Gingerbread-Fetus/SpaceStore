@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 251477962688495132}
   - component: {fileID: 251477962688495135}
+  - component: {fileID: 1477922831}
   m_Layer: 0
   m_Name: Customer Pool Manager
   m_TagString: Untagged
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251477962688495133}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -43,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e2cecb906602fb44979796249e8e35b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customerPool: {fileID: 11400000, guid: 1f4faddf82c3abb4995493742a973ebf, type: 2}
+  customerPool: {fileID: 11400000, guid: 855f920dd8dbc5041903fc27be7ac939, type: 2}
   customerPrefab: {fileID: 6449653314689777405, guid: dea2576915221474ea323ffc2861dd2e,
     type: 3}
   entrance: {fileID: 0}
@@ -52,3 +53,23 @@ MonoBehaviour:
   claimedItems: []
   unclaimedItems: []
   waveSpawning: 0
+--- !u!114 &1477922831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251477962688495133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486b78d961124a745a0d72331b8aa6e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customerObject: {fileID: 6449653314689777405, guid: 6408c2b27a076e941ba575cba16b2ffb,
+    type: 3}
+  topSpawnArea: {fileID: 0}
+  topGoal: {fileID: 0}
+  botSpawnArea: {fileID: 0}
+  botGoal: {fileID: 0}
+  numberOfPedestrians: 10
+  spawnTimerLimit: 3
