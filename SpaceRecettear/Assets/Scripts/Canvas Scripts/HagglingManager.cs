@@ -92,6 +92,7 @@ public class HagglingManager : MonoBehaviour
         offerChanger = hagglePanel.GetComponent<OfferChanger>();
         closingManager = closingCanvas.GetComponent<ClosingManager>();
         customerManager = customerManagerObject.GetComponent<CustomerManager>();
+        closingManager.StartingCash = playerInventory.GetCurrency();
         InstantiateAbilityButtons();
         //Set up UI
         offerText.text = currentOffer.ToString();
@@ -149,7 +150,6 @@ public class HagglingManager : MonoBehaviour
     public void ExitHagglingMenu()
     {
         offerText.text = currentOffer.ToString();
-        currentStamina = maxStamina;
         EndTurn();
     }
 
@@ -159,6 +159,7 @@ public class HagglingManager : MonoBehaviour
         {
             playerInventory.AddCurrency(currentOffer);
             moneyChange += currentOffer;
+            closingManager.TotalSales = moneyChange;
             activeCustomer.desiredItem.Shelf.changeStock(activeCustomer.desiredItem, -1);
             //TODO: Handle experience and gold animations
             HideCanvas();
@@ -167,6 +168,7 @@ public class HagglingManager : MonoBehaviour
             {
                 activeCustomer.GoToExit();
             }
+            currentStamina = maxStamina;
         }
     }
 
@@ -249,6 +251,7 @@ public class HagglingManager : MonoBehaviour
         //Make sure to hide other canvases
         storeOverlay.gameObject.SetActive(false);
         closingCanvas.SetActive(true);
+        closingManager.EndingCash = playerInventory.GetCurrency();
         closingManager.EndOfSession();
     }
 

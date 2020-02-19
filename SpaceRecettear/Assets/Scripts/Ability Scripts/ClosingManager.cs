@@ -8,15 +8,18 @@ public class ClosingManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI startingCashText;
     [SerializeField] TextMeshProUGUI endingCashText;
+    [SerializeField] TextMeshProUGUI totalSaleText;
     [SerializeField] TextMeshProUGUI totalProfitText;
 
     int startingCash;
     int endingCash;
+    int totalSales;
     int totalProfit;
 
     public int StartingCash { get => startingCash; set => startingCash = value; }
     public int EndingCash { get => endingCash; set => endingCash = value; }
     public int TotalProfit { get => totalProfit; set => totalProfit = value; }
+    public int TotalSales { get => totalSales; set => totalSales = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +40,7 @@ public class ClosingManager : MonoBehaviour
         //Show the stats for that day
         startingCashText.text = StartingCash.ToString();
         endingCashText.text = EndingCash.ToString();
+        totalSaleText.text = TotalSales.ToString();
         totalProfitText.text = TotalProfit.ToString();
         //Give player a grade?
     }
