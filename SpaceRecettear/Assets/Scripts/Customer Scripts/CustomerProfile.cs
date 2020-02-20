@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 /// <summary>
 /// The customer profile class provides a base I can expand on later to define different
@@ -12,11 +13,15 @@ using UnityEngine;
 public class CustomerProfile : ScriptableObject
 {
     [SerializeField] public int saleThreshold = 0;
+    [SerializeField] public int lowThreshold = 10;
+    [SerializeField] public int highThreshold = 40;
     [SerializeField] public List<ItemInstance> favoriteItems;
     [SerializeField] public List<ItemInstance> hatedItems;
     [SerializeField] public Sprite customerSprite;
     [SerializeField] public AnimatorOverrideController animatorController;
     int favorabilityRating = 0;
+    int likedItemNumber = 0;
+    int desiredPrice;
 
     public int FavorabilityRating { get => favorabilityRating;}
 
@@ -32,22 +37,14 @@ public class CustomerProfile : ScriptableObject
         return CalculateFavorability(currentTransaction) >= saleThreshold;
     }
 
-    public int CalculateFavorability(Transaction currentTransaction)
+    public float CalculateFavorability(Transaction currentTransaction)
     {
-        favorabilityRating = 0;
-        foreach (ItemInstance itemInstance in currentTransaction.offeredItems)
+        int transactionDifference = CalculateTransactionDifference(currentTransaction);
+        if(transactionDifference <= 0)
         {
-            if (hatedItems.Contains(itemInstance))
-            {
-                favorabilityRating--;
-            }
-            else if (favoriteItems.Contains(itemInstance))
-            {
-                favorabilityRating++;
-            }
+            return 10;
         }
-        int transactionWeight = GetTransactionWeight(currentTransaction);
-        favorabilityRating += transactionWeight;
+        return transactionDifference / currentTransaction.GetValue();
         Debug.Log("FavorabilityRating: " + favorabilityRating.ToString() + ",  Sale Threshold: " + saleThreshold);
         return favorabilityRating;
     }
@@ -67,20 +64,23 @@ public class CustomerProfile : ScriptableObject
         }
     }
 
-    private int GetTransactionWeight(Transaction currentTransaction)
+    private int CalculateTransactionDifference(Transaction currentTransaction)
     {
-        float approvalPercentage = 0f;
-        int transactionWeight = currentTransaction.GetValue() - currentTransaction.Offer;
-        if (currentTransaction.Offer > 0)
+        foreach (ItemInstance itemInstance in currentTransaction.offeredItems)
         {
-            approvalPercentage = (float)transactionWeight / (float)currentTransaction.Offer; 
+            if (hatedItems.Contains(itemInstance) && likedItemNumber > -10)
+            {
+                likedItemNumber--;
+            }
+            else if (favoriteItems.Contains(itemInstance) && likedItemNumber < 10)
+            {
+                likedItemNumber++;
+            }
         }
-        double roundedWeight = Math.Round(approvalPercentage, 1);
-        int finalWeight = (int)(roundedWeight * 10);
-        if (finalWeight >= 10)
-        {
-            return 10;
-        }
-        else return finalWeight;
+        int pricePercentageInt = Random.Range(lowThreshold, highThreshold);
+        pricePercentageInt += likedItemNumber;
+        float pricePercentage = 1 + ((float)pricePercentageInt / 100);
+        desiredPrice = (int)pricePercentage * currentTransaction.GetValue();
+        return currentTransaction.Offer - desiredPrice;
     }
 }
