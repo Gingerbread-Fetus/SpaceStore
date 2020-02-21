@@ -5,33 +5,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[Serializable]
-public struct Transaction
-{
-    [SerializeField] public List<ItemInstance> offeredItems;
-    int totalValue;
-    int offer;
-
-    public int Offer { get => offer; set => offer = value; }
-
-    public void AddItem(ItemInstance newItem)
-    {
-        offeredItems.Add(newItem);
-        totalValue = totalValue += newItem.item.baseSellPrice;
-    }
-
-    public void ClearTransaction()
-    {
-        offeredItems.Clear();
-        Offer = 0;
-        totalValue = 0;
-    }
-
-    public int GetValue()
-    {
-        return totalValue;
-    }
-}
 
 /// <summary>
 /// HagglingManager handles turns in the haggling screen. as well as transaction
@@ -96,7 +69,6 @@ public class HagglingManager : MonoBehaviour
         InstantiateAbilityButtons();
         //Set up UI
         offerText.text = currentOffer.ToString();
-        currentTransaction.Offer = currentOffer;
         transactionValueText.text = currentOffer.ToString();
         goldText.text = playerInventory.GetCurrency().ToString();
         maxStamina = playerProfile.GetStamina();
@@ -125,7 +97,7 @@ public class HagglingManager : MonoBehaviour
         if (!playerTurn)
         {
             HandleCustomerTurn();
-            satisfactionBubble.SetSatisfactionLevel(activeCustomerProfile.CalculateFavorability(currentTransaction));
+            satisfactionBubble.SetSatisfactionLevel(activeCustomerProfile.CalculateFavorability());
         }
         if (customerManager.WaveFinished)
         {
@@ -155,7 +127,7 @@ public class HagglingManager : MonoBehaviour
 
     public void Sell()
     {
-        if (activeCustomerProfile.ProcessTransaction(currentTransaction))
+        if (activeCustomerProfile.ProcessTransaction())
         {
             playerInventory.AddCurrency(currentOffer);
             moneyChange += currentOffer;
@@ -211,6 +183,7 @@ public class HagglingManager : MonoBehaviour
         itemForSale = activeCustomer.desiredItem;
         //currentOffer = itemForSale.CalculateItemPrice();//This resets the offer amount.
         imageHolder.sprite = itemForSale.item.itemIcon;
+        activeCustomerProfile.SetTransaction(currentTransaction);
         hagglingCanvas.SetActive(true);
     }
 
@@ -242,7 +215,7 @@ public class HagglingManager : MonoBehaviour
 
     public void EndTurn()
     {
-        satisfactionBubble.SetSatisfactionLevel(activeCustomerProfile.CalculateFavorability(currentTransaction));
+        satisfactionBubble.SetSatisfactionLevel(activeCustomerProfile.CalculateFavorability());
         playerTurn = false;
     }
 

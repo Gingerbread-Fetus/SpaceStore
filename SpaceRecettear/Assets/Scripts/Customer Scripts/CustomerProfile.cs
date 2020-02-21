@@ -12,19 +12,18 @@ using Random = UnityEngine.Random;
 [CreateAssetMenu(fileName = "New Customer Profile", menuName = "Customers/Profile")]
 public class CustomerProfile : ScriptableObject
 {
-    [SerializeField] public int saleThreshold = 0;
+    [SerializeField] public float saleThreshold = 0;
     [SerializeField] public int lowThreshold = 10;
     [SerializeField] public int highThreshold = 40;
     [SerializeField] public List<ItemInstance> favoriteItems;
     [SerializeField] public List<ItemInstance> hatedItems;
     [SerializeField] public Sprite customerSprite;
     [SerializeField] public AnimatorOverrideController animatorController;
-    int favorabilityRating = 0;
     int likedItemNumber = 0;
     int desiredPrice;
-
-    public int FavorabilityRating { get => favorabilityRating;}
-
+    int pricePercentageInt;
+    private Transaction currentTransaction;
+    
     /// <summary>
     /// This method checks the favorability of a transaction, if it meets the
     /// threshold then it will return true, representing a successful sale for
@@ -32,21 +31,30 @@ public class CustomerProfile : ScriptableObject
     /// </summary>
     /// <param name="currentTransaction"></param>
     /// <returns></returns>
-    public bool ProcessTransaction(Transaction currentTransaction)
+    public bool ProcessTransaction()
     {
-        return CalculateFavorability(currentTransaction) >= saleThreshold;
+        return CalculateFavorability() <= saleThreshold;
     }
 
-    public float CalculateFavorability(Transaction currentTransaction)
+    public void SetTransaction(Transaction newTransaction)
     {
-        int transactionDifference = CalculateTransactionDifference(currentTransaction);
+        currentTransaction = newTransaction;
+        if (currentTransaction != null)
+        {
+            CalculateDesiredPrice();
+        }
+    }
+
+    public float CalculateFavorability()
+    {
+        int transactionDifference = currentTransaction.Offer - desiredPrice;
         if(transactionDifference <= 0)
         {
-            return 10;
+            Debug.Log("Desired Price: " + desiredPrice.ToString() + ", Favorability: " + ((float)transactionDifference / (float)currentTransaction.GetValue()).ToString() + ",  Sale Threshold: " + saleThreshold);
+            return -10;
         }
-        return transactionDifference / currentTransaction.GetValue();
-        Debug.Log("FavorabilityRating: " + favorabilityRating.ToString() + ",  Sale Threshold: " + saleThreshold);
-        return favorabilityRating;
+        Debug.Log("Desired Price: " + desiredPrice.ToString() + ", Favorability: " + ((float)transactionDifference / (float)currentTransaction.GetValue()).ToString() + ",  Sale Threshold: " + saleThreshold);
+        return (float)transactionDifference / (float)currentTransaction.GetValue();
     }
 
     public int HaggleTransaction(Transaction currentTransaction)
@@ -64,7 +72,7 @@ public class CustomerProfile : ScriptableObject
         }
     }
 
-    private int CalculateTransactionDifference(Transaction currentTransaction)
+    private void CalculateDesiredPrice()
     {
         foreach (ItemInstance itemInstance in currentTransaction.offeredItems)
         {
@@ -77,10 +85,13 @@ public class CustomerProfile : ScriptableObject
                 likedItemNumber++;
             }
         }
-        int pricePercentageInt = Random.Range(lowThreshold, highThreshold);
+
+        pricePercentageInt = Random.Range(lowThreshold, highThreshold);
         pricePercentageInt += likedItemNumber;
+        saleThreshold = (float)pricePercentageInt / 100f;
+        Debug.Log("Freshly calculated sale threshold: " + saleThreshold.ToString());
         float pricePercentage = 1 + ((float)pricePercentageInt / 100);
-        desiredPrice = (int)pricePercentage * currentTransaction.GetValue();
-        return currentTransaction.Offer - desiredPrice;
+        desiredPrice = (int)Math.Round(pricePercentage * currentTransaction.GetValue());
+        Debug.Log("Freshly calculated desired Price: " + desiredPrice.ToString());
     }
 }

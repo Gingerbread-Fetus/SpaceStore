@@ -20,7 +20,7 @@ public class SatisfactionBubble : MonoBehaviour
 
     public void SetSatisfactionLevel(float newSatisfaction)
     {
-        Debug.Log(newSatisfaction);
+        Debug.Log("Satisfaction Bubble satisfaction: " + newSatisfaction);
         myAnimator.SetFloat("SatisfactionLevel", newSatisfaction);
     }
 }

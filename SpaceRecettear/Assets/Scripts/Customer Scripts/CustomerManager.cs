@@ -103,7 +103,6 @@ public class CustomerManager : MonoBehaviour
         }
         unclaimedItems.Add(item);
         waveSpawning = unclaimedItems.Count > 0;
-        Debug.Log(unclaimedItems.Count);
     }
 
 }

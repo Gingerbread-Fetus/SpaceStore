@@ -28,17 +28,14 @@ public class OfferChanger : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.UpArrow))
             {
-                Debug.Log("Arrow Key Down");
                 startTime = 0;
             }
             if (Input.GetKey(KeyCode.UpArrow))
             {
-                Debug.Log("Offer Change: " + offerChange);
                 IncreaseOffer(offerChange);
             }
             else if (Input.GetKey(KeyCode.DownArrow))
             {
-                Debug.Log("Offer Change: " + offerChange);
                 DecreaseOffer(offerChange);
             }
         }
@@ -83,6 +80,5 @@ public class OfferChanger : MonoBehaviour
     public void SetOfferFromValueChange()
     {
         resultingOffer = int.Parse(textField.text);
-        Debug.Log("New result: " + resultingOffer.ToString());
     }
 }
