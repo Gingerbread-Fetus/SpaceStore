@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2106706721
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 21ae12909dfa64464820da55fc494021, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -137,6 +137,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 200
+  cameras: {fileID: 0}
+  walkCam: {fileID: 0}
+  boomCam: {fileID: 0}
+  playerProfile: {fileID: 11400000, guid: 18599a1db187cd841ae5f284a4d58323, type: 2}
+  controlActive: 1
 --- !u!70 &7179439978752950604
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

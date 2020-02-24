@@ -62,6 +62,7 @@ public class HagglingManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentTransaction = new Transaction();
         offerChanger = hagglePanel.GetComponent<OfferChanger>();
         closingManager = closingCanvas.GetComponent<ClosingManager>();
         customerManager = customerManagerObject.GetComponent<CustomerManager>();
@@ -134,6 +135,7 @@ public class HagglingManager : MonoBehaviour
             closingManager.TotalSales = moneyChange;
             activeCustomer.desiredItem.Shelf.changeStock(activeCustomer.desiredItem, -1);
             //TODO: Handle experience and gold animations
+            currentTransaction.ClearTransaction();
             HideCanvas();
             activeCustomer.isFinishedShopping = true;//TODO: Temp, maybe later tie this to a list that when exhausted they will head for the exit.
             if (activeCustomer.isFinishedShopping)
@@ -165,7 +167,6 @@ public class HagglingManager : MonoBehaviour
 
     public void HideCanvas()
     {
-        currentTransaction.ClearTransaction();
         hagglingCanvas.SetActive(false);
         playerController.controlActive = true;
     }

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
@@ -35,12 +33,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
         PlayerInteract();
         DrawDebug();
         BoomCamera();
     }
-    
+
+    private void FixedUpdate()
+    {
+        Move();
+    }
+
     private void BoomCamera()
     {
         if (Input.GetButtonDown("Camera"))
@@ -105,7 +107,7 @@ public class PlayerController : MonoBehaviour
             myAnimator.SetFloat("InputY", verticalAxis);
             myAnimator.SetFloat("LastYFace", lastDirY);
             //move player
-            myRigidBody.velocity = new Vector2(horizontalAxis * walkSpeed * Time.deltaTime, verticalAxis * walkSpeed * Time.deltaTime);
+            myRigidBody.velocity = new Vector2(horizontalAxis * walkSpeed , verticalAxis * walkSpeed) * Time.deltaTime;
 
             bool playerIsMoving = myRigidBody.velocity.magnitude > Mathf.Epsilon;
             myAnimator.SetBool("Moving", playerIsMoving);  
