@@ -21,8 +21,17 @@ public class Transaction
 
     public void AddItem(ItemInstance newItem)
     {
-        offeredItems.Add(newItem);
         totalValue = totalValue += newItem.item.baseSellPrice;
+
+        int indexOf = offeredItems.IndexOf(newItem);
+        if(indexOf > -1)
+        {
+            offeredItems[indexOf].stock += newItem.stock;
+        }
+        else
+        {
+            offeredItems.Add(newItem);
+        }
     }
 
     public void ClearTransaction()

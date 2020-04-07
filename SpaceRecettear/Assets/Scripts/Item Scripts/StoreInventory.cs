@@ -191,6 +191,12 @@ public class StoreInventory : ScriptableObject
         throw new NotImplementedException();
     }
 
+    //TODO Be aware that this may require double checking that the item to check and the inventory actually have a stock > 0
+    public bool HasItem(ItemInstance itemToCheck)
+    {
+        return inventory.Contains(itemToCheck);
+    }
+
     public void SellItem(ItemInstance itemToSell, int itemPrice)
     {
         if (TakeItem(itemToSell))

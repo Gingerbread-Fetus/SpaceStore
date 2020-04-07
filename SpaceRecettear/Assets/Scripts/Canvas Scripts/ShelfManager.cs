@@ -44,31 +44,8 @@ public class ShelfManager : MonoBehaviour
         {
             foreach (ItemButton itemButton in playerInventoryPanel.transform.GetComponentsInChildren<ItemButton>())
             {
-                itemButton.stockNumberText.text = playerInventory.GetStock(itemButton.heldItem).ToString();
+                itemButton.heldItem.stock = playerInventory.GetStock(itemButton.heldItem);
             }
-
-            if (activeShelf)
-            {
-                ItemButton[] itemButtonsArray = shelfInventoryPanel.transform.GetComponentsInChildren<ItemButton>();
-                List<ItemButton> itemButtons = new List<ItemButton>(itemButtonsArray);
-                foreach (ItemButton itemButton in itemButtons)
-                {
-                    if (activeShelf.heldItems.Contains(itemButton.heldItem))
-                    {
-                        int itemIndex = activeShelf.heldItems.IndexOf(itemButton.heldItem);
-                        int itemStock = activeShelf.heldItems[itemIndex].stock;
-                        itemButton.stockNumberText.text = itemStock.ToString(); 
-                    }
-                }
-                foreach(ItemButton itemButton in itemButtons)
-                {
-                    if (!itemButtons.Contains(itemButton))
-                    {
-                        //create and add a button for it
-                        AddNewItemButton(itemButton.heldItem, shelfInventoryPanel);
-                    }
-                }
-            } 
         }
         isModified = false;
     }
@@ -97,7 +74,6 @@ public class ShelfManager : MonoBehaviour
 
         ItemButton itemButton = newButton.GetComponent<ItemButton>();
         itemButton.heldItem = item;
-        itemButton.stockNumberText.text = item.stock.ToString();
 
         newButton.onClick.AddListener(delegate { MoveItem(newButton); });
 
@@ -113,59 +89,89 @@ public class ShelfManager : MonoBehaviour
         ItemButton itemButton = interactedButton.GetComponent<ItemButton>();
         ItemInstance itemInstance = itemButton.heldItem;
         int itemStock = playerInventory.GetStock(itemInstance);
-        
+        //If the button is on the player inventory panel we are sending it to the shelf
         if (interactedButton.transform.IsChildOf(playerInventoryPanel.transform))
         {
-            if (itemInstance.stock > 1)
-            {
-                playerInventory.TakeItem(itemInstance);
-                //If the active shelf does not have this item then we have to create a new button.
-                if (!activeShelf.heldItems.Contains(itemButton.heldItem))
-                {
-                    ItemInstance newItemInstance = new ItemInstance();
-                    newItemInstance.item = itemButton.heldItem.item;
-                    ItemButton newItemButton = AddNewItemButton(newItemInstance, shelfInventoryPanel);
-                    activeShelf.heldItems.Add(newItemButton.heldItem);
-                    ShelfItem(newItemButton.heldItem, 1);
-                }
-                else
-                {
-                    activeShelf.changeStock(itemButton.heldItem, 1);
-                    ShelfItem(itemButton.heldItem, 1);
-                }
-            }
-            else
-            {
-                //If it is the last item destroy it after moving it to the other container.
-                playerInventory.TakeItem(itemInstance);
-                Destroy(interactedButton.gameObject);
-            }
+            SendToShelf(interactedButton, itemButton, itemInstance);
         }
+        //Else we are sending it to the player inventory
         else
         {
-            if (itemInstance.stock > 1)
-            {
-                playerInventory.GiveItem(itemInstance.item);
-                activeShelf.changeStock(itemButton.heldItem, -1);
-                int itemIndex = activeShelf.heldItems.IndexOf(itemButton.heldItem);
-                int stock = activeShelf.heldItems[itemIndex].stock;
-                itemButton.stockNumberText.text = stock.ToString();
-            }
-            else
-            {
-                playerInventory.GiveItem(itemInstance.item);
-                activeShelf.heldItems.Remove(itemButton.heldItem);
-                Destroy(interactedButton.gameObject);
-                shelvedItems.Remove(itemButton.heldItem);
-            }
-
+            SendToPlayerInventory(interactedButton, itemButton, itemInstance);
         }
         isModified = true;
     }
-    
+
+    private void SendToShelf(Button interactedButton, ItemButton itemButton, ItemInstance itemInstance)
+    {
+        if (itemInstance.stock > 1)
+        {
+            AddItemToActiveShelf(itemButton, itemInstance);
+        }
+        else
+        {
+            //If it is the last item destroy it after moving it to the other container.
+            AddItemToActiveShelf(itemButton, itemInstance);
+            playerInventory.TakeItem(itemInstance);
+            Destroy(interactedButton.gameObject);
+        }
+    }
+
+
+
+    private void AddItemToActiveShelf(ItemButton itemButton, ItemInstance itemInstance)
+    {
+        playerInventory.TakeItem(itemInstance);
+        //If the active shelf does not have this item then we have to create a new button.
+        if (!activeShelf.heldItems.Contains(itemButton.heldItem))
+        {
+            ItemInstance newItemInstance = new ItemInstance();
+            newItemInstance.item = itemButton.heldItem.item;
+            ItemButton newItemButton = AddNewItemButton(newItemInstance, shelfInventoryPanel);
+            activeShelf.heldItems.Add(newItemButton.heldItem);
+            ShelfItem(newItemButton.heldItem, 1);
+        }
+        else
+        {
+            activeShelf.changeStock(itemButton.heldItem, 1);
+            ShelfItem(itemButton.heldItem, 1);
+        }
+    }
+
+    private void SendToPlayerInventory(Button interactedButton, ItemButton itemButton, ItemInstance itemInstance)
+    {
+        if (itemInstance.stock > 1)
+        {
+            AddToInventoryPanel(itemButton,itemInstance);
+            playerInventory.GiveItem(itemInstance.item);
+            activeShelf.changeStock(itemButton.heldItem, -1);
+            int itemIndex = activeShelf.heldItems.IndexOf(itemButton.heldItem);
+            int stock = activeShelf.heldItems[itemIndex].stock;
+        }
+        else
+        {
+            AddToInventoryPanel(itemButton, itemInstance);
+            playerInventory.GiveItem(itemInstance.item);
+            activeShelf.heldItems.Remove(itemButton.heldItem);
+            Destroy(interactedButton.gameObject);
+            shelvedItems.Remove(itemButton.heldItem);
+        }
+    }
+
+    private void AddToInventoryPanel(ItemButton itemButton, ItemInstance itemInstance)
+    {
+        //If the player inventory doesn't have the item then we'll need a new button.
+        if (!playerInventory.HasItem(itemInstance))
+        {
+            ItemInstance newItemInstance = new ItemInstance();
+            newItemInstance.item = itemButton.heldItem.item;
+            newItemInstance.stock = 1;
+            ItemButton newItemButton = AddNewItemButton(newItemInstance, playerInventoryPanel);
+        }
+    }
+
     private void ShelfItem(ItemInstance heldItem, int amount)
     {
-        heldItem.stock = amount;
         heldItem.Shelf = activeShelf;
 
         shelvedItems.Add(heldItem);
@@ -192,7 +198,6 @@ public class ShelfManager : MonoBehaviour
 
             ItemButton newItemButton = newButton.GetComponent<ItemButton>();
             newItemButton.heldItem = itemInstance;
-            newItemButton.stockNumberText.text = itemInstance.stock.ToString();
             newButton.onClick.AddListener(delegate { MoveItem(newButton); });
         }
         

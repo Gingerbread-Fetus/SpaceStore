@@ -49,7 +49,6 @@ public class AbilityInventoryHandler : MonoBehaviour
     {
         foreach (ItemButton itemButton in playerInventoryPanel.transform.GetComponentsInChildren<ItemButton>())
         {
-            itemButton.stockNumberText.text = playerInventory.GetStock(itemButton.heldItem).ToString();
         }
     }
 
@@ -62,7 +61,6 @@ public class AbilityInventoryHandler : MonoBehaviour
 
         ItemButton itemButton = newButton.GetComponent<ItemButton>();
         itemButton.heldItem = item;
-        itemButton.stockNumberText.text = item.stock.ToString();
 
         newButton.onClick.AddListener(delegate { SelectItem(itemButton.heldItem, newButton); });
     }
@@ -86,7 +84,6 @@ public class AbilityInventoryHandler : MonoBehaviour
             {
                 //Take desired item from player inventory
                 playerInventory.TakeItem(itemInstance);
-                itemButton.stockNumberText.text = playerInventory.GetStock(itemInstance).ToString();
                 //Get the item currently on the item panel.
                 GameObject existingItem = selectedItemPanel.transform.GetChild(0).gameObject;
                 ItemInstance itemOnPanel = existingItem.GetComponent<ItemButton>().heldItem;
@@ -100,7 +97,6 @@ public class AbilityInventoryHandler : MonoBehaviour
             else
             {
                 playerInventory.TakeItem(itemInstance);
-                itemButton.stockNumberText.text = playerInventory.GetStock(itemInstance).ToString();
                 AddNewItemButton(newItem, selectedItemPanel);
                 selectedItem = newItem;
                 UpdateButtons();

@@ -48,6 +48,11 @@ public class CustomerManager : MonoBehaviour
         }
     }
 
+    public void StartSpawning()
+    {
+        StartCoroutine(SpawnCustomers());
+    }
+
     public IEnumerator SpawnCustomers()
     {
         while (waveSpawning && waveSize >= 0)
