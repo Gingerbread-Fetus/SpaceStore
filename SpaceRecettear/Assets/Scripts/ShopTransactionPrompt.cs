@@ -6,11 +6,18 @@ using UnityEngine.UI;
 
 public class ShopTransactionPrompt : MonoBehaviour
 {
+    public enum TransactionType
+    {
+        TakeFromShop,
+        GiveToShop
+    }
+
     [SerializeField] Image itemImageHolder;
     [SerializeField] TMP_InputField stockInputField;
 
+    public TransactionType transactionState = TransactionType.TakeFromShop;
     ShopkeepManager shopkeepManager;
-    ItemInstance desiredItem;
+    GuildShopTransactionButton desiredItem;
     int desiredItemStock = 0;
 
     // Start is called before the first frame update
@@ -28,18 +35,20 @@ public class ShopTransactionPrompt : MonoBehaviour
     private void OnEnable()
     {
         shopkeepManager = GetComponentInParent<ShopkeepManager>();
+        desiredItemStock = 0;
+        stockInputField.text = desiredItemStock.ToString();
     }
 
-    public void setDesiredItem(ItemInstance newDesiredItem)
+    public void setDesiredItem(GuildShopTransactionButton newDesiredItem)
     {
         desiredItem = newDesiredItem;
-        itemImageHolder.sprite = desiredItem.item.itemIcon;
+        itemImageHolder.sprite = desiredItem.heldItem.item.itemIcon;
     }
 
-    public void AddToStock(int newAmount)
+    public void AddToStock(int stockChange)
     {
-        desiredItemStock += newAmount;
-        stockInputField.text = newAmount.ToString();
+        desiredItemStock += stockChange;
+        stockInputField.text = desiredItemStock.ToString();
     }
 
     public void SetDesiredStock()
@@ -49,8 +58,14 @@ public class ShopTransactionPrompt : MonoBehaviour
 
     public void SendStockToTransaction()
     {
-        desiredItem.stock = desiredItemStock;
-        shopkeepManager.MoveItemToTransaction(desiredItem);
+        if (transactionState == TransactionType.TakeFromShop)
+        {
+            shopkeepManager.MoveItemToTransaction(desiredItem, desiredItemStock); 
+        }
+        else if(transactionState == TransactionType.GiveToShop)
+        {
+            shopkeepManager.RemoveItemFromTransaction(desiredItem, desiredItemStock);
+        }
         gameObject.SetActive(false);
     }
 }

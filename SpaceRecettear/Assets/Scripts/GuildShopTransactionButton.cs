@@ -3,24 +3,29 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ItemButton : MonoBehaviour
+public class GuildShopTransactionButton : MonoBehaviour
 {
     public ItemInstance heldItem;
-    [SerializeField]TextMeshProUGUI stockNumberText;
-       
+    [SerializeField] TextMeshProUGUI stockNumberText;
+    [SerializeField] bool limitedItem = false;
+
     void Update()
     {
-        stockNumberText.text = heldItem.stock.ToString();
+        if (!limitedItem)
+        {
+            stockNumberText.text = heldItem.stock.ToString(); 
+        }
     }
 
     void Start()
     {
+        //HELP
     }
-    
+
     public override bool Equals(object obj)
     {
         if (obj == null || this.GetType() != obj.GetType()) { return false; }
-        ItemButton c = obj as ItemButton;
+        GuildShopTransactionButton c = obj as GuildShopTransactionButton;
         return this.heldItem.Equals(c.heldItem);
     }
 
