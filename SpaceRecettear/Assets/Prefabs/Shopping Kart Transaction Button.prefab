@@ -167,9 +167,9 @@ GameObject:
   - component: {fileID: 2564019832923634248}
   - component: {fileID: 2564019832923634247}
   - component: {fileID: 2564019832923634246}
-  - component: {fileID: 1779280609772259172}
+  - component: {fileID: 5023278496514061972}
   m_Layer: 5
-  m_Name: ShopKeep Transaction Button
+  m_Name: Shopping Kart Transaction Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1779280609772259172
+--- !u!114 &5023278496514061972
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -283,14 +283,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2564019832923634244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b231db189228c4e4c8a7be5ebc5b8396, type: 3}
+  m_Script: {fileID: 11500000, guid: 0806f31deee80d44da78c6ca1f645dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heldItem:
-    item: {fileID: 0}
-    boomItem: 0
-    stock: 1
-    quality: 0
-    shelf: {fileID: 0}
-  stockNumberText: {fileID: 2033523821}
-  limitedItem: 0

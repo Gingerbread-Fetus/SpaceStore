@@ -41,6 +41,7 @@ public class ItemInstance
     // Reference to scriptable object "template".
     public Item item;
     int sellPrice;
+    public bool isLimited = false;
     // Object-specific data.
     [SerializeField] bool boomItem = false;
     [SerializeField] public int stock = 1;

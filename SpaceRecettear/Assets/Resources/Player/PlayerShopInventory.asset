@@ -14,18 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory:
   - item: {fileID: 11400000, guid: 10b591890c2f8a34bbe4b4074f4db942, type: 2}
+    isLimited: 0
     boomItem: 0
     stock: 5
     quality: 0
     shelf: {fileID: 0}
   - item: {fileID: 11400000, guid: 01cc6a52cdea1284bbdb8c474c58dedd, type: 2}
+    isLimited: 0
     boomItem: 0
     stock: 10
     quality: 0
     shelf: {fileID: 0}
   - item: {fileID: 11400000, guid: ed22bfaf86b0a2c4daa9a1d156624849, type: 2}
+    isLimited: 0
     boomItem: 0
     stock: 3
     quality: 0
     shelf: {fileID: 0}
-  currency: 567
+  currency: 600

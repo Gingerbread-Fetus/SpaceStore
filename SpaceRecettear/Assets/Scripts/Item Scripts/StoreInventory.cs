@@ -117,6 +117,28 @@ public class StoreInventory : ScriptableObject
         }
     }
 
+    public void GiveItem(ItemInstance addItem)
+    {
+        if (HasItem(addItem))//if it's already in the inventory add number asked for.
+        {
+            int i = inventory.IndexOf(addItem);
+            inventory[i].stock += addItem.stock;
+            Debug.Log(addItem.item.name + " of quality: " + inventory[i].quality + " has new stock: " + inventory[i].stock);
+        }
+        else
+        {
+            Debug.Log("New item added.");
+            inventory.Add(addItem);
+        }
+    }
+
+    public void GiveItem(ItemInstance addItem, int howMany)
+    {
+        ItemInstance tempItem = new ItemInstance(addItem);
+        tempItem.stock = howMany;
+        GiveItem(tempItem);
+    }
+
     public int GetStock(ItemInstance item)
     {
         if (inventory.Contains(item))
