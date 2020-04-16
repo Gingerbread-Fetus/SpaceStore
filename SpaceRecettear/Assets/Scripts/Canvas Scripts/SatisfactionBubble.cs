@@ -21,6 +21,6 @@ public class SatisfactionBubble : MonoBehaviour
     public void SetSatisfactionLevel(float newSatisfaction)
     {
         Debug.Log("Satisfaction Bubble satisfaction: " + newSatisfaction);
-        myAnimator.SetFloat("SatisfactionLevel", newSatisfaction);
+        myAnimator.SetFloat("SatisfactionLevel", newSatisfaction);//TODO an error is coming up here that confuses me
     }
 }

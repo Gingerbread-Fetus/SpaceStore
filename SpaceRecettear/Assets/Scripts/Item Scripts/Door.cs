@@ -1,26 +1,29 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
+    [SerializeField] RectTransform exitStorePromptPanel;
     CustomerManager customerManager;
     public void Interact()
     {
-        //Debug.Log("Door interacted with");
-        //IEnumerator spawningCoroutine = customerManager.SpawnCustomers();
-        //StartCoroutine(spawningCoroutine);
+        ShowPrompt();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void ShowPrompt()
     {
-        //customerManager = FindObjectOfType<CustomerManager>();
+        exitStorePromptPanel.gameObject.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void HidePanel()
     {
-        
+        exitStorePromptPanel.gameObject.SetActive(false);
+    }
+
+    public void ExitStore()
+    {
+
     }
 }
