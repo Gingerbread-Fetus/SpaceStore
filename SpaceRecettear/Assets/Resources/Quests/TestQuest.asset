@@ -15,9 +15,15 @@ MonoBehaviour:
   itemRewards:
   - amount: 1
     item: {fileID: 11400000, guid: 01cc6a52cdea1284bbdb8c474c58dedd, type: 2}
-  - amount: 0
+  - amount: 1
     item: {fileID: 11400000, guid: 10b591890c2f8a34bbe4b4074f4db942, type: 2}
-  - amount: 0
+  - amount: 1
     item: {fileID: 11400000, guid: ed22bfaf86b0a2c4daa9a1d156624849, type: 2}
-  storyText: This is just a test
+  storyText: "\tThis is just a test. This is where the description of the quest will
+    appear. On an quest, adventurers set out to retrieve rare items for the player."
   difficulty: 1
+  numberOfAdventurers: 1
+  recommendedAdventurers:
+  - {fileID: 11400000, guid: bb029eabd750e3844be0d14bc3333866, type: 2}
+  - {fileID: 11400000, guid: f515fec0308e69e4e98ef4ba2a658603, type: 2}
+  - {fileID: 11400000, guid: af0c48378b19cfa4ba8f253b2d14aa78, type: 2}

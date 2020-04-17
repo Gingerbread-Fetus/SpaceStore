@@ -10,11 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c06c86f8b32231843b8575866e2c291b, type: 3}
-  m_Name: Cust1
+  m_Name: Sue
   m_EditorClassIdentifier: 
   saleThreshold: 5
+  lowThreshold: 10
+  highThreshold: 40
   favoriteItems:
   - item: {fileID: 11400000, guid: 01cc6a52cdea1284bbdb8c474c58dedd, type: 2}
+    isLimited: 0
     boomItem: 0
     stock: 0
     quality: 0
@@ -23,3 +26,5 @@ MonoBehaviour:
   customerSprite: {fileID: 3016928708138566120, guid: d49d386243da1544291106fd444f46bf,
     type: 3}
   animatorController: {fileID: 22100000, guid: 893e227072fa7d544b26bb1fb6e95556, type: 2}
+  characterName: Sue
+  characterLevel: 1

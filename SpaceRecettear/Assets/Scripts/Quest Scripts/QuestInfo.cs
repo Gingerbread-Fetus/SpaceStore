@@ -6,9 +6,11 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Quest")]
 public class QuestInfo : ScriptableObject
 {
-    [SerializeField] List<ItemRewardBundle> itemRewards = new List<ItemRewardBundle>();
+    [SerializeField] public List<ItemRewardBundle> itemRewards = new List<ItemRewardBundle>();
     [TextArea(10, 14)] [SerializeField] public string storyText;
     [Range(0,10)][SerializeField] public int difficulty = 0;
+    [Range(1,10)][SerializeField] public int numberOfAdventurers = 1;
+    public List<CustomerProfile> recommendedAdventurers;
 
     public float GetSuccessChance()
     {
@@ -17,9 +19,9 @@ public class QuestInfo : ScriptableObject
 
 
     [Serializable]
-    private class ItemRewardBundle
+    public class ItemRewardBundle
     {
-        [Range(1,9999)] [SerializeField] int amount;
-        [SerializeField] Item item;
+        [Range(1,9999)] [SerializeField] public int amount = 1;
+        [SerializeField] public Item item;
     }
 }

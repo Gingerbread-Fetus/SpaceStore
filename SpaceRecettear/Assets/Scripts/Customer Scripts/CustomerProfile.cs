@@ -19,6 +19,8 @@ public class CustomerProfile : ScriptableObject
     [SerializeField] public List<ItemInstance> hatedItems;
     [SerializeField] public Sprite customerSprite;
     [SerializeField] public AnimatorOverrideController animatorController;
+    public string characterName;
+    public int characterLevel = 1;
     int likedItemNumber = 0;
     int desiredPrice;
     int pricePercentageInt;
