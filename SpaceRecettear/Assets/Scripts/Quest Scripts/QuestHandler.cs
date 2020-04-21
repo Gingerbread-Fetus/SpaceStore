@@ -10,7 +10,7 @@ public class QuestHandler : MonoBehaviour
     [SerializeField] QuestInfo[] availableQuests;
     [SerializeField] TextMeshProUGUI questTextPanel;
     [SerializeField] TextMeshProUGUI questInfoPanel;
-    [SerializeField] QuestButton questButtonPrefab;
+    [SerializeField] QuestButton questButtonPrefab;//todo consider making the prefab a meber of the quest class and instantiating it from there.
     [SerializeField] Transform questButtonPanel;
 
     QuestInfo selectedQuest;
