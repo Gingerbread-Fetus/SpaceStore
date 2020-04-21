@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5582b49124e4bfe4a931be4af41beb5b, type: 3}
-  m_Name: TestQuest
+  m_Name: TestQuest 1
   m_EditorClassIdentifier: 
+  questName: TestQuest1
   itemRewards:
   - amount: 1
     item: {fileID: 11400000, guid: 01cc6a52cdea1284bbdb8c474c58dedd, type: 2}
@@ -19,7 +20,9 @@ MonoBehaviour:
     item: {fileID: 11400000, guid: 10b591890c2f8a34bbe4b4074f4db942, type: 2}
   - amount: 1
     item: {fileID: 11400000, guid: ed22bfaf86b0a2c4daa9a1d156624849, type: 2}
-  storyText: "\tDefault quest."
+  storyText: "\tThis is just a test. This is where the description of the quest will
+    appear. On an quest, adventurers set out to retrieve rare items for the player.
+    This is the test quest 1."
   difficulty: 1
   numberOfAdventurers: 1
   recommendedAdventurers:

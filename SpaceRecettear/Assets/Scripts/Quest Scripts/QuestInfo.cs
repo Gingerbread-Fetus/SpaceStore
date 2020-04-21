@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Quest")]
 public class QuestInfo : ScriptableObject
 {
+    [SerializeField] public string questName;
     [SerializeField] public List<ItemRewardBundle> itemRewards = new List<ItemRewardBundle>();
     [TextArea(10, 14)] [SerializeField] public string storyText;
     [Range(0,10)][SerializeField] public int difficulty = 0;

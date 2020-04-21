@@ -3,17 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuestHandler : MonoBehaviour
 {
-    [SerializeField] QuestInfo selectedQuest;
+    [SerializeField] QuestInfo[] availableQuests;
     [SerializeField] TextMeshProUGUI questTextPanel;
     [SerializeField] TextMeshProUGUI questInfoPanel;
+    [SerializeField] QuestButton questButtonPrefab;
+    [SerializeField] Transform questButtonPanel;
+
+    QuestInfo selectedQuest;
+
     // Start is called before the first frame update
     void Start()
     {
+        selectedQuest = availableQuests[0];
         ChangeQuestText();
         ChangeQuestInfo();
+        CreateQuestButtons();
     }
 
     private void ChangeQuestText()
@@ -27,6 +35,24 @@ public class QuestHandler : MonoBehaviour
         questInfoPanel.text += "The quest difficulty is: " + selectedQuest.difficulty + ".\n";
         PrintRecommendedAdventurers();
         PrintRewards();
+    }
+
+    private void CreateQuestButtons()
+    {
+        foreach (QuestInfo quest in availableQuests)
+        {
+            QuestButton questButton = Instantiate<QuestButton>(questButtonPrefab, questButtonPanel);
+            questButton.quest = quest;
+            questButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = quest.questName;
+            questButton.GetComponent<Button>().onClick.AddListener(delegate { SetSelectedQuest(questButton.quest); });
+        }
+    }
+
+    private void SetSelectedQuest(QuestInfo quest)
+    {
+        selectedQuest = quest;
+        ChangeQuestInfo();
+        ChangeQuestText();
     }
 
     private void PrintRecommendedAdventurers()
