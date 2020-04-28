@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public abstract class Item : ScriptableObject
+public abstract class Item : ScriptableObject, ISerializationCallbackReceiver
 {   
     [SerializeField] string itemName;
     [SerializeField] public Sprite itemIcon;
     [SerializeField] public int baseSellPrice;
+    [SerializeField] string itemID;
     public string ItemName { get => itemName;}
+    public string ItemID { get => itemID;}
 
     public override bool Equals(System.Object obj)
     {
@@ -27,6 +29,20 @@ public abstract class Item : ScriptableObject
         hashCode = hashCode * -1521134295 + base.GetHashCode();
         hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(itemName);
         return hashCode;
+    }
+
+    public void OnBeforeSerialize()
+    {
+        // Generate and save a new UUID if this is blank.
+        if (string.IsNullOrWhiteSpace(itemID))
+        {
+            itemID = System.Guid.NewGuid().ToString();
+        }
+    }
+
+    public void OnAfterDeserialize()
+    {
+        //We want the other method for this interface. This is extra.
     }
 }
 
@@ -106,5 +122,10 @@ public class ItemInstance
     public bool ItemEqualsByType(ItemInstance otherItem)
     {
         return this.item.name.Equals(otherItem.item.name);
+    }
+
+    public string GetItemID()
+    {
+        return item.ItemID;
     }
 }
