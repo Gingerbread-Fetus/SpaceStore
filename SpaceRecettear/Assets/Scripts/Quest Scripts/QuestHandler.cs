@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class QuestHandler : MonoBehaviour
 {
     [SerializeField] QuestInfo[] availableQuests;
+    [SerializeField] CustomerProfile[] availableAdventurers;//todo how do we make adventurers available
     [SerializeField] TextMeshProUGUI questTextPanel;
     [SerializeField] TextMeshProUGUI questInfoPanel;
     [SerializeField] QuestButton questButtonPrefab;//todo consider making the prefab a meber of the quest class and instantiating it from there.
@@ -73,5 +74,10 @@ public class QuestHandler : MonoBehaviour
             questInfoPanel.text += itemBundle.item.name + " x " + itemBundle.amount + ", ";
         }
         questInfoPanel.text += "\n";
+    }
+
+    public CustomerProfile[] GetAvailableAdventurers()
+    {
+        return availableAdventurers;
     }
 }
