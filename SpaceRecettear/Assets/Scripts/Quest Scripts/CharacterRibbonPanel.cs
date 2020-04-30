@@ -16,11 +16,10 @@ public class CharacterRibbonPanel : MonoBehaviour
     CustomerProfile selectedAdventurer;
     CustomerProfile[] availableCharacters;
     int characterIndex = 2;
-    int arrayHead = 0;
+    int arrayHead = 2;
     int arrayTail;
     private bool isMoving = false;
     
-    // Start is called before the first frame update
     void Start()
     {
         questHandler = GetComponentInParent<QuestHandler>();
@@ -29,8 +28,8 @@ public class CharacterRibbonPanel : MonoBehaviour
         availableCharacters = questHandler.GetAvailableAdventurers();
         arrayTail = availableCharacters.Length - 1;
 
-        SetSelectedCharacter();
         InstantiateImages();
+        SetSelectedCharacter();
     }
 
     public void MoveToNextCharacter()
@@ -40,6 +39,7 @@ public class CharacterRibbonPanel : MonoBehaviour
         CreateNewItemOnRight();
     }
 
+    //todo when a button is clicked while it's moving, skip to end of movement, or consider doing nothing
     public void MoveToPreviousCharacter()
     {
         isMoving = true;
@@ -54,9 +54,22 @@ public class CharacterRibbonPanel : MonoBehaviour
         for(int i = 0; i < 5; i++)
         {
             GameObject newObj = Instantiate(adventurerPrefab, transform);
+            newObj.GetComponent<Image>().sprite = GetAdventurer(i).customerSprite;
             newObj.transform.localPosition = startPos;
             startPos += offsetVector;
         }
+        arrayHead = availableCharacters.Length - 1;
+        arrayTail = availableCharacters.Length - 1;
+    }
+
+    private CustomerProfile GetAdventurer(int i)
+    {
+        if(i >= availableCharacters.Length)
+        {
+            int index = i - availableCharacters.Length;
+            return availableCharacters[index];
+        }
+        return availableCharacters[i];
     }
 
     private void SetSelectedCharacter()
@@ -64,17 +77,26 @@ public class CharacterRibbonPanel : MonoBehaviour
         selectedAdventurer = availableCharacters[characterIndex];
     }
 
-
     private void CreateNewItemOnRight()
     {
+        if(arrayTail == availableCharacters.Length) { arrayTail = 0; }
+        if(arrayHead == availableCharacters.Length) { arrayHead = 0; }
         GameObject newAdventurer = Instantiate(adventurerPrefab, transform);
         newAdventurer.GetComponent<RectTransform>().anchoredPosition = new Vector2(2 * xOffset, 0);
-        newAdventurer.GetComponent<Image>().sprite = GetNextAdventurer();
+        newAdventurer.GetComponent<Image>().sprite = GetAdventurer(arrayTail).customerSprite;
+        arrayTail++;
+        arrayHead++;
     }
 
-    private Sprite GetNextAdventurer()
+    private void CreateNewItemOnLeft()
     {
-        throw new NotImplementedException();
+        if(arrayHead <= 0) { arrayHead = availableCharacters.Length; }
+        if(arrayTail <= 0) { arrayTail = availableCharacters.Length; }
+        GameObject newAdventurer = Instantiate(adventurerPrefab, transform);
+        newAdventurer.GetComponent<RectTransform>().anchoredPosition = new Vector2(-2 * xOffset, 0);
+        newAdventurer.GetComponent<Image>().sprite = GetAdventurer(arrayHead).customerSprite;
+        arrayHead--;
+        arrayTail--;
     }
 
     private void MoveChildrenLeft()
@@ -94,18 +116,6 @@ public class CharacterRibbonPanel : MonoBehaviour
                 StartCoroutine(MoveChildRight(child)); 
             }
         }
-    }
-
-    private void CreateNewItemOnLeft()
-    {
-        GameObject newAdventurer = Instantiate(adventurerPrefab, transform);
-        newAdventurer.GetComponent<RectTransform>().anchoredPosition = new Vector2(-2 * xOffset, 0);
-        newAdventurer.GetComponent<Image>().sprite = GetPreviousAdventurer();
-    }
-
-    private Sprite GetPreviousAdventurer()
-    {
-        throw new NotImplementedException();
     }
 
     private void CullOutOfBoundsChildren(RectTransform movingChild)
