@@ -12,6 +12,7 @@ public class QuestInfo : ScriptableObject
     [Range(0,10)][SerializeField] public int difficulty = 0;
     [Range(1,10)][SerializeField] public int numberOfAdventurers = 1;
     public List<CustomerProfile> recommendedAdventurers;
+    public List<CustomerProfile> assignedAdventurers;
 
     public float GetSuccessChance()
     {
@@ -24,5 +25,10 @@ public class QuestInfo : ScriptableObject
     {
         [Range(1,9999)] [SerializeField] public int amount = 1;
         [SerializeField] public Item item;
+    }
+
+    public void ClearAdventurers()
+    {
+        recommendedAdventurers.Clear();
     }
 }

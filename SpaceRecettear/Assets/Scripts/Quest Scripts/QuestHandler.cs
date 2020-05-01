@@ -80,4 +80,22 @@ public class QuestHandler : MonoBehaviour
     {
         return availableAdventurers;
     }
+
+    public void AssignAdventurer()
+    {
+        CustomerProfile adventurer = GetComponentInChildren<CharacterRibbonPanel>().GetSelectedAdventurer();
+        QuestInfo adventurerQuest = adventurer.GetAssignedQuest();
+        //Set the assigned quest on the character
+        if (adventurerQuest == null)
+        {
+            adventurer.AssignQuest(selectedQuest);
+            selectedQuest.assignedAdventurers.Add(adventurer);
+        }
+        else
+        {
+            adventurerQuest.assignedAdventurers.Remove(adventurer);
+            selectedQuest.assignedAdventurers.Add(adventurer);
+            adventurer.AssignQuest(selectedQuest);
+        }
+    }
 }

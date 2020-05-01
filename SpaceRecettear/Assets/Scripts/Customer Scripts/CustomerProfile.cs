@@ -21,6 +21,8 @@ public class CustomerProfile : ScriptableObject
     [SerializeField] public AnimatorOverrideController animatorController;
     public string characterName;
     public int characterLevel = 1;
+
+    QuestInfo assignedQuest;
     int likedItemNumber = 0;
     int desiredPrice;
     int pricePercentageInt;
@@ -45,6 +47,19 @@ public class CustomerProfile : ScriptableObject
         {
             CalculateDesiredPrice();
         }
+    }
+
+    public void AssignQuest(QuestInfo newQuest)
+    {
+        assignedQuest = newQuest;
+        Debug.Log("Adventurer: " + characterName + "Assigned to: " + newQuest.questName);
+        //todo Do other things when quest is assigned?
+        //Otherwise we can probably just make this variable public/exposed.
+    }
+
+    public QuestInfo GetAssignedQuest()
+    {
+        return assignedQuest;
     }
 
     public float CalculateFavorability()
