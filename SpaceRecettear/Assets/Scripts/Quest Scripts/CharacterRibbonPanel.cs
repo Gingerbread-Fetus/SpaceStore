@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CharacterRibbonPanel : MonoBehaviour
 {
     [SerializeField] GameObject adventurerPrefab;
     [SerializeField] float xOffset = 150f;
     [SerializeField] float moveSpeed = 3f;
+    [SerializeField] TextMeshProUGUI characterText;
 
     Vector3 leftTransform;
     Vector3 rightTransform;
@@ -26,7 +26,7 @@ public class CharacterRibbonPanel : MonoBehaviour
         leftTransform = new Vector3(-2 * xOffset, 0, 0);
         rightTransform = new Vector3(2 * xOffset, 0, 0);
         availableCharacters = questHandler.GetAvailableAdventurers();
-        arrayTail = availableCharacters.Length - 1;
+        arrayTail = 0;
 
         InstantiateImages();
         SetSelectedCharacter();
@@ -34,32 +34,72 @@ public class CharacterRibbonPanel : MonoBehaviour
 
     public void MoveToNextCharacter()
     {
-        isMoving = true;
-        MoveChildrenLeft();
-        CreateNewItemOnRight();
+        if (!isMoving)
+        {
+            isMoving = true;
+            MoveChildrenLeft();
+            CreateNewItemOnRight();
+            IncreaseCharacterIndex();
+        }
     }
 
-    //todo when a button is clicked while it's moving, skip to end of movement, or consider doing nothing
     public void MoveToPreviousCharacter()
     {
-        isMoving = true;
-        MoveChildrenRight();
-        CreateNewItemOnLeft();
+        if (!isMoving)
+        {
+            isMoving = true;
+            MoveChildrenRight();
+            CreateNewItemOnLeft();
+            DecreaseCharacterIndex();
+        }
     }
+
+    public CustomerProfile GetSelectedAdventurer()
+    {
+        return selectedAdventurer;
+    }
+
+    private void IncreaseCharacterIndex()
+    {
+        characterIndex++;
+        if(characterIndex == availableCharacters.Length)
+        {
+            characterIndex = 0;
+        }
+        selectedAdventurer = availableCharacters[characterIndex];
+        characterText.text = selectedAdventurer.characterName;
+    }
+
+    private void DecreaseCharacterIndex()
+    {
+        characterIndex--;
+        if(characterIndex < 0)
+        {
+            characterIndex = availableCharacters.Length - 1;
+        }
+        selectedAdventurer = availableCharacters[characterIndex];
+        characterText.text = selectedAdventurer.characterName;
+    }
+
+    
 
     private void InstantiateImages()
     {
         Vector3 startPos = leftTransform;
         Vector3 offsetVector = new Vector3(xOffset, 0, 0);
+        arrayTail = 0;
         for(int i = 0; i < 5; i++)
         {
             GameObject newObj = Instantiate(adventurerPrefab, transform);
             newObj.GetComponent<Image>().sprite = GetAdventurer(i).customerSprite;
             newObj.transform.localPosition = startPos;
             startPos += offsetVector;
+            if(i < availableCharacters.Length)
+            {
+                arrayTail = i;
+            }
         }
         arrayHead = availableCharacters.Length - 1;
-        arrayTail = availableCharacters.Length - 1;
     }
 
     private CustomerProfile GetAdventurer(int i)
@@ -75,6 +115,7 @@ public class CharacterRibbonPanel : MonoBehaviour
     private void SetSelectedCharacter()
     {
         selectedAdventurer = availableCharacters[characterIndex];
+        characterText.text = selectedAdventurer.characterName;
     }
 
     private void CreateNewItemOnRight()
@@ -111,10 +152,7 @@ public class CharacterRibbonPanel : MonoBehaviour
     {
         foreach (RectTransform child in transform)
         {
-            if (child != null)
-            {
-                StartCoroutine(MoveChildRight(child)); 
-            }
+            StartCoroutine(MoveChildRight(child)); 
         }
     }
 
