@@ -73,18 +73,23 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Interact"))
         {
-            //On interact, raycast to first object in facing direction
-            Vector2 facingDirection = new Vector2(lastDirX, lastDirY);
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, facingDirection, 1, interactableLayerMask);
-            
-            if(hit)
+            TryInteractingWithTarget();
+        }
+    }
+
+    private void TryInteractingWithTarget()
+    {
+        //On interact, raycast to first object in facing direction
+        Vector2 facingDirection = new Vector2(lastDirX, lastDirY);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, facingDirection, 1, interactableLayerMask);
+
+        if (hit)
+        {
+            //If an object is hit, check if it's interactable. Should be if it's on that layer
+            IInteractable interactable = hit.transform.gameObject.GetComponent<IInteractable>();
+            if (interactable != null)
             {
-                //If an object is hit, check if it's interactable. Should be if it's on that layer
-                IInteractable interactable = hit.transform.gameObject.GetComponent<IInteractable>();
-                if(interactable != null)
-                {
-                    interactable.Interact();
-                }
+                interactable.Interact();
             }
         }
     }
