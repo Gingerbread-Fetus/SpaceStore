@@ -20,7 +20,7 @@ public class CustomerController : MonoBehaviour, IInteractable
     [HideInInspector] public bool isFinishedShopping;
 
     LayerMask layerMask;
-    HagglingManager hagglingManager;
+    HagglingController hagglingController;
     CustomerPath path;
     Rigidbody2D myRigidBody;
     Animator myAnimator;
@@ -34,7 +34,7 @@ public class CustomerController : MonoBehaviour, IInteractable
 
     void Awake()
     {
-        hagglingManager = FindObjectOfType<HagglingManager>();
+        hagglingController = FindObjectOfType<HagglingController>();
     }
 
     // Start is called before the first frame update
@@ -211,9 +211,11 @@ public class CustomerController : MonoBehaviour, IInteractable
     {
         if (!isWalking)
         {
-            hagglingManager.SetActiveCustomer(gameObject);
-            hagglingManager.SetItemForSale(desiredItem);
-            hagglingManager.ShowCanvas();
+            hagglingController.SetActiveCustomer(gameObject);
+            hagglingController.ShowCanvas();
+            HagglingCanvas hagglingCanvas = FindObjectOfType<HagglingCanvas>();
+            hagglingCanvas.SetItemForSale(desiredItem);
+            hagglingCanvas.SetActiveCustomer(this);
         }
     }
 

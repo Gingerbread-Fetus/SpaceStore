@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class OfferChanger : MonoBehaviour
 {
     [SerializeField] TMP_InputField textField;
 
-    HagglingManager hagglingManager;
+    HagglingCanvas hagglingCanvas;
     int startingOffer;
     int resultingOffer;
     int offerChange = 1;
@@ -15,9 +13,9 @@ public class OfferChanger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hagglingManager = FindObjectOfType<HagglingManager>();
-        startingOffer = hagglingManager.currentOffer;
-        resultingOffer = hagglingManager.currentOffer;
+        hagglingCanvas = FindObjectOfType<HagglingCanvas>();
+        startingOffer = hagglingCanvas.currentOffer;
+        resultingOffer = hagglingCanvas.currentOffer;
         textField.text = startingOffer.ToString();
     }
 
@@ -46,17 +44,17 @@ public class OfferChanger : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    public void Hide()
+    public void ResolveAndHide()
     {
+        //Do other stuff here.
         gameObject.SetActive(false);
     }
 
     public void Done()
     {
-        hagglingManager.currentOffer = resultingOffer;
-        hagglingManager.currentTransaction.Offer = resultingOffer;
-        hagglingManager.ExitHagglingMenu();
-        Hide();
+        hagglingCanvas.currentOffer = resultingOffer;
+        hagglingCanvas.currentTransaction.Offer = resultingOffer;
+        ResolveAndHide();
     }
 
     public void IncreaseOffer(int offerDifference)

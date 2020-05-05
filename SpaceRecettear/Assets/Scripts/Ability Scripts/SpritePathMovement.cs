@@ -12,21 +12,23 @@ public class SpritePathMovement : MonoBehaviour
     [HideInInspector] public bool isMoving;
     [HideInInspector] public bool success;
 
-    HagglingManager hagglingManager;
+    HagglingController hagglingController;
     ItemInstance selectedItem;
     List<Transform> waypoints = new List<Transform>();
     int waypointIndex = 0;
     RectTransform movingRectTransform;
     GameObject waypointPathPrefab;
     Image customerImageRenderer;
-    
+    HagglingCanvas hagglingCanvas;
+
 
     private bool hasTriggered;
 
     // Start is called before the first frame update
     void Start()
     {
-        hagglingManager = FindObjectOfType<HagglingManager>();
+        hagglingController = FindObjectOfType<HagglingController>();
+        hagglingCanvas = FindObjectOfType<HagglingCanvas>();
         movingRectTransform = activeCustomer.GetComponent<RectTransform>();
         customerImageRenderer = activeCustomer.GetComponent<Image>();
         hasTriggered = false;
@@ -69,16 +71,15 @@ public class SpritePathMovement : MonoBehaviour
         if (success)
         {
             //Add to offered items
-            hagglingManager.AddItemOffer(selectedItem);
+            hagglingCanvas.AddToOfferedItems(selectedItem);
         }
         Invoke("ExitMiniGame", 3.0f);
     }
 
     private void ExitMiniGame()
     {
-        HagglingManager hagglingManager = FindObjectOfType<HagglingManager>();
-        hagglingManager.ShowCanvas();
-        hagglingManager.EndTurn();
+        hagglingCanvas.ShowCanvas();// todo will this work if the gameobject is inactive
+        hagglingCanvas.EndTurn();
         Destroy(gameObject);
     }
 
