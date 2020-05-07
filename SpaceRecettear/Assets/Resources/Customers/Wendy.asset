@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c06c86f8b32231843b8575866e2c291b, type: 3}
   m_Name: Wendy
   m_EditorClassIdentifier: 
-  saleThreshold: 5
+  priceFalloff: 0.03
   lowThreshold: 10
   highThreshold: 40
   favoriteItems: []

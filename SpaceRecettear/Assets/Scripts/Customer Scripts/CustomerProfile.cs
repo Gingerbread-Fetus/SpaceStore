@@ -12,7 +12,7 @@ using Random = UnityEngine.Random;
 [CreateAssetMenu(fileName = "New Customer Profile", menuName = "Customers/Profile")]
 public class CustomerProfile : ScriptableObject
 {
-    [SerializeField] public float saleThreshold = 0;
+    [SerializeField][Tooltip("Percentage of desired price that will decrease desirability ")] float priceFalloff = 0.03F;
     [SerializeField] public int lowThreshold = 10;
     [SerializeField] public int highThreshold = 40;
     [SerializeField] public List<ItemInstance> favoriteItems;
@@ -26,28 +26,8 @@ public class CustomerProfile : ScriptableObject
     int likedItemNumber = 0;
     int desiredPrice;
     int pricePercentageInt;
-    private Transaction currentTransaction;
-    
-    /// <summary>
-    /// This method checks the favorability of a transaction, if it meets the
-    /// threshold then it will return true, representing a successful sale for
-    /// the player. 
-    /// </summary>
-    /// <param name="currentTransaction"></param>
-    /// <returns></returns>
-    public bool ProcessTransaction()
-    {
-        return CalculateFavorability() <= saleThreshold;
-    }
 
-    public void SetTransaction(Transaction newTransaction)
-    {
-        currentTransaction = newTransaction;
-        if (currentTransaction != null)
-        {
-            CalculateDesiredPrice();
-        }
-    }
+    public float PriceFalloff { get => priceFalloff;}
 
     public void AssignQuest(QuestInfo newQuest)
     {
@@ -61,54 +41,13 @@ public class CustomerProfile : ScriptableObject
     {
         return assignedQuest;
     }
-
-    public float CalculateFavorability()
+    
+    public int CalculateDesiredPrice(int valueOfItems)
     {
-        int transactionDifference = currentTransaction.Offer - desiredPrice;
-        if(transactionDifference <= 0)
-        {
-            Debug.Log("Desired Price: " + desiredPrice.ToString() + ", Favorability: " + ((float)transactionDifference / (float)currentTransaction.GetValue()).ToString() + ",  Sale Threshold: " + saleThreshold);
-            return -10;
-        }
-        Debug.Log("Desired Price: " + desiredPrice.ToString() + ", Favorability: " + ((float)transactionDifference / (float)currentTransaction.GetValue()).ToString() + ",  Sale Threshold: " + saleThreshold);
-        return (float)transactionDifference / (float)currentTransaction.GetValue();
-    }
-
-    public int HaggleTransaction(Transaction currentTransaction)
-    {
-        int offerChange = -1;
-        //If the current offer is less than the or equal to value of the transaction, do nothing
-        if (currentTransaction.Offer <= currentTransaction.GetValue())
-        {
-            return 0;
-        }
-        else//else the current offer is > the value of the transaction, they'd overpay, attempt to lower it. 
-        {
-            offerChange = (currentTransaction.GetValue() - currentTransaction.Offer)/2;
-            return offerChange;
-        }
-    }
-
-    private void CalculateDesiredPrice()
-    {
-        foreach (ItemInstance itemInstance in currentTransaction.offeredItems)
-        {
-            if (hatedItems.Contains(itemInstance) && likedItemNumber > -10)
-            {
-                likedItemNumber--;
-            }
-            else if (favoriteItems.Contains(itemInstance) && likedItemNumber < 10)
-            {
-                likedItemNumber++;
-            }
-        }
-
-        pricePercentageInt = Random.Range(lowThreshold, highThreshold);
-        pricePercentageInt += likedItemNumber;
-        saleThreshold = (float)pricePercentageInt / 100f;
-        Debug.Log("Freshly calculated sale threshold: " + saleThreshold.ToString());
-        float pricePercentage = 1 + ((float)pricePercentageInt / 100);
-        desiredPrice = (int)Math.Round(pricePercentage * currentTransaction.GetValue());
-        Debug.Log("Freshly calculated desired Price: " + desiredPrice.ToString());
+        int desiredPriceRange = Random.Range(lowThreshold, highThreshold);
+        float desiredPricePercentage = (float)desiredPriceRange / 100f;
+        float itemPriceFloat = valueOfItems + (valueOfItems * (desiredPricePercentage));
+        desiredPrice = Mathf.RoundToInt(itemPriceFloat);
+        return desiredPrice;
     }
 }

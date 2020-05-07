@@ -10,7 +10,6 @@ public class ThrowInAbilityScript : Ability
     [SerializeField] GameObject inventoryDisplayPrefab;
 
     TextMeshProUGUI hitOrMissText;
-    HagglingController hagglingController;
     GameObject path;
     GameObject miniGameCanvas;
     GameObject inventoryDisplay;
@@ -20,8 +19,6 @@ public class ThrowInAbilityScript : Ability
     public override void Initialize(GameObject obj)
     {
         //Disable the haggling canvas
-        hagglingController = FindObjectOfType<HagglingController>();
-        hagglingController.HideCanvas();
 
         //Create mini-game canvas
         miniGameCanvas = Instantiate(aMinigameCanvas, null,true);

@@ -20,7 +20,6 @@ public class CustomerController : MonoBehaviour, IInteractable
     [HideInInspector] public bool isFinishedShopping;
 
     LayerMask layerMask;
-    HagglingController hagglingController;
     CustomerPath path;
     Rigidbody2D myRigidBody;
     Animator myAnimator;
@@ -34,7 +33,6 @@ public class CustomerController : MonoBehaviour, IInteractable
 
     void Awake()
     {
-        hagglingController = FindObjectOfType<HagglingController>();
     }
 
     // Start is called before the first frame update
@@ -74,6 +72,7 @@ public class CustomerController : MonoBehaviour, IInteractable
         path.SetEndPoints(transform.position, levelExit.transform.position);
         path.FindPathAStar();
         isWalking = true;
+        StartCoroutine(WaitAndDestroy());
     }
 
     /// <summary>
@@ -211,11 +210,7 @@ public class CustomerController : MonoBehaviour, IInteractable
     {
         if (!isWalking)
         {
-            hagglingController.SetActiveCustomer(gameObject);
-            hagglingController.ShowCanvas();
-            HagglingCanvas hagglingCanvas = FindObjectOfType<HagglingCanvas>();
-            hagglingCanvas.SetItemForSale(desiredItem);
-            hagglingCanvas.SetActiveCustomer(this);
+            FindObjectOfType<HagglingController>().StartHaggling(this);
         }
     }
 

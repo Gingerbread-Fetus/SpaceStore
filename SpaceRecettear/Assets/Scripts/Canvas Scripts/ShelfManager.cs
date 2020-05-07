@@ -117,8 +117,6 @@ public class ShelfManager : MonoBehaviour
         }
     }
 
-
-
     private void AddItemToActiveShelf(ItemButton itemButton, ItemInstance itemInstance)
     {
         playerInventory.TakeItem(itemInstance);

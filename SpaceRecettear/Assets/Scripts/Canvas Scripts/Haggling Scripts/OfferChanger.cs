@@ -5,7 +5,6 @@ public class OfferChanger : MonoBehaviour
 {
     [SerializeField] TMP_InputField textField;
 
-    HagglingCanvas hagglingCanvas;
     int startingOffer;
     int resultingOffer;
     int offerChange = 1;
@@ -13,10 +12,8 @@ public class OfferChanger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hagglingCanvas = FindObjectOfType<HagglingCanvas>();
-        startingOffer = hagglingCanvas.currentOffer;
-        resultingOffer = hagglingCanvas.currentOffer;
         textField.text = startingOffer.ToString();
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -41,20 +38,27 @@ public class OfferChanger : MonoBehaviour
 
     public void Show()
     {
-        gameObject.SetActive(true);
-    }
-
-    public void ResolveAndHide()
-    {
-        //Do other stuff here.
-        gameObject.SetActive(false);
+        HagglingController hagglingController = FindObjectOfType<HagglingController>();
+        if (hagglingController.CurrentStamina > 0)
+        {
+            startingOffer = hagglingController.transaction.Offer;
+            hagglingController.CurrentStamina -= hagglingController.HagglingCost;
+            textField.text = startingOffer.ToString();
+            gameObject.SetActive(true); 
+        }
+        else
+        {
+            Debug.Log("Stamina too low");
+        }
     }
 
     public void Done()
     {
-        hagglingCanvas.currentOffer = resultingOffer;
-        hagglingCanvas.currentTransaction.Offer = resultingOffer;
-        ResolveAndHide();
+        HagglingController hagglingController = FindObjectOfType<HagglingController>();
+        hagglingController.transaction.Offer = resultingOffer;
+        hagglingController.CalculateSatisfaction();
+        FindObjectOfType<HagglingCanvas>().RedrawAll();
+        gameObject.SetActive(false);
     }
 
     public void IncreaseOffer(int offerDifference)
