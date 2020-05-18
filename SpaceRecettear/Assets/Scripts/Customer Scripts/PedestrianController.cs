@@ -57,10 +57,8 @@ public class PedestrianController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        {
-            isWalking = false;
-            StartCoroutine(Respawn());
-        }
+        isWalking = false;
+        StartCoroutine(Respawn());
     }
 
     private IEnumerator Respawn()

@@ -28,13 +28,7 @@ public class AbilityInventoryHandler : MonoBehaviour
     {
         CreateInventoryButtons();
     }
-    
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
+
     private void CreateInventoryButtons()
     {
         items = playerInventory.GetInventory();
@@ -122,5 +116,9 @@ public class AbilityInventoryHandler : MonoBehaviour
             gameObject.SetActive(false); 
         }
     }
-    
+
+    public void ReturnItem()
+    {
+        playerInventory.GiveItem(selectedItem);
+    }    
 }

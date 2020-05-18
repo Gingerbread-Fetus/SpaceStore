@@ -15,9 +15,11 @@ public class HagglingCanvas : MonoBehaviour
     [SerializeField] TextMeshProUGUI playerGoldText;
     [SerializeField] TextMeshProUGUI offerText;
     [SerializeField] GameObject abilityPanel;
+    [SerializeField] GameObject itemPanel;
     [SerializeField] AbilityButton abilityButtonPrefab;
 
     public GameObject AbilityPanel { get => abilityPanel; }
+    public GameObject ItemPanel { get => itemPanel; }
 
     void Start()
     {

@@ -66,8 +66,13 @@ public class SpritePathMovement : MonoBehaviour
     {
         if (success)
         {
-            //TODO: Add to offered items
+            HagglingController hagglingController = FindObjectOfType<HagglingController>();
+            hagglingController.AddItemToTransaction(selectedItem);
             Debug.Log("Success");
+        }
+        else
+        {
+            inventoryHandler.ReturnItem();
         }
         Invoke("ExitMiniGame", 3.0f);
     }

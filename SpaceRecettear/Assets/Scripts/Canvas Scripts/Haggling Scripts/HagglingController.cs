@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HagglingController : MonoBehaviour
 {
@@ -99,5 +100,14 @@ public class HagglingController : MonoBehaviour
             abilityObject.transform.parent = this.transform;
             hagglingCanvas.CreateAbilityButton(ability, abilityObject);
         }
+    }
+
+    public void AddItemToTransaction(ItemInstance newItem)
+    {
+        transaction.AddItem(newItem);
+        var newObject = Instantiate(new GameObject(), hagglingCanvas.ItemPanel.transform, false);
+        var newImage = newObject.AddComponent<Image>();
+        newObject.name = newItem.item.name;
+        newImage.sprite = newItem.item.itemIcon;
     }
 }
