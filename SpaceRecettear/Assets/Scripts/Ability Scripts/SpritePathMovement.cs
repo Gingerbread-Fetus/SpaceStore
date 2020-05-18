@@ -9,7 +9,8 @@ public class SpritePathMovement : MonoBehaviour
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] GameObject activeCustomer;
     [SerializeField] Image itemImage;
-    [HideInInspector] public bool isMoving;
+    [SerializeField] AbilityInventoryHandler inventoryHandler;
+    [HideInInspector] public bool isMoving = false;
     [HideInInspector] public bool success;
 
     ItemInstance selectedItem;
@@ -30,7 +31,6 @@ public class SpritePathMovement : MonoBehaviour
         hasTriggered = false;
     }
     
-    // Update is called once per frame
     void Update()
     {
         if (isMoving)
@@ -66,14 +66,15 @@ public class SpritePathMovement : MonoBehaviour
     {
         if (success)
         {
-            //Add to offered items
+            //TODO: Add to offered items
+            Debug.Log("Success");
         }
         Invoke("ExitMiniGame", 3.0f);
     }
 
     private void ExitMiniGame()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     public void SetWaypoints(GameObject waypointObject)
@@ -99,5 +100,12 @@ public class SpritePathMovement : MonoBehaviour
     public void PauseMovement()
     {
         isMoving = !isMoving;
+    }
+
+    public void StartMiniGame()
+    {
+        ChangeItem(inventoryHandler.selectedItem);
+        isMoving = true;
+        hasTriggered = true;
     }
 }

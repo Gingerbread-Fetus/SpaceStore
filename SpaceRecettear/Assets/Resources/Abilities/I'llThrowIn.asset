@@ -16,10 +16,11 @@ MonoBehaviour:
   aSprite: {fileID: 0}
   aAbilityCost: 5
   aSound: {fileID: 0}
-  aMinigameCanvas: {fileID: 3682406708637218168, guid: 9d7bde1bdb7498c46a8ffa450ce4972a,
+  aMinigamePrefab: {fileID: 3682406708637218168, guid: 9d7bde1bdb7498c46a8ffa450ce4972a,
     type: 3}
   aItemInstance:
     item: {fileID: 0}
+    isLimited: 0
     boomItem: 0
     stock: 1
     quality: 0

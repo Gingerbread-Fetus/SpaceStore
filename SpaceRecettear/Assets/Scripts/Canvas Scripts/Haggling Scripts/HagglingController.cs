@@ -29,6 +29,11 @@ public class HagglingController : MonoBehaviour
     public int SatisfactionLevel { get => satisfactionLevel; set => satisfactionLevel = value; }
     public int SatisfactionMax { get => satisfactionMax; set => satisfactionMax = value; }
 
+    private void Start()
+    {
+        CreateMiniGames();
+    }
+
     public void StartHaggling(CustomerController customerController)
     {
         transaction = new Transaction();
@@ -83,6 +88,16 @@ public class HagglingController : MonoBehaviour
         else
         {
             Debug.Log("Not good enough!");
+        }
+    }
+
+    private void CreateMiniGames()
+    {
+        foreach(Ability ability in PlayerProfile.Abilities)
+        {
+            var abilityObject = ability.Initialize();
+            abilityObject.transform.parent = this.transform;
+            hagglingCanvas.CreateAbilityButton(ability, abilityObject);
         }
     }
 }

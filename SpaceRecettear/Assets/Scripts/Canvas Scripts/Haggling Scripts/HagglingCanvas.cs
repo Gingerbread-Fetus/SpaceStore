@@ -23,7 +23,6 @@ public class HagglingCanvas : MonoBehaviour
     {
         staminaSlider.maxValue = hagglingController.PlayerProfile.GetStamina();
         staminaSlider.value = staminaSlider.maxValue;
-        PopulateAbilityButtons();
         abilityPanel.SetActive(false);
         gameObject.SetActive(false);
     }
@@ -43,15 +42,11 @@ public class HagglingCanvas : MonoBehaviour
         else { abilityPanel.SetActive(true); }
     }
 
-    private void PopulateAbilityButtons()
+    public void CreateAbilityButton(Ability ability, GameObject abilityCanvas)
     {
-        List<Ability> abilityList = hagglingController.PlayerProfile.Abilities;
-        foreach(Ability ability in abilityList)
-        {
-            Debug.Log("Adding Ability: " + ability.aName);
-            var newButton = Instantiate(abilityButtonPrefab, abilityPanel.transform);
-            newButton.SetAbility(ability);
-            //TODO: hook up the new buttons on click event to the relevant ability
-        }
+        Debug.Log("Adding Ability: " + ability.aName);
+        var newButton = Instantiate(abilityButtonPrefab, abilityPanel.transform);
+        newButton.SetAbility(ability);
+        newButton.GetComponent<Button>().onClick.AddListener(ability.TriggerAbility);
     }
 }

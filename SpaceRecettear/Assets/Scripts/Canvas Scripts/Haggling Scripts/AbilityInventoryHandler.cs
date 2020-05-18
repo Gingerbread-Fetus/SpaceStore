@@ -15,7 +15,6 @@ public class AbilityInventoryHandler : MonoBehaviour
     [SerializeField] GameObject selectedItemPanel;
     [SerializeField] Button itemButtonPrefab;
     [SerializeField] TextMeshProUGUI flavorTextObject;
-    [SerializeField] Ability ability;
     [HideInInspector] public ItemInstance selectedItem;
 
     GameObject miniGameObject;
@@ -120,14 +119,8 @@ public class AbilityInventoryHandler : MonoBehaviour
     {
         if (selectedItem != null)
         {
-            ability.TriggerAbility();
             gameObject.SetActive(false); 
         }
-    }
-
-    public void SetAbility(Ability newAbility)
-    {
-        ability = newAbility;
     }
     
 }

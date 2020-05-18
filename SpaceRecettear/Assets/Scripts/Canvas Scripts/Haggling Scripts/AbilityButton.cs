@@ -20,10 +20,4 @@ public class AbilityButton : MonoBehaviour
     {
         textComponent = GetComponentInChildren<TextMeshProUGUI>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

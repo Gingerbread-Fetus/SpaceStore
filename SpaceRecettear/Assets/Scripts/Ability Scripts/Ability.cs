@@ -8,10 +8,11 @@ public abstract class Ability : ScriptableObject
     public Sprite aSprite;
     public int aAbilityCost = 1;
     public AudioClip aSound;
-    public GameObject aMinigameCanvas;
+    public GameObject aMinigamePrefab;
     public ItemInstance aItemInstance;
 
     [TextArea(10, 14)] [SerializeField]public string abilityDescription;
-    public abstract void Initialize(GameObject obj);
+    public abstract GameObject Initialize();
     public abstract void TriggerAbility();
+    public abstract void Cleanup();
 }

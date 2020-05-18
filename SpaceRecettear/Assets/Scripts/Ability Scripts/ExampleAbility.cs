@@ -6,7 +6,7 @@ using UnityEngine;
 public class ExampleAbility : Ability
 {
 
-    public override void Initialize(GameObject obj)
+    public override GameObject Initialize()
     {
         throw new System.NotImplementedException();
     }
@@ -19,5 +19,10 @@ public class ExampleAbility : Ability
     public override string ToString()
     {
         return base.aName;
+    }
+
+    public override void Cleanup()
+    {
+        throw new System.NotImplementedException();
     }
 }
