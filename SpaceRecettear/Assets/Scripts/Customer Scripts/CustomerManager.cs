@@ -55,6 +55,7 @@ public class CustomerManager : MonoBehaviour
 
     public IEnumerator SpawnCustomers()
     {
+        waveSpawning = true;
         while (waveSpawning && waveSize >= 0)
         {
             //Get a random profile from the pool
@@ -70,6 +71,7 @@ public class CustomerManager : MonoBehaviour
                 yield return new WaitForSecondsRealtime(spawnWait);
             }
         }
+        waveSpawning = false;
     }
 
     public ItemInstance ClaimItem(ItemInstance item)
@@ -91,7 +93,7 @@ public class CustomerManager : MonoBehaviour
             int randomIndex = itemIndices[Random.Range(0, itemIndices.Count - 1)];
             claimedItem = unclaimedItems[randomIndex];
             unclaimedItems.RemoveAt(randomIndex);
-            waveSpawning = unclaimedItems.Count > 0;
+            //waveSpawning = unclaimedItems.Count > 0; //This line is turning off the spawning.
         }
         if (claimedItem != null)
         {
@@ -102,12 +104,13 @@ public class CustomerManager : MonoBehaviour
 
     public void UnclaimItem(ItemInstance item)
     {
+        //TODO: Could this cause problems like .Remove was above?
         if (claimedItems.Contains(item))
         {
             claimedItems.Remove(item); 
         }
         unclaimedItems.Add(item);
-        waveSpawning = unclaimedItems.Count > 0;
+        //waveSpawning = unclaimedItems.Count > 0; //This one is turning it on.
     }
 
 }
