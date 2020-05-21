@@ -34,12 +34,32 @@ public class CustomerController : MonoBehaviour, IInteractable
     float customerStartTime = 0;
     float customerCurrentTime = 0;
     private bool isDebug;
-    
+    bool isLeaving;
+
+    public bool IsLeaving
+    {
+        get
+        { return isLeaving; }
+        set
+        {
+            if (isLeaving == value) { return; }
+            isLeaving = value;
+            if(IsLeavingChange != null)
+            {
+                IsLeavingChange(isLeaving);
+            }
+        }
+    }
+    public delegate void OnVariableChangeDelegate(bool newVal);
+    public event OnVariableChangeDelegate IsLeavingChange;
+
     // Start is called before the first frame update
     void Start()
     {
+        unclaimedItems = customerManager.unclaimedItems;
+        IsLeavingChange += IsLeavingHandler;
         customerStartTime = Time.timeSinceLevelLoad;
-        layerMask = LayerMask.GetMask("Interactable", "Walls");
+        layerMask = LayerMask.GetMask("Interactable", "Walls", "Player");
         Bulletin.gameObject.SetActive(false);
         pathIndex = 0;
         SetUpCustomerProfile();
@@ -52,15 +72,15 @@ public class CustomerController : MonoBehaviour, IInteractable
     {
         if(desiredItem == null) { FindNewItem(); }
         customerCurrentTime = Time.timeSinceLevelLoad - customerStartTime;
-        if(customerCurrentTime > customerSearchTimeout)
+        if (customerCurrentTime > customerSearchTimeout && desiredItem == null)
         {
             Debug.Log("Customer " + gameObject.name + " didn't find anything, they are leaving.");
-            //Do other things?
-            GoToExit();
+            IsLeaving = true;
         }
-        if(customerCurrentTime > customerTransactionTimeout)
+        else if (customerCurrentTime > customerTransactionTimeout && desiredItem != null)
         {
             Debug.Log("Customer " + gameObject.name + " transaction has timed out, they are leaving.");
+            IsLeaving = true;
         }
     }
 
@@ -76,17 +96,7 @@ public class CustomerController : MonoBehaviour, IInteractable
     {
         desiredItem.Shelf.heldItems.Remove(desiredItem);
     }
-
-    public void GoToExit()
-    {
-        pathIndex = 0;
-        customerPath.Clear();
-        path.SetEndPoints(transform.position, levelExit.transform.position);
-        path.FindPathAStar();
-        isWalking = true;
-        StartCoroutine(WaitAndDestroy());
-    }
-
+    
     /// <summary>
     /// Moves the character from place to place.
     /// </summary>
@@ -130,60 +140,40 @@ public class CustomerController : MonoBehaviour, IInteractable
                 customerPath = GenerateWanderingPath();
             }
         }
-
-        if (customerPath == null)
-        {
-            Debug.Log("No customer path found, " + gameObject.name + " will wander");
-            SetReady(false);
-            //Walk in a circle? Back and forth? Random directions for 5 steps?
-            isWalking = true;
-        }
     }
 
+    //TODO: Need to rework this
     private IList<Cell> GenerateWanderingPath()
     {
         pathIndex = 0;
         List<Cell> newPath = new List<Cell>();
-        Cell startingCell = new Cell(transform.position, transform.position);//The heuristic won't matter for this case, so we can just ignore the goal.
-        Cell currentCell = startingCell;
-        for(int i = 0; i < nullPathLength; i++)
-        {
-            Cell nextCell = GetRandomNeighbor(currentCell);
-            newPath.Add(nextCell);
-        }
         return newPath;
     }
 
-    private Cell GetRandomNeighbor(Cell currentCell)
+    private void IsLeavingHandler(bool newVal)
     {
-        List<Cell> neighbors = new List<Cell>();
-
-        for (int x = -1; x <= 1; x++)
+        if (newVal == true)
         {
-            for (int y = -1; y <= 1; y++)
-            {
-                Vector3 tmp = new Vector3(x, y, 0);
-                Vector3 nextPos = tmp + currentCell.Position;
-                if (x == 0 && y == 0) { continue; }//skip over the 'center' cell.
-                Cell nextSuccessor = new Cell(currentCell, nextPos, nextPos);////for neighbors of current: cost = g(current) + movementcost(current, neighbor)
-                RaycastHit2D hit = Physics2D.Raycast(currentCell.Position, (nextSuccessor.Position - currentCell.Position).normalized, 1f, layerMask);
-
-                if (hit)//If fraction <= 0 then the collision came from inside the collider.
-                {
-                    //Debug.Log(hit + ": hit detected by raycast on " + hit.collider.gameObject.name);
-                    continue;
-                }
-                else
-                {
-                    if (drawDebugging) { Debug.DrawRay(nextSuccessor.Position, Vector3.right * .5f, Color.yellow, 3.0f); }
-                    nextSuccessor.parent = currentCell;
-                    neighbors.Add(nextSuccessor);
-                }
-            }
+            Debug.Log("Did it work?");
+            //TODO: Move item to unclaimed items, left for now because it's being handy for testing.
+            PathToExit(); 
         }
-        return neighbors[Random.Range(0,neighbors.Count)];
+        else
+        {
+            Debug.Log("Customer is no longer leaving");
+        }
     }
 
+    private void PathToExit()
+    {
+        pathIndex = 0;
+        customerPath.Clear();
+        path.SetEndPoints(transform.position, levelExit.transform.position);
+        path.FindPathAStar();
+        isWalking = true;
+        StartCoroutine(WaitAndDestroy());
+    }
+    
     private void SetReady(bool status)
     {
         Bulletin.SetActive(status);
@@ -201,7 +191,6 @@ public class CustomerController : MonoBehaviour, IInteractable
 
     private void FindNewItem()
     {
-        unclaimedItems = customerManager.unclaimedItems;
         //TODO: I feel customers should be choosing from a list of preferred items, but for now I'm just choosing randomly from shelved things
         if (unclaimedItems.Count > 0)
         {

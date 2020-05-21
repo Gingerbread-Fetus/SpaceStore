@@ -71,7 +71,7 @@ public class HagglingController : MonoBehaviour
     {
         hagglingCanvas.gameObject.SetActive(false);
         FindObjectOfType<CustomerManager>().UnclaimItem(desiredItem);
-        activeCustomerController.GoToExit();
+        activeCustomerController.IsLeaving = true;
     }
 
     public void Sell()
@@ -83,7 +83,7 @@ public class HagglingController : MonoBehaviour
             playerInventory.AddCurrency(transaction.Offer);
             transaction.ClearTransaction();
             hagglingCanvas.gameObject.SetActive(false);
-            activeCustomerController.GoToExit();
+            activeCustomerController.IsLeaving = true;
             Debug.Log(playerInventory.GetCurrency());
         }
         else

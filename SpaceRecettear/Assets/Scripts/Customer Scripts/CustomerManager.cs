@@ -41,7 +41,7 @@ public class CustomerManager : MonoBehaviour
     void Update()
     {
         progressSlider.value = waveSize;
-        //If the wave has not already finished, and the wave has all been spawned, and all children have bee destroyed, end wave
+        //If the wave has not already finished, and the wave has all been spawned, and all children have been destroyed, end wave
         if(!waveFinished && waveSize <= 0 && transform.childCount == 0)
         {
             waveFinished = true;
@@ -60,6 +60,7 @@ public class CustomerManager : MonoBehaviour
         {
             //Get a random profile from the pool
             CustomerProfile customerProfile = customerPool.GetRandomProfile();
+            Debug.Log("Spawning next customer: " + customerProfile.characterName);
 
             if (customerProfile != null)
             {
@@ -72,6 +73,15 @@ public class CustomerManager : MonoBehaviour
             }
         }
         waveSpawning = false;
+    }
+
+    public void SpawnOneCustomer()
+    {
+        CustomerProfile customerProfile = customerPool.GetRandomProfile();
+        GameObject newCustomer = Instantiate(customerPrefab, entrance.transform.position, Quaternion.identity, gameObject.transform);
+        CustomerController newCustomerController = newCustomer.GetComponent<CustomerController>();
+        newCustomerController.customerProfile = customerProfile;
+        newCustomerController.levelExit = entrance;
     }
 
     public ItemInstance ClaimItem(ItemInstance item)
