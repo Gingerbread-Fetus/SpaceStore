@@ -4,13 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+[RequireComponent(typeof(CustomerPath), typeof(CustomerTimer))]
 public class CustomerController : MonoBehaviour, IInteractable
 {
     [Tooltip("Length of path generated if the customer can't find an item.")]
     [SerializeField] int nullPathLength = 5;
     [SerializeField] float walkSpeed = 5f;
-    [Tooltip("How long the customer will walk around the store before leaving.")] [SerializeField] float customerSearchTimeout = 5f;
-    [Tooltip("How long the customer will wait on a transaction before leaving.")] [SerializeField] float customerTransactionTimeout = 5f;
     [SerializeField] public CustomerProfile customerProfile;
     [SerializeField] float maxRange = .001f;
     [SerializeField] public bool isWalking;
@@ -26,15 +25,16 @@ public class CustomerController : MonoBehaviour, IInteractable
     Rigidbody2D myRigidBody;
     Animator myAnimator;
     CustomerManager customerManager;
+    CustomerTimer customerTimer;
     List<ItemInstance> unclaimedItems;
     IList<Cell> customerPath;
     int pathIndex;
-    float lastDirY;
-    float lastDirX;
-    float customerStartTime = 0;
-    float customerCurrentTime = 0;
+    float lastDirY, lastDirX;
+    float customerStartTime, customerCurrentTime = 0;
     private bool isDebug;
     bool isLeaving;
+    bool transactionReady;
+    bool isWaiting;
 
     public bool IsLeaving
     {
@@ -47,15 +47,59 @@ public class CustomerController : MonoBehaviour, IInteractable
             if(IsLeavingChange != null)
             {
                 IsLeavingChange(isLeaving);
+                customerTimer.StopWaitingTimer();
+                customerTimer.StopTransactionTimer();
             }
         }
     }
+
+    public bool TransactionReady
+    {
+        get { return transactionReady; }
+        set
+        {
+            if(transactionReady == value) { return; }
+            transactionReady = value;
+            Bulletin.SetActive(transactionReady);
+            if (transactionReady)
+            {
+                customerTimer.StopWaitingTimer();
+                customerTimer.StartTransactionTimer();
+            }
+            else
+            {
+                customerTimer.StopTransactionTimer();
+            }
+        }
+    }
+
+    public bool IsWaiting
+    {
+        get { return isWaiting; }
+        set
+        {
+            if (isWaiting == value) { return; }
+            isWaiting = value;
+            if (isWaiting)
+            {
+                customerTimer.StartWaitingTimer();
+            }
+            else
+            {
+                customerTimer.StopWaitingTimer();
+            }
+        }
+    }
+
     public delegate void OnVariableChangeDelegate(bool newVal);
     public event OnVariableChangeDelegate IsLeavingChange;
 
     // Start is called before the first frame update
     void Start()
     {
+        customerManager = FindObjectOfType<CustomerManager>();
+        path = GetComponent<CustomerPath>();
+        customerTimer = GetComponent<CustomerTimer>();
         unclaimedItems = customerManager.unclaimedItems;
         IsLeavingChange += IsLeavingHandler;
         customerStartTime = Time.timeSinceLevelLoad;
@@ -63,24 +107,15 @@ public class CustomerController : MonoBehaviour, IInteractable
         Bulletin.gameObject.SetActive(false);
         pathIndex = 0;
         SetUpCustomerProfile();
-        path = GetComponent<CustomerPath>();
         FindNewItem();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(desiredItem == null) { FindNewItem(); }
-        customerCurrentTime = Time.timeSinceLevelLoad - customerStartTime;
-        if (customerCurrentTime > customerSearchTimeout && desiredItem == null)
+        if(desiredItem == null)
         {
-            Debug.Log("Customer " + gameObject.name + " didn't find anything, they are leaving.");
-            IsLeaving = true;
-        }
-        else if (customerCurrentTime > customerTransactionTimeout && desiredItem != null)
-        {
-            Debug.Log("Customer " + gameObject.name + " transaction has timed out, they are leaving.");
-            IsLeaving = true;
+            FindNewItem();
         }
     }
 
@@ -105,7 +140,7 @@ public class CustomerController : MonoBehaviour, IInteractable
         if (customerPath != null && pathIndex < customerPath.Count)
         {
             isWalking = true;
-            SetReady(false);
+            TransactionReady = false;
             var target = customerPath[pathIndex].Position;
             Vector2 heading = target - transform.position;
             float distance = heading.magnitude;
@@ -131,13 +166,14 @@ public class CustomerController : MonoBehaviour, IInteractable
                 //If the item is not null then the character should have arrived at their destination.
                 isWalking = false;
                 myAnimator.SetBool("IsWalking", isWalking);
-                SetReady(true);
+                TransactionReady = true;
             }
             else
             {
                 //If the item is null then this character has reached the end of their path and should continue wandering
                 customerPath = new List<Cell>();
                 customerPath = GenerateWanderingPath();
+                IsWaiting = true;
             }
         }
     }
@@ -154,8 +190,9 @@ public class CustomerController : MonoBehaviour, IInteractable
     {
         if (newVal == true)
         {
-            Debug.Log("Did it work?");
-            //TODO: Move item to unclaimed items, left for now because it's being handy for testing.
+            if (desiredItem != null) { unclaimedItems.Add(desiredItem); }
+            customerTimer.StopWaitingTimer();
+            customerTimer.StopTransactionTimer();
             PathToExit(); 
         }
         else
@@ -172,11 +209,6 @@ public class CustomerController : MonoBehaviour, IInteractable
         path.FindPathAStar();
         isWalking = true;
         StartCoroutine(WaitAndDestroy());
-    }
-    
-    private void SetReady(bool status)
-    {
-        Bulletin.SetActive(status);
     }
 
     private void SetUpCustomerProfile()
