@@ -11,10 +11,14 @@ public class CustomerTimer : MonoBehaviour
     float transactionTime, transactionStartTime, waitTime, waitStartTime = 0f;
     bool isWaiting, isTransactionReady = false;
 
+    public float TransactionTime { get => transactionTime; set => transactionTime = value; }
+    public float WaitTime { get => waitTime; set => waitTime = value; }
+    public bool IsWaiting { get => isWaiting; set => isWaiting = value; }
+    public bool IsTransactionReady { get => isTransactionReady; set => isTransactionReady = value; }
 
     void Start()
     {
-        waitTime = 0f;
+        WaitTime = 0f;
         customerController = GetComponent<CustomerController>();
         transactionStartTime = Time.timeSinceLevelLoad;
         waitStartTime = Time.timeSinceLevelLoad;
@@ -22,68 +26,48 @@ public class CustomerTimer : MonoBehaviour
 
     void Update()
     {
-        if (isWaiting)
+        if (IsWaiting)
         {
-            waitTime = Time.timeSinceLevelLoad - waitStartTime;
+            WaitTime = Time.timeSinceLevelLoad - waitStartTime;
             CheckWaitTimer();
         }
-        if (isTransactionReady)
+        if (IsTransactionReady)
         {
-            transactionTime = Time.timeSinceLevelLoad - transactionStartTime;
+            TransactionTime = Time.timeSinceLevelLoad - transactionStartTime;
             CheckTransactionTimer();
         }
     }
 
     public void StartTransactionTimer()
     {
-        transactionTime = 0f;
+        TransactionTime = 0f;
         transactionStartTime = Time.timeSinceLevelLoad;
-        isTransactionReady = true;
+        IsTransactionReady = true;
     }
 
     public void StartWaitingTimer()
     {
-        waitTime = 0f;
+        WaitTime = 0f;
         waitStartTime = Time.timeSinceLevelLoad;
-        isWaiting = true;
+        IsWaiting = true;
     }
-
-    public void StopTransactionTimer()
-    {
-        isTransactionReady = false;
-    }
-
-    public void StopWaitingTimer()
-    {
-        isWaiting = false;
-    }
-
-    public void ResumeTransactionTimer()
-    {
-        isTransactionReady = true;
-    }
-
-    public void ResumeWaitingTimer()
-    {
-        isWaiting = true;
-    }
-
+    
     private void CheckTransactionTimer()
     {
-        if(transactionTime > customerTransactionTimeout)
+        if(TransactionTime > customerTransactionTimeout)
         {
-            Debug.Log("Customer " + gameObject.name + " transaction has timed out, they are leaving.");
-            isTransactionReady = false;
+            Debug.Log("Customer " + customerController.customerProfile.characterName + " transaction has timed out, they are leaving.");
+            IsTransactionReady = false;
             customerController.IsLeaving = true;
         }
     }
 
     private void CheckWaitTimer()
     {
-        if(waitTime > customerTransactionTimeout)
+        if(WaitTime > customerTransactionTimeout)
         {
-            Debug.Log("Customer " + gameObject.name + " didn't find anything, they are leaving.");
-            isWaiting = false;
+            Debug.Log("Customer " + customerController.customerProfile.characterName + " didn't find anything, they are leaving.");
+            IsWaiting = false;
             customerController.IsLeaving = true;
         }
     }

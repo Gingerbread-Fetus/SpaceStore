@@ -18,7 +18,6 @@ public class CustomerController : MonoBehaviour, IInteractable
 
     [SerializeField] public GameObject levelExit;
     [HideInInspector] public ItemInstance desiredItem;
-    [HideInInspector] public bool isFinishedShopping;
 
     LayerMask layerMask;
     CustomerPath path;
@@ -32,7 +31,7 @@ public class CustomerController : MonoBehaviour, IInteractable
     float lastDirY, lastDirX;
     float customerStartTime, customerCurrentTime = 0;
     private bool isDebug;
-    bool isLeaving;
+    bool isLeaving = false;
     bool transactionReady;
     bool isWaiting;
 
@@ -47,8 +46,8 @@ public class CustomerController : MonoBehaviour, IInteractable
             if(IsLeavingChange != null)
             {
                 IsLeavingChange(isLeaving);
-                customerTimer.StopWaitingTimer();
-                customerTimer.StopTransactionTimer();
+                customerTimer.IsWaiting = false;
+                customerTimer.IsTransactionReady = false;
             }
         }
     }
@@ -63,12 +62,12 @@ public class CustomerController : MonoBehaviour, IInteractable
             Bulletin.SetActive(transactionReady);
             if (transactionReady)
             {
-                customerTimer.StopWaitingTimer();
+                customerTimer.IsWaiting = false;
                 customerTimer.StartTransactionTimer();
             }
             else
             {
-                customerTimer.StopTransactionTimer();
+                customerTimer.IsTransactionReady = false;
             }
         }
     }
@@ -86,7 +85,7 @@ public class CustomerController : MonoBehaviour, IInteractable
             }
             else
             {
-                customerTimer.StopWaitingTimer();
+                customerTimer.IsWaiting = false;
             }
         }
     }
@@ -115,7 +114,13 @@ public class CustomerController : MonoBehaviour, IInteractable
     {
         if(desiredItem == null)
         {
-            FindNewItem();
+            bool itemFound = FindNewItem();
+            if (itemFound)
+            {
+                customerTimer.IsWaiting = false;
+                customerTimer.WaitTime = 0f;
+                IsWaiting = false;
+            }
         }
     }
 
@@ -173,7 +178,6 @@ public class CustomerController : MonoBehaviour, IInteractable
                 //If the item is null then this character has reached the end of their path and should continue wandering
                 customerPath = new List<Cell>();
                 customerPath = GenerateWanderingPath();
-                IsWaiting = true;
             }
         }
     }
@@ -191,8 +195,8 @@ public class CustomerController : MonoBehaviour, IInteractable
         if (newVal == true)
         {
             if (desiredItem != null) { unclaimedItems.Add(desiredItem); }
-            customerTimer.StopWaitingTimer();
-            customerTimer.StopTransactionTimer();
+            customerTimer.IsWaiting = false;
+            customerTimer.IsTransactionReady = false;
             PathToExit(); 
         }
         else
@@ -221,7 +225,7 @@ public class CustomerController : MonoBehaviour, IInteractable
         sr.sprite = customerProfile.customerSprite;
     }
 
-    private void FindNewItem()
+    private bool FindNewItem()
     {
         //TODO: I feel customers should be choosing from a list of preferred items, but for now I'm just choosing randomly from shelved things
         if (unclaimedItems.Count > 0)
@@ -236,9 +240,10 @@ public class CustomerController : MonoBehaviour, IInteractable
             path.FindPathAStar();
 
             customerPath = path.GetPath();
-            return;
+            return true;
         }
         desiredItem = null;
+        return false;
     }
 
     public void Interact()
@@ -246,14 +251,6 @@ public class CustomerController : MonoBehaviour, IInteractable
         if (!isWalking)
         {
             FindObjectOfType<HagglingController>().StartHaggling(this);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag.Equals("Exit") && isFinishedShopping)
-        {
-            StartCoroutine(WaitAndDestroy());
         }
     }
 

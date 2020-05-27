@@ -31,11 +31,6 @@ public class CustomerPath : MonoBehaviour
         SetEndPoints(startingPosition, endingPosition);
     }
 
-    private void Update()
-    {
-        
-    }
-
     private List<Cell> ConstructPath()
     {
         
@@ -90,7 +85,6 @@ public class CustomerPath : MonoBehaviour
                 goalCell = currentCell;
                 //Debug.Log("Goal Cell found: " + goalCell.ToString());
                 ConstructPath();
-                //Debug.Break();//This is great for debugging purposes
                 break;
             }
             //for neighbors of current:
