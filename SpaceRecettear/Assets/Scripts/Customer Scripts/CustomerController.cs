@@ -118,9 +118,11 @@ public class CustomerController : MonoBehaviour, IInteractable
             bool itemFound = FindNewItem();
             if (itemFound)
             {
-                customerTimer.IsWaiting = false;
-                customerTimer.WaitTime = 0f;
                 IsWaiting = false;
+            }
+            else
+            {
+                IsWaiting = true;
             }
         }
     }
@@ -174,11 +176,15 @@ public class CustomerController : MonoBehaviour, IInteractable
                 myAnimator.SetBool("IsWalking", isWalking);
                 TransactionReady = true;
             }
-            else
+            else if(!isLeaving)
             {
                 //If the item is null then this character has reached the end of their path and should continue wandering
                 customerPath = new List<Cell>();
                 GenerateWanderingPath();
+            }
+            else
+            {
+                isWalking = false;
             }
         }
     }
@@ -209,6 +215,7 @@ public class CustomerController : MonoBehaviour, IInteractable
             if (desiredItem != null) { unclaimedItems.Add(desiredItem); }
             customerTimer.IsWaiting = false;
             customerTimer.IsTransactionReady = false;
+            IsWaiting = false;
             PathToExit(); 
         }
         else
@@ -219,9 +226,10 @@ public class CustomerController : MonoBehaviour, IInteractable
 
     private void PathToExit()
     {
+        IsWaiting = false;
+        path.SetEndPoints(customerPath[pathIndex].Position, levelExit.transform.position);
         pathIndex = 0;
         customerPath.Clear();
-        path.SetEndPoints(transform.position, levelExit.transform.position);
         path.FindPathAStar();
         isWalking = true;
         StartCoroutine(WaitAndDestroy());
