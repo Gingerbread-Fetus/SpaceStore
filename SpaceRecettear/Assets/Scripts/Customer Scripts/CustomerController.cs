@@ -16,8 +16,9 @@ public class CustomerController : MonoBehaviour, IInteractable
     [SerializeField] public bool drawDebugging = true;
     [SerializeField] GameObject Bulletin;
 
-    [SerializeField] public GameObject levelExit;
+    [HideInInspector] public GameObject levelExit;
     [HideInInspector] public ItemInstance desiredItem;
+    [HideInInspector] public ShelfManager shelfManager;
 
     LayerMask layerMask;
     CustomerPath path;
@@ -177,17 +178,28 @@ public class CustomerController : MonoBehaviour, IInteractable
             {
                 //If the item is null then this character has reached the end of their path and should continue wandering
                 customerPath = new List<Cell>();
-                customerPath = GenerateWanderingPath();
+                GenerateWanderingPath();
             }
         }
     }
 
     //TODO: Need to rework this
-    private IList<Cell> GenerateWanderingPath()
+    private void GenerateWanderingPath()
     {
         pathIndex = 0;
-        List<Cell> newPath = new List<Cell>();
-        return newPath;
+        //Get Random Shelf
+        Transform shelf = GetRandomShelf();
+        //Pathfind to that shelf
+        path.SetEndPoints(transform.position, shelf.position);
+        path.FindPathAStar();
+        customerPath = path.GetPath();
+    }
+
+    private Transform GetRandomShelf()
+    {
+        Shelf[] children = shelfManager.GetComponentsInChildren<Shelf>();
+        Shelf randomObject = children[Random.Range(0, children.Length)];
+        return randomObject.standArea.transform;
     }
 
     private void IsLeavingHandler(bool newVal)

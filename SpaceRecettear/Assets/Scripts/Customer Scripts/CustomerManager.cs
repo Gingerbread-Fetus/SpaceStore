@@ -68,6 +68,7 @@ public class CustomerManager : MonoBehaviour
                 CustomerController newCustomerController = newCustomer.GetComponent<CustomerController>();
                 newCustomerController.customerProfile = customerProfile;
                 newCustomerController.levelExit = entrance;
+                newCustomerController.shelfManager = shelfManager;
                 waveSize--;
                 yield return new WaitForSecondsRealtime(spawnWait);
             }
@@ -82,6 +83,7 @@ public class CustomerManager : MonoBehaviour
         CustomerController newCustomerController = newCustomer.GetComponent<CustomerController>();
         newCustomerController.customerProfile = customerProfile;
         newCustomerController.levelExit = entrance;
+        newCustomerController.shelfManager = shelfManager;
     }
 
     public ItemInstance ClaimItem(ItemInstance item)

@@ -48,8 +48,10 @@ MonoBehaviour:
   customerPrefab: {fileID: 6449653314689777405, guid: dea2576915221474ea323ffc2861dd2e,
     type: 3}
   entrance: {fileID: 0}
+  progressSliderGameObject: {fileID: 0}
   spawnWait: 3
   shelfManager: {fileID: 0}
+  waveSize: 15
   claimedItems: []
   unclaimedItems: []
   waveSpawning: 0

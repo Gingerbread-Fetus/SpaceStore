@@ -120,7 +120,7 @@ public class CustomerPath : MonoBehaviour
                 Cell nextSuccessor = new Cell(cell, nextPos, endingPosition);////for neighbors of current: cost = g(current) + movementcost(current, neighbor)
                 RaycastHit2D hit = Physics2D.Raycast(cell.Position, (nextSuccessor.Position - cell.Position).normalized, 1f, layerMask);
 
-                if (hit)//If fraction <= 0 then the collision came from inside the collider.
+                if (hit)
                 {
                     //Debug.Log(hit + ": hit detected by raycast on " + hit.collider.gameObject.name);
                     continue;
