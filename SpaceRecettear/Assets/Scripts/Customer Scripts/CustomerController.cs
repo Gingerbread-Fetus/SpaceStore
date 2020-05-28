@@ -227,7 +227,14 @@ public class CustomerController : MonoBehaviour, IInteractable
     private void PathToExit()
     {
         IsWaiting = false;
-        path.SetEndPoints(customerPath[pathIndex].Position, levelExit.transform.position);
+        if (pathIndex < customerPath.Count)
+        {
+            path.SetEndPoints(customerPath[pathIndex].Position, levelExit.transform.position); 
+        }
+        else
+        {
+            path.SetEndPoints(transform.position, levelExit.transform.position);
+        }
         pathIndex = 0;
         customerPath.Clear();
         path.FindPathAStar();
