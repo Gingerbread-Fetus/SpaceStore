@@ -17,17 +17,18 @@ public class CustomerController : MonoBehaviour, IInteractable
     [SerializeField] GameObject Bulletin;
 
     [HideInInspector] public GameObject levelExit;
-    [HideInInspector] public ItemInstance desiredItem;
     [HideInInspector] public ShelfManager shelfManager;
 
     LayerMask layerMask;
+    ItemInstance desiredItem;
     CustomerPath path;
     Rigidbody2D myRigidBody;
     Animator myAnimator;
-    CustomerManager customerManager;
+    CustomerDirector customerDirector;
     CustomerTimer customerTimer;
     List<ItemInstance> unclaimedItems;
     IList<Cell> customerPath;
+    string customerID;
     int pathIndex;
     float lastDirY, lastDirX;
     float customerStartTime, customerCurrentTime = 0;
@@ -63,7 +64,7 @@ public class CustomerController : MonoBehaviour, IInteractable
             Bulletin.SetActive(transactionReady);
             if (transactionReady)
             {
-                customerTimer.IsWaiting = false;
+                IsWaiting = false;
                 customerTimer.StartTransactionTimer();
             }
             else
@@ -87,9 +88,25 @@ public class CustomerController : MonoBehaviour, IInteractable
             else
             {
                 customerTimer.IsWaiting = false;
+                customerDirector.waitingCustomers.Remove(customerID);
             }
         }
     }
+
+    public ItemInstance DesiredItem
+    {
+        get
+        {
+            return desiredItem;
+        }
+        set
+        {
+            desiredItem = value;
+            customerTimer.IsWaiting = false;
+            PathToItem();
+        }
+    }
+    
 
     public delegate void OnVariableChangeDelegate(bool newVal);
     public event OnVariableChangeDelegate IsLeavingChange;
@@ -97,34 +114,27 @@ public class CustomerController : MonoBehaviour, IInteractable
     // Start is called before the first frame update
     void Start()
     {
-        customerManager = FindObjectOfType<CustomerManager>();
+        customerDirector = FindObjectOfType<CustomerDirector>();
         path = GetComponent<CustomerPath>();
         customerTimer = GetComponent<CustomerTimer>();
-        unclaimedItems = customerManager.unclaimedItems;
+        unclaimedItems = customerDirector.unclaimedItems;
         IsLeavingChange += IsLeavingHandler;
         customerStartTime = Time.timeSinceLevelLoad;
         layerMask = LayerMask.GetMask("Interactable", "Walls", "Player");
         Bulletin.gameObject.SetActive(false);
         pathIndex = 0;
         SetUpCustomerProfile();
-        FindNewItem();
+        customerID = Guid.NewGuid().ToString();
+        if (!FindNewItem())
+        {
+            customerDirector.waitingCustomers.Add(customerID, this);
+            customerTimer.StartWaitingTimer();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(desiredItem == null)
-        {
-            bool itemFound = FindNewItem();
-            if (itemFound)
-            {
-                IsWaiting = false;
-            }
-            else
-            {
-                IsWaiting = true;
-            }
-        }
     }
 
     void FixedUpdate()
@@ -212,10 +222,11 @@ public class CustomerController : MonoBehaviour, IInteractable
     {
         if (newVal == true)
         {
-            if (desiredItem != null) { unclaimedItems.Add(desiredItem); }
+            if (desiredItem != null) { customerDirector.UnclaimItem(desiredItem); }
             customerTimer.IsWaiting = false;
             customerTimer.IsTransactionReady = false;
             IsWaiting = false;
+            customerDirector.waitingCustomers.Remove(customerID);
             PathToExit(); 
         }
         else
@@ -223,30 +234,12 @@ public class CustomerController : MonoBehaviour, IInteractable
             Debug.Log("Customer is no longer leaving");
         }
     }
-
-    private void PathToExit()
-    {
-        IsWaiting = false;
-        if (pathIndex < customerPath.Count)
-        {
-            path.SetEndPoints(customerPath[pathIndex].Position, levelExit.transform.position); 
-        }
-        else
-        {
-            path.SetEndPoints(transform.position, levelExit.transform.position);
-        }
-        pathIndex = 0;
-        customerPath.Clear();
-        path.FindPathAStar();
-        isWalking = true;
-        StartCoroutine(WaitAndDestroy());
-    }
-
+    
     private void SetUpCustomerProfile()
     {
         myAnimator = GetComponent<Animator>();
         myRigidBody = GetComponent<Rigidbody2D>();
-        customerManager = FindObjectOfType<CustomerManager>();
+        customerDirector = FindObjectOfType<CustomerDirector>();
         myAnimator.runtimeAnimatorController = customerProfile.animatorController;
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         sr.sprite = customerProfile.customerSprite;
@@ -260,7 +253,7 @@ public class CustomerController : MonoBehaviour, IInteractable
             //TODO later, I plan to change this part right here to check for a random item from prefered items. 
             int itemIndex = Random.Range(0, unclaimedItems.Count);
             desiredItem = unclaimedItems[itemIndex];//For now it's just getting a random item on the shelves and calling the method I've placed for later.
-            desiredItem = customerManager.ClaimItem(desiredItem);//TODO need to decide what to do if this returns null.
+            desiredItem = customerDirector.ClaimItem(desiredItem);//TODO need to decide what to do if this returns null.
 
             Vector3 itemLocation = desiredItem.Shelf.GetPosition();
             path.SetEndPoints(transform.position,itemLocation);
@@ -271,6 +264,44 @@ public class CustomerController : MonoBehaviour, IInteractable
         }
         desiredItem = null;
         return false;
+    }
+
+    private void PathToItem()
+    {
+        Debug.Log("Pathing to new item");
+        Vector3 itemLocation = desiredItem.Shelf.GetPosition();
+        IsWaiting = false;
+        if (pathIndex < customerPath.Count)
+        {
+            path.SetEndPoints(customerPath[pathIndex].Position, itemLocation);
+        }
+        else
+        {
+            path.SetEndPoints(transform.position, itemLocation);
+        }
+        pathIndex = 0;
+        customerPath.Clear();
+        path.FindPathAStar();
+        customerPath = path.GetPath();
+    }
+
+    private void PathToExit()
+    {
+        IsWaiting = false;
+        if (desiredItem != null) { customerDirector.UnclaimItem(desiredItem); }
+        if (pathIndex < customerPath.Count)
+        {
+            path.SetEndPoints(customerPath[pathIndex].Position, levelExit.transform.position);
+        }
+        else
+        {
+            path.SetEndPoints(transform.position, levelExit.transform.position);
+        }
+        pathIndex = 0;
+        customerPath.Clear();
+        path.FindPathAStar();
+        isWalking = true;
+        StartCoroutine(WaitAndDestroy());
     }
 
     public void Interact()

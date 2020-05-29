@@ -19,13 +19,13 @@ public class ShelfManager : MonoBehaviour
     List<ItemInstance> items;
     List<ItemInstance> shelvedItems;//this is what the customers will use to reference what is on the shelves for their purchases.
     private bool isModified = false;
-    private CustomerManager CustomerManager;
+    private CustomerDirector CustomerManager;
 
     // Start is called before the first frame update
     void Start()
     {
         shelvedItems = new List<ItemInstance>();
-        CustomerManager = FindObjectOfType<CustomerManager>();
+        CustomerManager = FindObjectOfType<CustomerDirector>();
         //For every item in the player inventory, populate the inventory panel with an item button
         items = playerInventory.GetInventory();
         foreach(ItemInstance item in items)

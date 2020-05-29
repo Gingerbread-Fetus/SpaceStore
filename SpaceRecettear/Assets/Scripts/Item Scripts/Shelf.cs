@@ -9,14 +9,14 @@ public class Shelf : Furniture, IInteractable
     [SerializeField] public GameObject standArea;
 
     ShelfManager shelfManager;
-    CustomerManager customerManager;
+    CustomerDirector customerManager;
     Collider2D standAreaCollider;
     
     // Start is called before the first frame update
     void Start()
     {
         shelfManager = FindObjectOfType<ShelfManager>();
-        customerManager = FindObjectOfType<CustomerManager>();
+        customerManager = FindObjectOfType<CustomerDirector>();
         standAreaCollider = standArea.GetComponent<CircleCollider2D>();
         if(heldItems.Count > 0)
         {

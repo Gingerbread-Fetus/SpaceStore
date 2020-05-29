@@ -7112,6 +7112,11 @@ PrefabInstance:
       propertyPath: shelfManager
       value: 
       objectReference: {fileID: 391822271}
+    - target: {fileID: 251477962688495135, guid: 5d472001383aa354988307c7152b01f4,
+        type: 3}
+      propertyPath: spawnWait
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d472001383aa354988307c7152b01f4, type: 3}
 --- !u!1001 &3731461438278901395
@@ -7635,7 +7640,7 @@ PrefabInstance:
     - target: {fileID: 4197505932783208255, guid: 8d51f81b00dd2614ca250226e03cda7d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3.2825463
+      value: -0.00003361702
       objectReference: {fileID: 0}
     - target: {fileID: 4474076956458474916, guid: 8d51f81b00dd2614ca250226e03cda7d,
         type: 3}

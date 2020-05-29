@@ -125,7 +125,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSellPrice: 0
-  heldItems: []
+  heldItems:
+  - item: {fileID: 11400000, guid: 01cc6a52cdea1284bbdb8c474c58dedd, type: 2}
+    isLimited: 0
+    boomItem: 0
+    stock: 1
+    quality: 0
+    shelf: {fileID: 0}
   spriteHolder: {fileID: 1638886162770564780}
   standArea: {fileID: 3715653167006065777}
 --- !u!1 &1638886162770564782

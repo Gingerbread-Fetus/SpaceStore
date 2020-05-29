@@ -41,12 +41,12 @@ public class HagglingController : MonoBehaviour
         hagglingCanvas.gameObject.SetActive(true);
         activeCustomerController = customerController;
         activeCustomerProfile = customerController.customerProfile;
-        desiredItem = activeCustomerController.desiredItem;
+        desiredItem = activeCustomerController.DesiredItem;
 
         Debug.Log("Active Customer: " + activeCustomerProfile.characterName +
             ", Desired Item: " + desiredItem.item.name);
 
-        transaction.AddItem(activeCustomerController.desiredItem);
+        transaction.AddItem(activeCustomerController.DesiredItem);
         transaction.Offer = desiredItem.item.baseSellPrice;
         desiredPrice = activeCustomerProfile.CalculateDesiredPrice(transaction.GetValue());
         Debug.Log("desired price: " + desiredPrice);
@@ -70,7 +70,7 @@ public class HagglingController : MonoBehaviour
     public void NoDeal()
     {
         hagglingCanvas.gameObject.SetActive(false);
-        FindObjectOfType<CustomerManager>().UnclaimItem(desiredItem);
+        FindObjectOfType<CustomerDirector>().UnclaimItem(desiredItem);
         activeCustomerController.IsLeaving = true;
     }
 

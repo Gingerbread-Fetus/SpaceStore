@@ -6,7 +6,7 @@ using UnityEngine;
 public class Door : MonoBehaviour, IInteractable
 {
     [SerializeField] RectTransform exitStorePromptPanel;
-    CustomerManager customerManager;
+    CustomerDirector customerManager;
     public void Interact()
     {
         ShowPrompt();

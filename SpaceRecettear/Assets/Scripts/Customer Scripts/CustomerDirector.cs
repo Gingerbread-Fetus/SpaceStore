@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CustomerManager : MonoBehaviour
+public class CustomerDirector : MonoBehaviour
 {
     [SerializeField] CustomerPool customerPool;
     [SerializeField] GameObject customerPrefab;
@@ -17,6 +17,7 @@ public class CustomerManager : MonoBehaviour
 
     public List<ItemInstance> claimedItems;
     public List<ItemInstance> unclaimedItems;
+    public Dictionary<string, CustomerController> waitingCustomers = new Dictionary<string, CustomerController>();
     public bool waveSpawning = false;
     
     Slider progressSlider;
@@ -45,6 +46,15 @@ public class CustomerManager : MonoBehaviour
         if(!waveFinished && waveSize <= 0 && transform.childCount == 0)
         {
             waveFinished = true;
+        }
+        if(unclaimedItems.Count > 0 && waitingCustomers.Count > 0)
+        {
+            int customerIndex = Random.Range(0, waitingCustomers.Count);
+            List<string> keyList = new List<string>(waitingCustomers.Keys);
+            string randomCustomerID = keyList[Random.Range(0, keyList.Count)];
+            CustomerController randomCustomer = waitingCustomers[randomCustomerID];
+            waitingCustomers.Remove(randomCustomerID);
+            randomCustomer.DesiredItem = ClaimItem(unclaimedItems[Random.Range(0, unclaimedItems.Count)]);
         }
     }
 
@@ -116,13 +126,13 @@ public class CustomerManager : MonoBehaviour
 
     public void UnclaimItem(ItemInstance item)
     {
-        //TODO: Could this cause problems like .Remove was above?
         if (claimedItems.Contains(item))
         {
             claimedItems.Remove(item); 
         }
-        unclaimedItems.Add(item);
-        //waveSpawning = unclaimedItems.Count > 0; //This one is turning it on.
+        if (!unclaimedItems.Contains(item))
+        {
+            unclaimedItems.Add(item); 
+        }
     }
-
 }
