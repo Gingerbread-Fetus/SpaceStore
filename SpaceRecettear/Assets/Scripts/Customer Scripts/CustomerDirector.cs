@@ -1,10 +1,16 @@
-﻿using System.Collections;
+﻿using Sirenix.OdinInspector;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CustomerDirector : MonoBehaviour
+public class CustomerDirector : SerializedMonoBehaviour
 {
+    /// <summary>
+    /// TODO Leaving this as a reminder for myself. What I'm going to do instead of what I've been trying, is just write the methods
+    /// for claiming and unclaiming shelves from the dictionary, then go through and start to untangle the defunct code. Dunno why I didn't 
+    /// think of this before...
+    /// </summary>
     [SerializeField] CustomerPool customerPool;
     [SerializeField] GameObject customerPrefab;
     [SerializeField] GameObject entrance;
@@ -18,6 +24,8 @@ public class CustomerDirector : MonoBehaviour
     public List<ItemInstance> claimedItems;
     public List<ItemInstance> unclaimedItems;
     public Dictionary<string, CustomerController> waitingCustomers = new Dictionary<string, CustomerController>();
+    public Dictionary<string, List<Shelf>> unclaimedShelves = new Dictionary<string, List<Shelf>>();
+    public Dictionary<string, List<Shelf>> claimedShelves = new Dictionary<string, List<Shelf>>();
     public bool waveSpawning = false;
     
     Slider progressSlider;
