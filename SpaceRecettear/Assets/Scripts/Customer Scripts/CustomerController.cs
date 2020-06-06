@@ -27,6 +27,7 @@ public class CustomerController : MonoBehaviour, IInteractable
     CustomerDirector customerDirector;
     CustomerTimer customerTimer;
     List<ItemInstance> unclaimedItems;
+    Shelf targetShelf;
     IList<Cell> customerPath;
     string customerID;
     int pathIndex;
@@ -88,7 +89,7 @@ public class CustomerController : MonoBehaviour, IInteractable
             else
             {
                 customerTimer.IsWaiting = false;
-                customerDirector.waitingCustomers.Remove(customerID);
+                customerDirector.WaitingCustomers.Remove(customerID);
             }
         }
     }
@@ -106,16 +107,29 @@ public class CustomerController : MonoBehaviour, IInteractable
             PathToItem();
         }
     }
-    
 
+    public Shelf TargetShelf
+    {
+        get
+        {
+            return targetShelf;
+        }
+        set
+        {
+            targetShelf = value;
+            customerTimer.IsWaiting = false;
+            PathToShelf();
+        }
+    }
+    
     public delegate void OnVariableChangeDelegate(bool newVal);
     public event OnVariableChangeDelegate IsLeavingChange;
 
     // Start is called before the first frame update
     void Start()
     {
-        customerDirector = FindObjectOfType<CustomerDirector>();
         path = GetComponent<CustomerPath>();
+        customerDirector = FindObjectOfType<CustomerDirector>();
         customerTimer = GetComponent<CustomerTimer>();
         unclaimedItems = customerDirector.unclaimedItems;
         IsLeavingChange += IsLeavingHandler;
@@ -125,18 +139,10 @@ public class CustomerController : MonoBehaviour, IInteractable
         pathIndex = 0;
         SetUpCustomerProfile();
         customerID = Guid.NewGuid().ToString();
-        if (!FindNewItem())
-        {
-            customerDirector.waitingCustomers.Add(customerID, this);
-            customerTimer.StartWaitingTimer();
-        }
+        customerDirector.WaitingCustomers.Add(customerID, this);
+        customerTimer.StartWaitingTimer();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
+    
     void FixedUpdate()
     {
         Move();
@@ -179,7 +185,7 @@ public class CustomerController : MonoBehaviour, IInteractable
         }
         else
         {
-            if (desiredItem != null)
+            if (targetShelf != null)
             {
                 //If the item is not null then the character should have arrived at their destination.
                 isWalking = false;
@@ -222,11 +228,15 @@ public class CustomerController : MonoBehaviour, IInteractable
     {
         if (newVal == true)
         {
-            if (desiredItem != null) { customerDirector.UnclaimItem(desiredItem); }
+            if (targetShelf != null)
+            {
+                customerDirector.UnclaimShelf(targetShelf);
+                customerDirector.RemoveFromClaimedShelves(targetShelf);
+            }
             customerTimer.IsWaiting = false;
             customerTimer.IsTransactionReady = false;
             IsWaiting = false;
-            customerDirector.waitingCustomers.Remove(customerID);
+            customerDirector.WaitingCustomers.Remove(customerID);
             PathToExit(); 
         }
         else
@@ -245,27 +255,6 @@ public class CustomerController : MonoBehaviour, IInteractable
         sr.sprite = customerProfile.customerSprite;
     }
 
-    private bool FindNewItem()
-    {
-        //TODO: I feel customers should be choosing from a list of preferred items, but for now I'm just choosing randomly from shelved things
-        if (unclaimedItems.Count > 0)
-        {
-            //TODO later, I plan to change this part right here to check for a random item from prefered items. 
-            int itemIndex = Random.Range(0, unclaimedItems.Count);
-            desiredItem = unclaimedItems[itemIndex];//For now it's just getting a random item on the shelves and calling the method I've placed for later.
-            desiredItem = customerDirector.ClaimItem(desiredItem);//TODO need to decide what to do if this returns null.
-
-            Vector3 itemLocation = desiredItem.Shelf.GetPosition();
-            path.SetEndPoints(transform.position,itemLocation);
-            path.FindPathAStar();
-
-            customerPath = path.GetPath();
-            return true;
-        }
-        desiredItem = null;
-        return false;
-    }
-
     private void PathToItem()
     {
         Debug.Log("Pathing to new item");
@@ -278,6 +267,30 @@ public class CustomerController : MonoBehaviour, IInteractable
         else
         {
             path.SetEndPoints(transform.position, itemLocation);
+        }
+        pathIndex = 0;
+        customerPath.Clear();
+        path.FindPathAStar();
+        customerPath = path.GetPath();
+    }
+
+    private void PathToShelf()
+    {
+        if (customerPath == null)
+        {
+            Debug.Log("Null customer path");
+            customerPath = GetComponent<CustomerPath>().GetPath();
+        }
+        Debug.Log("Pathing to new shelf");
+        Vector3 shelfLocation = targetShelf.GetPosition();
+        IsWaiting = false;
+        if (pathIndex < customerPath.Count)
+        {
+            path.SetEndPoints(customerPath[pathIndex].Position, shelfLocation);
+        }
+        else
+        {
+            path.SetEndPoints(transform.position, shelfLocation);
         }
         pathIndex = 0;
         customerPath.Clear();

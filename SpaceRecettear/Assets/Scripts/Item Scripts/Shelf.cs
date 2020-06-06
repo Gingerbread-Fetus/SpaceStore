@@ -4,36 +4,51 @@ using UnityEngine;
 
 public class Shelf : Furniture, IInteractable
 {
+    [SerializeField] ItemInstance heldItem;
     [SerializeField] public List<ItemInstance> heldItems = new List<ItemInstance>();
     [SerializeField] public SpriteRenderer spriteHolder;
     [SerializeField] public GameObject standArea;
 
     ShelfManager shelfManager;
-    CustomerDirector customerManager;
+    CustomerDirector customerDirector;
     Collider2D standAreaCollider;
-    
+
+    public ItemInstance HeldItem
+    {
+        get
+        {
+            return heldItem;
+        }
+        set
+        {
+            if (value == null)
+            {
+                customerDirector.RemoveFromClaimedShelves(this);
+            }
+            heldItem = value;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         shelfManager = FindObjectOfType<ShelfManager>();
-        customerManager = FindObjectOfType<CustomerDirector>();
+        customerDirector = FindObjectOfType<CustomerDirector>();
         standAreaCollider = standArea.GetComponent<CircleCollider2D>();
-        if(heldItems.Count > 0)
+        
+        if(HeldItem.item != null)
         {
-            foreach (ItemInstance item in heldItems)
-            {
-                item.Shelf = this;
-                customerManager.UnclaimItem(item);
-            }
+            //TODO, rework code so that shelves only hold one item.
+            customerDirector.UnclaimShelf(this);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (heldItems.Count > 0)
+        if (heldItem.item != null)
         {
-            spriteHolder.sprite = heldItems[0].item.itemIcon;
+            spriteHolder.sprite = heldItem.item.itemIcon;
         }
         else
         {

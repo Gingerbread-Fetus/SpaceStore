@@ -44,12 +44,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e2cecb906602fb44979796249e8e35b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: waitingCustomers
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[CustomerController,
+        GameAssembly]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: unclaimedShelves
+      Entry: 7
+      Data: 2|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[Shelf,
+        GameAssembly]], mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 1
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: claimedShelves
+      Entry: 7
+      Data: 3|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[Shelf,
+        GameAssembly]], mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 1
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   customerPool: {fileID: 11400000, guid: 855f920dd8dbc5041903fc27be7ac939, type: 2}
   customerPrefab: {fileID: 6449653314689777405, guid: dea2576915221474ea323ffc2861dd2e,
     type: 3}
   entrance: {fileID: 0}
   progressSliderGameObject: {fileID: 0}
-  spawnWait: 3
+  spawnWait: 1
   shelfManager: {fileID: 0}
   waveSize: 15
   claimedItems: []
